@@ -1,0 +1,497 @@
+// Project Q Publishing - Layout System
+// Responsive layout framework with containers, grids, and utilities
+
+// =============================================================================
+// CONTAINER SYSTEM
+// =============================================================================
+
+// Base container styles
+%container-base {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding-mobile;
+  padding-right: $container-padding-mobile;
+  
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+  }
+}
+
+// Standard content container
+.container {
+  @extend %container-base;
+  max-width: $content-width + ($container-padding * 2);
+}
+
+// Text-optimized container for articles
+.container-text {
+  @extend %container-base;
+  max-width: $text-width + ($container-padding * 2);
+}
+
+// Wide container for special layouts
+.container-wide {
+  @extend %container-base;
+  max-width: $wide-width + ($container-padding * 2);
+}
+
+// Full-width container with padding
+.container-fluid {
+  @extend %container-base;
+  max-width: none;
+}
+
+// No padding container
+.container-flush {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+// =============================================================================
+// GRID SYSTEMS
+// =============================================================================
+
+// Flexible grid container
+.grid {
+  display: grid;
+  gap: $spacing-lg;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    gap: $spacing-md;
+  }
+}
+
+// Book catalog grid - responsive columns
+.books-grid {
+  display: grid;
+  gap: $spacing-lg;
+  grid-template-columns: 1fr;
+  
+  @media screen and (min-width: $breakpoint-mobile + 1px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-xl;
+  }
+  
+  @media screen and (min-width: $breakpoint-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media screen and (min-width: $breakpoint-wide) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Feature grid for homepage sections
+.feature-grid {
+  display: grid;
+  gap: $spacing-xl;
+  grid-template-columns: 1fr;
+  
+  @media screen and (min-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media screen and (min-width: $breakpoint-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Two-column layout (sidebar + main)
+.two-column {
+  display: grid;
+  gap: $spacing-xl;
+  grid-template-columns: 1fr;
+  
+  @media screen and (min-width: $breakpoint-desktop) {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+.two-column-reverse {
+  display: grid;
+  gap: $spacing-xl;
+  grid-template-columns: 1fr;
+  
+  @media screen and (min-width: $breakpoint-desktop) {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+// Equal height flex containers
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-lg;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    gap: $spacing-md;
+  }
+}
+
+.flex-item {
+  flex: 1;
+  min-width: 280px;
+}
+
+// =============================================================================
+// PAGE LAYOUT STRUCTURE
+// =============================================================================
+
+// Main site layout
+.site-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Header layout
+.site-header {
+  background-color: $nav-background;
+  border-bottom: 1px solid $nav-border;
+  position: relative;
+  z-index: $z-index-sticky;
+}
+
+// Main content area
+.site-main {
+  flex: 1;
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-xl;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding-top: $spacing-lg;
+    padding-bottom: $spacing-lg;
+  }
+}
+
+// Footer layout
+.site-footer {
+  background-color: $footer-background;
+  color: $footer-text;
+  padding-top: $spacing-xl;
+  padding-bottom: $spacing-lg;
+  margin-top: auto;
+}
+
+// =============================================================================
+// SECTION LAYOUTS
+// =============================================================================
+
+// Generic section with consistent spacing
+.section {
+  padding-top: $spacing-xxl;
+  padding-bottom: $spacing-xxl;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
+  }
+  
+  &:first-child {
+    padding-top: 0;
+  }
+  
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+// Hero section
+.hero {
+  text-align: center;
+  padding-top: $spacing-xxl * 1.5;
+  padding-bottom: $spacing-xxl;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-lg;
+  }
+}
+
+// Feature section with background
+.section-featured {
+  background-color: $background-secondary;
+  padding-top: $spacing-xxl;
+  padding-bottom: $spacing-xxl;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
+  }
+}
+
+// =============================================================================
+// CARD LAYOUTS
+// =============================================================================
+
+// Base card component
+.card {
+  background-color: $card-background;
+  border: 1px solid $card-border;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+  overflow: hidden;
+  transition: box-shadow $transition-base, transform $transition-base;
+  
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+}
+
+// Card content padding
+.card-content {
+  padding: $spacing-lg;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: $spacing-md;
+  }
+}
+
+// Card header
+.card-header {
+  padding: $spacing-md $spacing-lg;
+  border-bottom: 1px solid $card-border;
+  background-color: $background-secondary;
+}
+
+// Card footer
+.card-footer {
+  padding: $spacing-md $spacing-lg;
+  border-top: 1px solid $card-border;
+  background-color: $background-secondary;
+}
+
+// Book card specific layout
+.book-card {
+  @extend .card;
+  
+  .book-cover {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .book-info {
+    padding: $spacing-lg;
+  }
+  
+  .book-title {
+    margin-bottom: $spacing-sm;
+  }
+  
+  .book-author {
+    margin-bottom: $spacing-md;
+    color: $text-secondary;
+  }
+  
+  .book-price {
+    font-weight: $font-weight-semibold;
+    color: $primary-600;
+    font-size: 1.1em;
+  }
+}
+
+// =============================================================================
+// CONTENT LAYOUTS
+// =============================================================================
+
+// Article layout
+.article-layout {
+  max-width: $text-width;
+  margin: 0 auto;
+}
+
+// Book detail layout
+.book-detail {
+  display: grid;
+  gap: $spacing-xl;
+  grid-template-columns: 1fr;
+  align-items: start;
+  
+  @media screen and (min-width: $breakpoint-tablet) {
+    grid-template-columns: 300px 1fr;
+  }
+  
+  @media screen and (min-width: $breakpoint-desktop) {
+    grid-template-columns: 400px 1fr;
+  }
+}
+
+.book-cover-large {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-lg;
+}
+
+.book-details {
+  .book-title {
+    margin-bottom: $spacing-sm;
+  }
+  
+  .book-author {
+    margin-bottom: $spacing-lg;
+    font-size: $large-font-size;
+    color: $text-secondary;
+  }
+  
+  .book-meta {
+    margin-bottom: $spacing-lg;
+    
+    .meta-item {
+      margin-bottom: $spacing-sm;
+      
+      .meta-label {
+        font-weight: $font-weight-semibold;
+        color: $text-secondary;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// NAVIGATION LAYOUTS
+// =============================================================================
+
+// Breadcrumb navigation
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-lg;
+  font-size: $small-font-size;
+  color: $text-muted;
+  
+  .breadcrumb-item {
+    &:not(:last-child)::after {
+      content: '/';
+      margin: 0 $spacing-sm;
+      color: $text-muted;
+    }
+    
+    a {
+      color: $text-muted;
+      text-decoration: none;
+      
+      &:hover {
+        color: $link-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-top: $spacing-xl;
+  
+  .page-item {
+    a, span {
+      display: block;
+      padding: $spacing-sm $spacing-md;
+      border: 1px solid $border-light;
+      border-radius: $border-radius-sm;
+      text-decoration: none;
+      color: $text-primary;
+      transition: all $transition-fast;
+      
+      &:hover:not(.disabled) {
+        background-color: $primary-50;
+        border-color: $primary-300;
+        color: $primary-700;
+      }
+    }
+    
+    &.active {
+      a, span {
+        background-color: $primary-500;
+        border-color: $primary-500;
+        color: $text-inverse;
+      }
+    }
+    
+    &.disabled {
+      a, span {
+        color: $text-disabled;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// UTILITY LAYOUTS
+// =============================================================================
+
+// Center content
+.center {
+  text-align: center;
+}
+
+// Horizontal list (for tags, categories)
+.horizontal-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Stack items with consistent spacing
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.stack-sm { gap: $spacing-sm; }
+.stack-lg { gap: $spacing-lg; }
+.stack-xl { gap: $spacing-xl; }
+
+// Cluster items with wrapping
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  align-items: center;
+}
+
+.cluster-sm { gap: $spacing-sm; }
+.cluster-lg { gap: $spacing-lg; }
+
+// Auto-fit grid for unknown number of items
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-lg;
+}
+
+// Sidebar layout
+.sidebar {
+  .sidebar-section {
+    margin-bottom: $spacing-xl;
+    
+    .sidebar-title {
+      font-size: $h5-font-size;
+      font-weight: $font-weight-semibold;
+      margin-bottom: $spacing-md;
+      color: $text-primary;
+    }
+    
+    .sidebar-content {
+      font-size: $small-font-size;
+      line-height: 1.6;
+    }
+  }
+}

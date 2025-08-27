@@ -1,0 +1,392 @@
+// Project Q Publishing - Typography System
+// Professional typography for technical book publishing
+
+// =============================================================================
+// BASE TYPOGRAPHY
+// =============================================================================
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  color: $text-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// =============================================================================
+// HEADINGS SYSTEM
+// =============================================================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  color: $text-primary;
+  margin-top: 0;
+  font-weight: $font-weight-medium;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  font-weight: $font-weight-light;
+  margin-bottom: $spacing-lg;
+  letter-spacing: -0.02em;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: $h1-font-size * 0.85; // 30.6px on mobile
+    margin-bottom: $spacing-md;
+  }
+}
+
+h2 {
+  font-size: $h2-font-size;
+  font-weight: $font-weight-light;
+  margin-bottom: $spacing-md;
+  letter-spacing: -0.01em;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: $h2-font-size * 0.87; // 26.1px on mobile
+    margin-bottom: $spacing-sm;
+  }
+}
+
+h3 {
+  font-size: $h3-font-size;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-md;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: $h3-font-size * 0.9; // 21.6px on mobile
+  }
+}
+
+h4 {
+  font-size: $h4-font-size;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-sm;
+  
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: $h4-font-size * 0.95; // 19px on mobile
+  }
+}
+
+h5 {
+  font-size: $h5-font-size;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-sm;
+}
+
+h6 {
+  font-size: $h6-font-size;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $text-secondary;
+}
+
+// Heading spacing adjustments when following other elements
+* + h1 { margin-top: $spacing-xxl; }
+* + h2 { margin-top: $spacing-xl; }
+* + h3 { margin-top: $spacing-lg; }
+* + h4 { margin-top: $spacing-lg; }
+* + h5 { margin-top: $spacing-md; }
+* + h6 { margin-top: $spacing-md; }
+
+// =============================================================================
+// PARAGRAPH & TEXT STYLES
+// =============================================================================
+
+p {
+  margin-top: 0;
+  margin-bottom: $spacing-md;
+  max-width: $text-width;
+}
+
+// Lead paragraph - larger introductory text
+.lead {
+  font-size: $large-font-size;
+  line-height: 1.7;
+  color: $text-secondary;
+  margin-bottom: $spacing-lg;
+}
+
+// Small text
+small, .small {
+  font-size: $small-font-size;
+  color: $text-secondary;
+}
+
+// Text utilities
+.text-muted {
+  color: $text-muted;
+}
+
+.text-primary {
+  color: $text-primary;
+}
+
+.text-secondary {
+  color: $text-secondary;
+}
+
+// =============================================================================
+// LINK STYLES
+// =============================================================================
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color $transition-fast, text-decoration $transition-fast;
+  
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+  
+  &:visited {
+    color: $link-visited-color;
+  }
+  
+  &:active {
+    color: $link-active-color;
+  }
+  
+  &:focus {
+    outline: 2px solid $primary-300;
+    outline-offset: 2px;
+    border-radius: $border-radius-sm;
+  }
+}
+
+// Navigation links (no underline on hover)
+.nav-link, .site-nav a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// =============================================================================
+// LIST STYLES
+// =============================================================================
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: $spacing-md;
+  padding-left: $spacing-lg;
+}
+
+li {
+  margin-bottom: $spacing-xs;
+}
+
+// Nested lists
+ul ul, ol ol, ul ol, ol ul {
+  margin-bottom: 0;
+}
+
+// Clean lists (no bullets/numbers)
+.list-clean {
+  list-style: none;
+  padding-left: 0;
+}
+
+// =============================================================================
+// CODE & TECHNICAL CONTENT
+// =============================================================================
+
+code, pre, kbd, samp {
+  font-family: $code-font-family;
+  font-size: 0.9em;
+}
+
+// Inline code
+code {
+  background-color: $inline-code-background;
+  color: $inline-code-text;
+  padding: 0.125em 0.25em;
+  border-radius: $border-radius-sm;
+  border: 1px solid $inline-code-border;
+  font-weight: $font-weight-medium;
+}
+
+// Code blocks
+pre {
+  background-color: $code-block-background;
+  color: $code-text;
+  padding: $spacing-md;
+  border-radius: $border-radius-md;
+  border: 1px solid $code-border;
+  overflow-x: auto;
+  line-height: $code-line-height;
+  margin-bottom: $spacing-md;
+  
+  code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    border: none;
+    font-weight: $font-weight-normal;
+  }
+}
+
+// Keyboard input
+kbd {
+  background-color: $gray-800;
+  color: $text-inverse;
+  padding: 0.125em 0.25em;
+  border-radius: $border-radius-sm;
+  font-size: 0.875em;
+  font-weight: $font-weight-semibold;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+// =============================================================================
+// BLOCKQUOTES
+// =============================================================================
+
+blockquote {
+  margin: $spacing-lg 0;
+  padding: $spacing-md $spacing-lg;
+  border-left: 4px solid $primary-300;
+  background-color: $primary-50;
+  color: $text-secondary;
+  font-style: italic;
+  
+  p {
+    margin-bottom: 0;
+    
+    &:not(:last-child) {
+      margin-bottom: $spacing-sm;
+    }
+  }
+  
+  cite {
+    display: block;
+    margin-top: $spacing-sm;
+    font-size: $small-font-size;
+    color: $text-muted;
+    font-style: normal;
+    
+    &:before {
+      content: "— ";
+    }
+  }
+}
+
+// =============================================================================
+// PUBLISHING-SPECIFIC TYPOGRAPHY
+// =============================================================================
+
+// Book titles
+.book-title {
+  font-style: italic;
+  font-weight: $font-weight-medium;
+  color: $text-primary;
+}
+
+// Author names
+.author-name {
+  font-weight: $font-weight-medium;
+  color: $text-primary;
+}
+
+// Price formatting
+.price {
+  font-weight: $font-weight-semibold;
+  color: $primary-600;
+  font-size: 1.1em;
+}
+
+// Publication dates
+.pub-date {
+  color: $text-muted;
+  font-size: $small-font-size;
+}
+
+// Technical terms and programming languages
+.tech-term, .programming-language {
+  font-family: $code-font-family;
+  background-color: $gray-100;
+  color: $text-primary;
+  padding: 0.125em 0.375em;
+  border-radius: $border-radius-sm;
+  font-size: 0.9em;
+  font-weight: $font-weight-medium;
+}
+
+// Book categories/tags
+.category-tag {
+  display: inline-block;
+  background-color: $secondary-100;
+  color: $secondary-700;
+  padding: 0.25em 0.5em;
+  border-radius: $border-radius-sm;
+  font-size: $small-font-size;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+  margin-right: $spacing-xs;
+  margin-bottom: $spacing-xs;
+  
+  &:hover {
+    background-color: $secondary-200;
+    color: $secondary-800;
+    text-decoration: none;
+  }
+}
+
+// =============================================================================
+// UTILITY CLASSES
+// =============================================================================
+
+// Font weights
+.font-light { font-weight: $font-weight-light; }
+.font-normal { font-weight: $font-weight-normal; }
+.font-medium { font-weight: $font-weight-medium; }
+.font-semibold { font-weight: $font-weight-semibold; }
+.font-bold { font-weight: $font-weight-bold; }
+
+// Font sizes
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: $small-font-size; }
+.text-base { font-size: $base-font-size; }
+.text-lg { font-size: $large-font-size; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+
+// Text alignment
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+// Line height utilities
+.leading-tight { line-height: 1.25; }
+.leading-normal { line-height: 1.5; }
+.leading-relaxed { line-height: 1.75; }
+
+// =============================================================================
+// RESPONSIVE TYPOGRAPHY ADJUSTMENTS
+// =============================================================================
+
+@media screen and (max-width: $breakpoint-mobile) {
+  body {
+    font-size: 15px; // Slightly smaller on mobile
+    line-height: 1.65; // Slightly more line height for readability
+  }
+  
+  p {
+    max-width: none; // Full width on mobile
+  }
+  
+  .lead {
+    font-size: 1.125rem;
+  }
+  
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
+  }
+}

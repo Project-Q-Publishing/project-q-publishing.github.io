@@ -1,0 +1,724 @@
+// Project Q Publishing - Navigation & Header Styling
+// Professional navigation system with brand consistency
+
+// =============================================================================
+// SITE HEADER
+// =============================================================================
+
+.site-header {
+  background-color: $nav-background;
+  border-bottom: 1px solid $nav-border;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: $z-index-sticky;
+  padding: $spacing-md 0;
+  
+  @include mobile-only {
+    padding: $spacing-sm 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0 $container-padding-mobile;
+    
+    @include tablet-up {
+      padding: 0 $container-padding;
+    }
+  }
+}
+
+// Site title/logo
+.site-title {
+  font-family: $heading-font-family;
+  font-size: $h2-font-size;
+  font-weight: $font-weight-light;
+  color: $text-primary;
+  text-decoration: none;
+  margin-bottom: $spacing-md;
+  letter-spacing: -0.01em;
+  transition: color $transition-fast;
+  
+  @include mobile-only {
+    font-size: $h3-font-size;
+    margin-bottom: $spacing-sm;
+  }
+  
+  @include desktop-up {
+    font-size: $h1-font-size * 0.9;
+  }
+  
+  &:hover {
+    color: $primary-600;
+    text-decoration: none;
+  }
+  
+  &:visited {
+    color: $text-primary;
+  }
+}
+
+// Site tagline
+.site-tagline {
+  font-size: $base-font-size;
+  color: $text-secondary;
+  margin-bottom: $spacing-lg;
+  font-weight: $font-weight-normal;
+  
+  @include mobile-only {
+    font-size: $small-font-size;
+    margin-bottom: $spacing-md;
+  }
+}
+
+// Logo integration (when logo is added)
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  text-decoration: none;
+  margin-bottom: $spacing-md;
+  
+  .logo-image {
+    height: 40px;
+    width: auto;
+    
+    @include desktop-up {
+      height: 50px;
+    }
+  }
+  
+  .logo-text {
+    @extend .site-title;
+    margin-bottom: 0;
+  }
+}
+
+// =============================================================================
+// NAVIGATION
+// =============================================================================
+
+.site-nav {
+  position: static !important;
+  float: none !important;
+  width: 100%;
+  
+  // Navigation trigger (mobile hamburger - hidden on desktop)
+  .nav-trigger {
+    display: none;
+    
+    @include mobile-only {
+      display: block;
+    }
+  }
+  
+  // Navigation menu container
+  .trigger {
+    position: static !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: $spacing-sm 0;
+    
+    @include mobile-only {
+      flex-direction: column;
+      gap: $spacing-xs;
+    }
+  }
+  
+  // Navigation links
+  .page-link {
+    display: inline-flex;
+    align-items: center;
+    padding: $spacing-sm $spacing-lg;
+    margin: 0 $spacing-xs;
+    color: $nav-link-color;
+    font-size: $base-font-size;
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+    border-radius: $border-radius-sm;
+    transition: all $transition-fast;
+    position: relative;
+    
+    @include mobile-only {
+      margin: 0;
+      padding: $spacing-md $spacing-lg;
+      width: 200px;
+      justify-content: center;
+      font-size: $large-font-size;
+    }
+    
+    // Hover state
+    &:hover {
+      color: $nav-link-hover;
+      background-color: $primary-50;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    
+    // Active state (current page)
+    &.active,
+    &[aria-current="page"] {
+      color: $primary-600;
+      background-color: $primary-100;
+      font-weight: $font-weight-semibold;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -$spacing-xs;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 2px;
+        background-color: $primary-500;
+        border-radius: 1px;
+        
+        @include mobile-only {
+          bottom: $spacing-xs;
+          width: 30px;
+          height: 3px;
+        }
+      }
+    }
+    
+    // Focus state for accessibility
+    &:focus {
+      outline: 2px solid $primary-300;
+      outline-offset: 2px;
+      color: $nav-link-hover;
+    }
+    
+    // Visited state
+    &:visited {
+      color: $nav-link-color;
+      
+      &:hover {
+        color: $nav-link-hover;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// ENHANCED MOBILE NAVIGATION (Optional Hamburger Menu)
+// =============================================================================
+
+// Enhanced mobile navigation with hamburger menu
+@include mobile-only {
+  .site-header {
+    position: relative;
+  }
+  
+  .site-nav {
+    // Always show hamburger menu on mobile
+    .nav-trigger {
+      display: block;
+      position: absolute;
+      top: $spacing-md;
+      right: $spacing-md;
+      width: 44px;
+      height: 44px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: $z-index-dropdown + 1;
+      padding: $spacing-sm;
+      
+      // Three horizontal lines (hamburger icon)
+      .hamburger-line {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: $primary-600;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+        border-radius: 1px;
+        
+        &:first-child {
+          transform-origin: center;
+        }
+        
+        &:nth-child(2) {
+          transform-origin: center;
+        }
+        
+        &:last-child {
+          transform-origin: center;
+        }
+      }
+      
+      &:hover .hamburger-line {
+        background-color: $primary-700;
+      }
+      
+      &:focus {
+        outline: 2px solid $primary-300;
+        outline-offset: 2px;
+        border-radius: $border-radius-sm;
+      }
+    }
+    
+    // Hide menu by default on mobile
+    .trigger {
+      display: none !important;
+    }
+    
+    // Show menu when nav-open class is applied
+    &.nav-open {
+      .nav-trigger {
+        // Transform hamburger into X
+        .hamburger-line {
+          &:first-child {
+            transform: rotate(45deg) translate(5px, 5px);
+          }
+          
+          &:nth-child(2) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+          }
+          
+          &:last-child {
+            transform: rotate(-45deg) translate(7px, -6px);
+          }
+        }
+      }
+      
+      .trigger {
+        display: flex !important;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($gray-800, 0.96);
+        backdrop-filter: blur(10px);
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        z-index: $z-index-dropdown;
+        animation: slideInDown 0.3s ease-out;
+        gap: $spacing-md;
+        
+        .page-link {
+          width: auto;
+          padding: $spacing-lg $spacing-xl;
+          margin: $spacing-xs 0;
+          font-size: $h4-font-size;
+          border-radius: $border-radius-lg;
+          color: $text-inverse;
+          background-color: rgba($primary-600, 0.1);
+          border: 2px solid transparent;
+          transition: all $transition-base;
+          text-align: center;
+          min-width: 200px;
+          
+          &:hover {
+            background-color: $primary-600;
+            border-color: $primary-400;
+            transform: scale(1.05);
+            color: $text-inverse;
+          }
+          
+          &.active,
+          &[aria-current="page"] {
+            background-color: $accent-600;
+            color: $gray-900;
+            border-color: $accent-400;
+          }
+        }
+      }
+    }
+  }
+  
+  // Prevent body scroll when menu is open
+  body.nav-open {
+    overflow: hidden;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// =============================================================================
+// STICKY NAVIGATION (Optional Enhancement)
+// =============================================================================
+
+// Sticky header behavior
+.site-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($nav-background, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease-out;
+  
+  .site-title {
+    font-size: $h4-font-size;
+    margin-bottom: $spacing-sm;
+  }
+  
+  .site-tagline {
+    display: none;
+  }
+  
+  .site-nav .page-link {
+    padding: $spacing-xs $spacing-md;
+    font-size: $small-font-size;
+    
+    @include mobile-only {
+      font-size: $base-font-size;
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+// Body offset when sticky nav is active
+body.sticky-nav {
+  padding-top: 100px;
+  
+  @include mobile-only {
+    padding-top: 80px;
+  }
+}
+
+// =============================================================================
+// SITE FOOTER
+// =============================================================================
+
+.site-footer {
+  background-color: $footer-background;
+  color: $footer-text;
+  padding: $spacing-xxl 0 $spacing-lg;
+  margin-top: $spacing-xxl * 2;
+  border-top: 1px solid darken($footer-background, 10%);
+  
+  .wrapper {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0 $container-padding-mobile;
+    
+    @include tablet-up {
+      padding: 0 $container-padding;
+    }
+  }
+}
+
+// Footer content layout
+.footer-content {
+  display: grid;
+  gap: $spacing-xl;
+  grid-template-columns: 1fr;
+  margin-bottom: $spacing-xl;
+  
+  @include tablet-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include desktop-up {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Footer sections
+.footer-section {
+  .footer-title {
+    font-size: $h6-font-size;
+    font-weight: $font-weight-semibold;
+    color: $footer-link;
+    margin-bottom: $spacing-md;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin-bottom: $spacing-sm;
+      
+      a {
+        color: $footer-text;
+        text-decoration: none;
+        transition: color $transition-fast;
+        font-size: $small-font-size;
+        
+        &:hover {
+          color: $footer-link-hover;
+        }
+      }
+    }
+  }
+  
+  .footer-text {
+    font-size: $small-font-size;
+    line-height: 1.6;
+    color: $footer-text;
+  }
+}
+
+// Social media links
+.footer-social {
+  display: flex;
+  gap: $spacing-md;
+  margin-top: $spacing-md;
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba($footer-text, 0.1);
+    color: $footer-text;
+    border-radius: $border-radius-sm;
+    text-decoration: none;
+    transition: all $transition-fast;
+    
+    &:hover {
+      background-color: $primary-600;
+      color: $text-inverse;
+      transform: translateY(-2px);
+    }
+    
+    svg, i {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+// Footer bottom section
+.footer-bottom {
+  padding-top: $spacing-lg;
+  border-top: 1px solid rgba($footer-text, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: $spacing-md;
+  
+  @include tablet-up {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  
+  .copyright {
+    font-size: $small-font-size;
+    color: rgba($footer-text, 0.8);
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: $spacing-lg;
+    
+    @include mobile-only {
+      flex-direction: column;
+      gap: $spacing-sm;
+    }
+    
+    a {
+      color: $footer-text;
+      text-decoration: none;
+      font-size: $small-font-size;
+      transition: color $transition-fast;
+      
+      &:hover {
+        color: $footer-link-hover;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// BREADCRUMB NAVIGATION (Enhanced from components)
+// =============================================================================
+
+.breadcrumb-nav {
+  background-color: $background-secondary;
+  padding: $spacing-md 0;
+  border-bottom: 1px solid $border-light;
+  
+  .wrapper {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0 $container-padding-mobile;
+    
+    @include tablet-up {
+      padding: 0 $container-padding;
+    }
+  }
+  
+  .breadcrumb {
+    margin-bottom: 0;
+  }
+}
+
+// =============================================================================
+// SKIP TO CONTENT (Accessibility)
+// =============================================================================
+
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background-color: $primary-600;
+  color: $text-inverse;
+  padding: $spacing-sm $spacing-md;
+  text-decoration: none;
+  border-radius: $border-radius-sm;
+  font-weight: $font-weight-medium;
+  z-index: $z-index-tooltip;
+  transition: top $transition-fast;
+  
+  &:focus {
+    top: 6px;
+  }
+}
+
+// =============================================================================
+// SEARCH IN HEADER (Optional)
+// =============================================================================
+
+.header-search {
+  position: relative;
+  margin-top: $spacing-md;
+  width: 100%;
+  max-width: 300px;
+  
+  @include mobile-only {
+    max-width: 250px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: $spacing-xs $spacing-md;
+    padding-right: 2.5rem;
+    border: 1px solid $border-medium;
+    border-radius: $border-radius-sm;
+    font-size: $small-font-size;
+    background-color: $background-primary;
+    
+    &:focus {
+      outline: none;
+      border-color: $primary-500;
+      box-shadow: 0 0 0 2px rgba($primary-500, 0.2);
+    }
+  }
+  
+  .search-button {
+    position: absolute;
+    right: $spacing-xs;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: $text-muted;
+    cursor: pointer;
+    padding: 0.25rem;
+    
+    &:hover {
+      color: $primary-600;
+    }
+    
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+// =============================================================================
+// RESPONSIVE NAVIGATION ADJUSTMENTS
+// =============================================================================
+
+// Ensure navigation works well across all breakpoints
+@include mobile-only {
+  .site-header {
+    .site-title {
+      text-align: center;
+    }
+    
+    .site-nav .page-link {
+      width: 100%;
+      max-width: 250px;
+      text-align: center;
+    }
+  }
+}
+
+@include tablet-up {
+  .site-nav .trigger {
+    justify-content: center;
+    gap: $spacing-xs;
+  }
+}
+
+@include desktop-up {
+  .site-nav .page-link {
+    margin: 0 $spacing-sm;
+    padding: $spacing-sm $spacing-xl;
+  }
+  
+  .footer-content {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+// =============================================================================
+// NAVIGATION UTILITIES
+// =============================================================================
+
+// Hide navigation items on specific pages
+.nav-hide-on-homepage .page-link[href="/"] {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+// Highlight external links
+.page-link[href^="http"]:not([href*="projectqpub.com"])::after {
+  content: '↗';
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  opacity: 0.7;
+}
+
+// Print styles
+@media print {
+  .site-header,
+  .site-nav,
+  .site-footer {
+    display: none;
+  }
+}

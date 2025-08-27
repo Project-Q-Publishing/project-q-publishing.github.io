@@ -1,0 +1,932 @@
+// Project Q Publishing - UI Component Library
+// Reusable components with consistent brand styling
+
+// =============================================================================
+// BUTTON SYSTEM
+// =============================================================================
+
+// Base button styles
+%button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-lg;
+  border: 1px solid transparent;
+  border-radius: $border-radius-md;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $font-weight-medium;
+  line-height: 1.5;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all $transition-fast;
+  user-select: none;
+  white-space: nowrap;
+  
+  &:focus {
+    outline: 2px solid $primary-300;
+    outline-offset: 2px;
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  // Icon spacing
+  svg, i {
+    width: 1em;
+    height: 1em;
+    
+    &:not(:only-child) {
+      &:first-child {
+        margin-right: $spacing-xs;
+      }
+      
+      &:last-child {
+        margin-left: $spacing-xs;
+      }
+    }
+  }
+}
+
+// Primary button
+.btn-primary {
+  @extend %button-base;
+  background-color: $button-primary-bg;
+  color: $button-primary-text;
+  border-color: $button-primary-bg;
+  
+  &:hover:not(:disabled) {
+    background-color: $button-primary-hover;
+    border-color: $button-primary-hover;
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: $shadow-sm;
+  }
+}
+
+// Secondary button
+.btn-secondary {
+  @extend %button-base;
+  background-color: $button-secondary-bg;
+  color: $button-secondary-text;
+  border-color: $button-secondary-border;
+  
+  &:hover:not(:disabled) {
+    background-color: $button-secondary-hover;
+    border-color: $primary-600;
+    color: $primary-700;
+  }
+}
+
+// Accent button
+.btn-accent {
+  @extend %button-base;
+  background-color: $button-accent-bg;
+  color: $button-accent-text;
+  border-color: $button-accent-bg;
+  
+  &:hover:not(:disabled) {
+    background-color: $button-accent-hover;
+    border-color: $button-accent-hover;
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+}
+
+// Ghost button
+.btn-ghost {
+  @extend %button-base;
+  background-color: transparent;
+  color: $primary-600;
+  border-color: transparent;
+  
+  &:hover:not(:disabled) {
+    background-color: $primary-50;
+    color: $primary-700;
+  }
+}
+
+// Danger button
+.btn-danger {
+  @extend %button-base;
+  background-color: $error-500;
+  color: $text-inverse;
+  border-color: $error-500;
+  
+  &:hover:not(:disabled) {
+    background-color: $error-600;
+    border-color: $error-600;
+  }
+}
+
+// Button sizes
+.btn-sm {
+  padding: $spacing-xs $spacing-md;
+  font-size: $small-font-size;
+}
+
+.btn-lg {
+  padding: $spacing-md $spacing-xl;
+  font-size: $large-font-size;
+}
+
+// Full-width button
+.btn-block {
+  width: 100%;
+}
+
+// Button group
+.btn-group {
+  display: inline-flex;
+  
+  .btn {
+    border-radius: 0;
+    
+    &:first-child {
+      border-top-left-radius: $border-radius-md;
+      border-bottom-left-radius: $border-radius-md;
+    }
+    
+    &:last-child {
+      border-top-right-radius: $border-radius-md;
+      border-bottom-right-radius: $border-radius-md;
+    }
+    
+    &:not(:last-child) {
+      border-right: none;
+    }
+  }
+}
+
+// Loading button state
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    width: 1em;
+    height: 1em;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: btn-spin 0.8s linear infinite;
+  }
+}
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+// =============================================================================
+// FORM COMPONENTS
+// =============================================================================
+
+// Base form element styles
+%form-element-base {
+  display: block;
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: 1.5;
+  color: $text-primary;
+  background-color: $background-primary;
+  border: 1px solid $border-medium;
+  border-radius: $border-radius-sm;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary-500;
+    box-shadow: 0 0 0 3px rgba($primary-500, 0.1);
+  }
+  
+  &::placeholder {
+    color: $text-muted;
+  }
+  
+  &:disabled {
+    background-color: $background-secondary;
+    color: $text-disabled;
+    cursor: not-allowed;
+  }
+}
+
+// Input field
+.form-input {
+  @extend %form-element-base;
+}
+
+// Textarea
+.form-textarea {
+  @extend %form-element-base;
+  resize: vertical;
+  min-height: 100px;
+}
+
+// Select dropdown
+.form-select {
+  @extend %form-element-base;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right $spacing-sm center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+  padding-right: $spacing-xl;
+  appearance: none;
+}
+
+// Form group
+.form-group {
+  margin-bottom: $spacing-lg;
+}
+
+// Form label
+.form-label {
+  display: block;
+  margin-bottom: $spacing-xs;
+  font-weight: $font-weight-medium;
+  color: $text-primary;
+}
+
+// Form help text
+.form-help {
+  margin-top: $spacing-xs;
+  font-size: $small-font-size;
+  color: $text-muted;
+}
+
+// Form validation states
+.form-input {
+  &.is-valid {
+    border-color: $success-500;
+    
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($success-500, 0.1);
+    }
+  }
+  
+  &.is-invalid {
+    border-color: $error-500;
+    
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($error-500, 0.1);
+    }
+  }
+}
+
+.invalid-feedback {
+  margin-top: $spacing-xs;
+  font-size: $small-font-size;
+  color: $error-600;
+}
+
+.valid-feedback {
+  margin-top: $spacing-xs;
+  font-size: $small-font-size;
+  color: $success-600;
+}
+
+// Checkbox and radio
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $spacing-sm;
+  
+  .form-check-input {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.125rem;
+    margin-right: $spacing-sm;
+  }
+  
+  .form-check-label {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+}
+
+// Search form
+.search-form {
+  position: relative;
+  
+  .search-input {
+    @extend .form-input;
+    padding-right: 3rem;
+  }
+  
+  .search-btn {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: $text-muted;
+    cursor: pointer;
+    padding: 0.25rem;
+    
+    &:hover {
+      color: $primary-600;
+    }
+  }
+}
+
+// =============================================================================
+// ALERT COMPONENTS
+// =============================================================================
+
+%alert-base {
+  padding: $spacing-md $spacing-lg;
+  border: 1px solid transparent;
+  border-radius: $border-radius-md;
+  margin-bottom: $spacing-md;
+  position: relative;
+  
+  .alert-title {
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-xs;
+  }
+  
+  .alert-close {
+    position: absolute;
+    top: $spacing-sm;
+    right: $spacing-sm;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0.7;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.alert-success {
+  @extend %alert-base;
+  background-color: $success-50;
+  border-color: $success-200;
+  color: $success-800;
+}
+
+.alert-warning {
+  @extend %alert-base;
+  background-color: $warning-50;
+  border-color: $warning-200;
+  color: $warning-800;
+}
+
+.alert-error {
+  @extend %alert-base;
+  background-color: $error-50;
+  border-color: $error-200;
+  color: $error-800;
+}
+
+.alert-info {
+  @extend %alert-base;
+  background-color: $info-50;
+  border-color: $info-200;
+  color: $info-800;
+}
+
+// =============================================================================
+// BADGE & TAG COMPONENTS
+// =============================================================================
+
+// Base badge
+%badge-base {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-size: $small-font-size;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+  border-radius: $border-radius-sm;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+// Category tags
+.category-tag {
+  @extend %badge-base;
+  background-color: $secondary-100;
+  color: $secondary-700;
+  transition: all $transition-fast;
+  
+  &:hover {
+    background-color: $secondary-200;
+    color: $secondary-800;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+}
+
+// Programming language badges
+.lang-badge {
+  @extend %badge-base;
+  background-color: $primary-100;
+  color: $primary-800;
+}
+
+// Difficulty badges
+.difficulty-badge {
+  @extend %badge-base;
+  
+  &.beginner {
+    background-color: $success-100;
+    color: $success-800;
+  }
+  
+  &.intermediate {
+    background-color: $warning-100;
+    color: $warning-800;
+  }
+  
+  &.advanced {
+    background-color: $error-100;
+    color: $error-800;
+  }
+}
+
+// Price badge
+.price-badge {
+  @extend %badge-base;
+  background-color: $accent-400;
+  color: $accent-900;
+  font-weight: $font-weight-semibold;
+}
+
+// Status badges
+.status-badge {
+  @extend %badge-base;
+  
+  &.new {
+    background-color: $success-500;
+    color: $text-inverse;
+  }
+  
+  &.featured {
+    background-color: $accent-500;
+    color: $accent-900;
+  }
+  
+  &.bestseller {
+    background-color: $error-500;
+    color: $text-inverse;
+  }
+}
+
+// Removable tag
+.tag-removable {
+  @extend %badge-base;
+  background-color: $gray-200;
+  color: $gray-800;
+  padding-right: $spacing-xs;
+  
+  .tag-remove {
+    margin-left: $spacing-xs;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 0.875rem;
+    
+    &:hover {
+      color: $error-600;
+    }
+  }
+}
+
+// =============================================================================
+// LOADING & STATE COMPONENTS
+// =============================================================================
+
+// Spinner
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid $gray-200;
+  border-top-color: $primary-500;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.spinner-lg {
+  width: 2rem;
+  height: 2rem;
+  border-width: 3px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+// Skeleton loader
+.skeleton {
+  background: linear-gradient(90deg, $gray-200 25%, $gray-100 50%, $gray-200 75%);
+  background-size: 200% 100%;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+  border-radius: $border-radius-sm;
+}
+
+@keyframes skeleton-pulse {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-text {
+  @extend .skeleton;
+  height: 1rem;
+  margin-bottom: $spacing-xs;
+  
+  &:last-child {
+    margin-bottom: 0;
+    width: 60%;
+  }
+}
+
+.skeleton-title {
+  @extend .skeleton;
+  height: 1.5rem;
+  margin-bottom: $spacing-sm;
+}
+
+.skeleton-image {
+  @extend .skeleton;
+  width: 100%;
+  height: 200px;
+}
+
+// Progress bar
+.progress {
+  width: 100%;
+  height: 0.5rem;
+  background-color: $gray-200;
+  border-radius: $border-radius-sm;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: $primary-500;
+  border-radius: inherit;
+  transition: width $transition-base;
+}
+
+// Empty state
+.empty-state {
+  text-align: center;
+  padding: $spacing-xxl $spacing-lg;
+  color: $text-muted;
+  
+  .empty-icon {
+    font-size: 3rem;
+    margin-bottom: $spacing-lg;
+    color: $gray-400;
+  }
+  
+  .empty-title {
+    font-size: $h4-font-size;
+    font-weight: $font-weight-medium;
+    color: $text-secondary;
+    margin-bottom: $spacing-sm;
+  }
+  
+  .empty-description {
+    max-width: 400px;
+    margin: 0 auto $spacing-lg;
+  }
+}
+
+// =============================================================================
+// NAVIGATION ENHANCEMENTS
+// =============================================================================
+
+// Enhanced breadcrumbs
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  padding: $spacing-sm 0;
+  margin-bottom: $spacing-lg;
+  font-size: $small-font-size;
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: $text-muted;
+    
+    &:not(:last-child)::after {
+      content: '/';
+      margin: 0 $spacing-sm;
+      color: $border-dark;
+    }
+    
+    &:last-child {
+      color: $text-primary;
+      font-weight: $font-weight-medium;
+    }
+    
+    a {
+      color: $text-muted;
+      text-decoration: none;
+      transition: color $transition-fast;
+      
+      &:hover {
+        color: $primary-600;
+      }
+    }
+  }
+}
+
+// Enhanced pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-xs;
+  margin: $spacing-xl 0;
+  
+  .page-item {
+    a, span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid $border-light;
+      border-radius: $border-radius-sm;
+      text-decoration: none;
+      color: $text-primary;
+      transition: all $transition-fast;
+      font-weight: $font-weight-medium;
+      
+      &:hover:not(.disabled) {
+        background-color: $primary-50;
+        border-color: $primary-300;
+        color: $primary-700;
+      }
+    }
+    
+    &.active {
+      a, span {
+        background-color: $primary-500;
+        border-color: $primary-500;
+        color: $text-inverse;
+      }
+    }
+    
+    &.disabled {
+      a, span {
+        color: $text-disabled;
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    }
+  }
+  
+  .page-prev,
+  .page-next {
+    a, span {
+      width: auto;
+      padding: 0 $spacing-md;
+    }
+  }
+}
+
+// Tab navigation
+.nav-tabs {
+  display: flex;
+  border-bottom: 1px solid $border-light;
+  margin-bottom: $spacing-lg;
+  
+  .nav-item {
+    margin-bottom: -1px;
+    
+    .nav-link {
+      display: block;
+      padding: $spacing-md $spacing-lg;
+      color: $text-secondary;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-bottom: none;
+      border-radius: $border-radius-sm $border-radius-sm 0 0;
+      transition: all $transition-fast;
+      
+      &:hover {
+        color: $primary-600;
+        border-color: $border-light;
+        background-color: $background-secondary;
+      }
+      
+      &.active {
+        color: $primary-600;
+        background-color: $background-primary;
+        border-color: $border-light;
+        border-bottom-color: $background-primary;
+      }
+    }
+  }
+}
+
+// =============================================================================
+// PUBLISHING-SPECIFIC COMPONENTS
+// =============================================================================
+
+// Book card enhancement
+.book-card {
+  transition: all $transition-base;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+  
+  .book-cover-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: $border-radius-md $border-radius-md 0 0;
+    
+    .book-cover {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform $transition-base;
+    }
+    
+    .book-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.7));
+      opacity: 0;
+      transition: opacity $transition-base;
+      display: flex;
+      align-items: flex-end;
+      padding: $spacing-md;
+      
+      .quick-actions {
+        display: flex;
+        gap: $spacing-sm;
+      }
+    }
+    
+    &:hover {
+      .book-cover {
+        transform: scale(1.05);
+      }
+      
+      .book-overlay {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .book-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+    margin: $spacing-sm 0;
+  }
+}
+
+// Author bio card
+.author-card {
+  display: flex;
+  gap: $spacing-lg;
+  padding: $spacing-lg;
+  background-color: $background-secondary;
+  border-radius: $border-radius-md;
+  
+  .author-avatar {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .author-info {
+    .author-name {
+      font-size: $h5-font-size;
+      font-weight: $font-weight-semibold;
+      margin-bottom: $spacing-xs;
+    }
+    
+    .author-bio {
+      color: $text-secondary;
+      margin-bottom: $spacing-sm;
+    }
+    
+    .author-links {
+      display: flex;
+      gap: $spacing-md;
+      
+      a {
+        color: $text-muted;
+        text-decoration: none;
+        
+        &:hover {
+          color: $primary-600;
+        }
+      }
+    }
+  }
+}
+
+// Review/testimonial block
+.testimonial {
+  background-color: $background-secondary;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  border-left: 4px solid $primary-500;
+  
+  .testimonial-text {
+    font-style: italic;
+    font-size: $large-font-size;
+    margin-bottom: $spacing-md;
+    color: $text-secondary;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .author-details {
+      .author-name {
+        font-weight: $font-weight-medium;
+        color: $text-primary;
+      }
+      
+      .author-title {
+        font-size: $small-font-size;
+        color: $text-muted;
+      }
+    }
+  }
+}
+
+// Code example component
+.code-example {
+  margin: $spacing-lg 0;
+  
+  .code-header {
+    background-color: $gray-800;
+    color: $gray-300;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-md $border-radius-md 0 0;
+    font-size: $small-font-size;
+    font-family: $code-font-family;
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    
+    .code-title {
+      flex: 1;
+    }
+    
+    .code-copy {
+      background: none;
+      border: none;
+      color: $gray-400;
+      cursor: pointer;
+      padding: $spacing-xs;
+      
+      &:hover {
+        color: $gray-200;
+      }
+    }
+  }
+  
+  pre {
+    margin: 0;
+    border-radius: 0 0 $border-radius-md $border-radius-md;
+  }
+}

@@ -1,63 +1,13 @@
 // Custom styles for Project Q Publishing
-// Navigation always below site title
+// Import variable system first
+@import "variables";
+@import "colors";
+@import "typography";
+@import "layout";
+@import "responsive";
+@import "components";
+@import "navigation";
+@import "brand-integration";
 
-// Force navigation to display below title at all screen sizes
-.site-header {
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .site-title {
-    margin-bottom: 15px;
-    font-size: 1.8em;
-    font-weight: 300;
-  }
-}
-
-// Navigation styling for all screen sizes
-.site-nav {
-  position: static !important;
-  float: none !important;
-  
-  .trigger {
-    position: static !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    display: block !important;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  .page-link {
-    display: inline-block;
-    margin: 0 15px;
-    color: #424242;
-    font-size: 1.1em;
-    
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-// Mobile specific adjustments
-@media screen and (max-width: 600px) {
-  .site-header .site-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .site-nav .page-link {
-    margin: 0 10px;
-    font-size: 1em;
-  }
-}
-
-// Ensure proper spacing for content
-.page-content {
-  padding-top: 20px;
-}
+// Legacy navigation styles have been replaced with comprehensive navigation system
+// All navigation styling is now handled in _navigation.scss

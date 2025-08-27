@@ -1,4 +1,10 @@
 <nav class="site-nav">
+  <button class="nav-trigger" aria-label="Toggle mobile navigation" type="button">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+  
   <div class="trigger">
     <a class="page-link" href="{{ "/" | relative_url }}">Home</a>
     <a class="page-link" href="{{ "/about" | relative_url }}">About</a>
@@ -6,3 +12,56 @@
     <a class="page-link" href="{{ "/contact" | relative_url }}">Contact</a>
   </div>
 </nav>
+
+<script>
+// Mobile navigation toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const navTrigger = document.querySelector('.nav-trigger');
+  const siteNav = document.querySelector('.site-nav');
+  const body = document.body;
+  
+  if (navTrigger && siteNav) {
+    navTrigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Toggle nav-open class
+      if (siteNav.classList.contains('nav-open')) {
+        siteNav.classList.remove('nav-open');
+        body.classList.remove('nav-open');
+      } else {
+        siteNav.classList.add('nav-open');
+        body.classList.add('nav-open');
+      }
+    });
+    
+    // Close menu when clicking on a navigation link
+    const navLinks = document.querySelectorAll('.site-nav .page-link');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        siteNav.classList.remove('nav-open');
+        body.classList.remove('nav-open');
+      });
+    });
+    
+    // Close menu when clicking outside (on the overlay)
+    const trigger = document.querySelector('.site-nav .trigger');
+    if (trigger) {
+      trigger.addEventListener('click', function(e) {
+        // Only close if clicking on the overlay itself, not the links
+        if (e.target === trigger) {
+          siteNav.classList.remove('nav-open');
+          body.classList.remove('nav-open');
+        }
+      });
+    }
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && siteNav.classList.contains('nav-open')) {
+        siteNav.classList.remove('nav-open');
+        body.classList.remove('nav-open');
+      }
+    });
+  }
+});
+</script>
