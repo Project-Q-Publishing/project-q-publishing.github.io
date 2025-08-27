@@ -141,11 +141,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-paginate
-
-# Plugin configuration
-paginate: 10
-paginate_path: "/posts/page:num"
 
 # Feed configuration
 feed:
