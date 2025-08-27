@@ -1,2 +1,81 @@
-theme: jekyll-theme-minimal
+# Project Q Publishing - Jekyll Configuration
+# Technical programming books for developers and engineers
+
+# Site settings
+domain: projectqpub.com
+url: https://projectqpub.com
+baseurl: ""
+
 title: Project Q Publishing
+email: info@projectqpub.com
+description: >-
+  Quality technical programming books for developers and engineers.
+
+# Author/Publisher info
+author:
+  name: Project Q Publishing
+  email: info@projectqpub.com
+
+# Social media and professional links
+social_links:
+  linkedin: https://linkedin.com/company/project-q-publishing
+  github: https://github.com/Project-Q-Publishing
+
+# Navigation structure
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Books
+    url: /books/
+  - title: Contact
+    url: /contact/
+
+# Collections configuration
+collections:
+  books:
+    output: true
+    permalink: /books/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "books"
+    values:
+      layout: "book"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO and metadata
+lang: en-US
+timezone: America/New_York
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - CLAUDE.md
