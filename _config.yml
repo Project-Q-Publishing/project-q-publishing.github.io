@@ -7,36 +7,120 @@ url: https://projectqpub.com
 baseurl: ""
 
 title: Project Q Publishing
+tagline: "Quality Technical Programming Books"
 email: info@projectqpub.com
 description: >-
   Quality technical programming books for developers and engineers.
+  Specializing in comprehensive, practical resources covering modern 
+  programming languages, software development methodologies, and 
+  emerging technologies.
+
+# Extended metadata
+keywords: "programming books, technical books, software development, programming languages, coding, developers, engineers, technology"
+company:
+  name: "Project Q Publishing"
+  founded: 2025
+  focus: "Non-fiction technical programming books"
+  target_audience: "Developers, engineers, and technology professionals"
 
 # Author/Publisher info
 author:
   name: Project Q Publishing
   email: info@projectqpub.com
+  bio: "Dedicated to creating exceptional technical programming books that serve the needs of today's developers and engineers."
 
 # Social media and professional links
 social_links:
   linkedin: https://linkedin.com/company/project-q-publishing
   github: https://github.com/Project-Q-Publishing
+  twitter: https://twitter.com/projectqpub
+  email: info@projectqpub.com
+
+# Social media usernames for SEO
+social:
+  name: Project Q Publishing
+  links:
+    - https://linkedin.com/company/project-q-publishing
+    - https://github.com/Project-Q-Publishing
+    - https://twitter.com/projectqpub
+
+# Contact information
+contact:
+  email: info@projectqpub.com
+  business_hours: "Monday-Friday, 9 AM - 5 PM EST"
+  response_time: "We typically respond within 24 hours"
+  submissions: "We welcome manuscript submissions from experienced developers"
 
 # Navigation structure
 navigation:
   - title: Home
     url: /
+    description: "Homepage with featured books and company overview"
   - title: About
     url: /about/
+    description: "Learn about our mission and publishing philosophy"
   - title: Books
     url: /books/
+    description: "Browse our catalog of technical programming books"
   - title: Contact
     url: /contact/
+    description: "Get in touch for inquiries and manuscript submissions"
+
+# Header configuration
+header:
+  show_tagline: true
+  show_navigation: true
+  style: "centered"
+
+# Footer configuration  
+footer:
+  show_social_links: true
+  show_contact_info: true
+  show_copyright: true
+  additional_links:
+    - title: "Privacy Policy"
+      url: "/privacy/"
+    - title: "Submission Guidelines"
+      url: "/submissions/"
 
 # Collections configuration
 collections:
   books:
     output: true
     permalink: /books/:name/
+    description: "Technical programming books published by Project Q Publishing"
+    sort_by: publication_date
+    sort_order: desc
+  authors:
+    output: true
+    permalink: /authors/:name/
+    description: "Authors who have published with Project Q Publishing"
+  categories:
+    output: false
+    description: "Book categories and programming topics"
+
+# Book metadata schema
+book_schema:
+  required_fields:
+    - title
+    - author
+    - isbn
+    - publication_date
+    - price
+    - description
+  optional_fields:
+    - subtitle
+    - series
+    - edition
+    - pages
+    - cover_image
+    - sample_chapters
+    - purchase_links
+    - reviews
+    - difficulty_level
+    - programming_languages
+    - topics
+    - target_audience
 
 # Default front matter
 defaults:
@@ -61,10 +145,71 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
+
+# Plugin configuration
+paginate: 10
+paginate_path: "/posts/page:num/"
+
+# Feed configuration
+feed:
+  posts_limit: 20
+  excerpt_only: false
 
 # SEO and metadata
 lang: en-US
 timezone: America/New_York
+google_analytics: # Add GA tracking ID when ready
+google_site_verification: # Add Google Search Console verification
+
+# SEO defaults
+seo:
+  type: Organization
+  name: "Project Q Publishing"
+  headline: "Quality Technical Programming Books"
+  description: "Specializing in comprehensive, practical programming resources for developers and engineers"
+  url: "https://projectqpub.com"
+  logo: "/assets/images/logo.png"
+  social_image: "/assets/images/social-card.png"
+
+# Schema.org structured data
+organization:
+  name: "Project Q Publishing"
+  url: "https://projectqpub.com"
+  logo: "https://projectqpub.com/assets/images/logo.png"
+  same_as:
+    - "https://linkedin.com/company/project-q-publishing"
+    - "https://github.com/Project-Q-Publishing"
+    - "https://twitter.com/projectqpub"
+
+# Content and formatting
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Development settings
+show_drafts: false
+future: false
+safe: false
+incremental: false
+profile: false
+
+# Archive and categorization
+archive_url: "/archive/"
+category_url: "/categories/"
+tag_url: "/tags/"
+
+# Site features
+features:
+  search: true
+  comments: false
+  analytics: false
+  social_sharing: true
+  author_bio: true
+  related_posts: true
 
 # Exclude from processing
 exclude:
@@ -79,3 +224,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - CLAUDE.md
+  - README.md
+  - LICENSE
+  - package.json
+  - package-lock.json
