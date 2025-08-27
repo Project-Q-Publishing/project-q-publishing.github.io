@@ -75,17 +75,28 @@
   }
 }
 
-// Logo integration (when logo is added)
+// Logo integration with text
 .site-logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: $spacing-md;
   text-decoration: none;
   margin-bottom: $spacing-md;
+  transition: all $transition-fast;
+  
+  @include mobile-only {
+    gap: $spacing-sm;
+  }
   
   .logo-image {
     height: 40px;
     width: auto;
+    transition: transform $transition-fast;
+    
+    @include mobile-only {
+      height: 32px;
+    }
     
     @include desktop-up {
       height: 50px;
@@ -93,8 +104,36 @@
   }
   
   .logo-text {
-    @extend .site-title;
+    font-family: $heading-font-family;
+    font-size: $h2-font-size;
+    font-weight: $font-weight-light;
+    color: $text-primary;
+    letter-spacing: -0.01em;
     margin-bottom: 0;
+    
+    @include mobile-only {
+      font-size: $h3-font-size;
+    }
+    
+    @include desktop-up {
+      font-size: $h1-font-size * 0.9;
+    }
+  }
+  
+  &:hover {
+    text-decoration: none;
+    
+    .logo-image {
+      transform: scale(1.05);
+    }
+    
+    .logo-text {
+      color: $primary-600;
+    }
+  }
+  
+  &:visited .logo-text {
+    color: $text-primary;
   }
 }
 

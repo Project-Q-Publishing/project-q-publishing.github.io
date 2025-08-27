@@ -1,6 +1,9 @@
 <header class="site-header" role="banner">
   <div class="wrapper">
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-logo" rel="author" href="{{ "/" | relative_url }}">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Project Q Publishing Logo" class="logo-image">
+      <span class="logo-text">{{ site.title | escape }}</span>
+    </a>
     
     {% include navigation.html %}
   </div>
