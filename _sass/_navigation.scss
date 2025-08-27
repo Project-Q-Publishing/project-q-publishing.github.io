@@ -107,9 +107,13 @@
   float: none !important;
   width: 100%;
   
-  // Navigation trigger (mobile hamburger - hidden by default since we use vertical layout)
+  // Navigation trigger (mobile hamburger - hidden on desktop)
   .nav-trigger {
     display: none;
+    
+    @include mobile-only {
+      display: block;
+    }
   }
   
   // Navigation menu container
@@ -209,98 +213,136 @@
 // ENHANCED MOBILE NAVIGATION (Optional Hamburger Menu)
 // =============================================================================
 
-// Enhanced mobile menu toggle
+// Enhanced mobile navigation with hamburger menu
 @include mobile-only {
+  .site-header {
+    position: relative;
+  }
+  
   .site-nav {
+    // Always show hamburger menu on mobile
     .nav-trigger {
       display: block;
       position: absolute;
-      top: 50%;
+      top: $spacing-md;
       right: $spacing-md;
-      transform: translateY(-50%);
-      width: 36px;
-      height: 36px;
+      width: 44px;
+      height: 44px;
       background: none;
-      border: 2px solid $primary-500;
-      border-radius: $border-radius-sm;
+      border: none;
       cursor: pointer;
       z-index: $z-index-dropdown + 1;
+      padding: $spacing-sm;
       
-      // Hamburger icon
-      span {
+      // Three horizontal lines (hamburger icon)
+      .hamburger-line {
         display: block;
-        width: 18px;
+        width: 22px;
         height: 2px;
         background-color: $primary-600;
-        margin: 3px auto;
-        transition: all $transition-fast;
+        margin: 4px 0;
+        transition: all 0.3s ease;
         border-radius: 1px;
         
-        &:nth-child(1) {
-          transform-origin: left center;
+        &:first-child {
+          transform-origin: center;
         }
         
-        &:nth-child(3) {
-          transform-origin: left center;
+        &:nth-child(2) {
+          transform-origin: center;
+        }
+        
+        &:last-child {
+          transform-origin: center;
         }
       }
       
-      &:hover {
-        border-color: $primary-600;
-        
-        span {
-          background-color: $primary-700;
-        }
+      &:hover .hamburger-line {
+        background-color: $primary-700;
+      }
+      
+      &:focus {
+        outline: 2px solid $primary-300;
+        outline-offset: 2px;
+        border-radius: $border-radius-sm;
       }
     }
     
-    // Mobile menu collapsed state
+    // Hide menu by default on mobile
     .trigger {
       display: none !important;
-      position: fixed !important;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba($background-primary, 0.98);
-      backdrop-filter: blur(10px);
-      flex-direction: column !important;
-      justify-content: center !important;
-      align-items: center !important;
-      z-index: $z-index-dropdown;
-      animation: slideInDown 0.3s ease-out;
-      
-      .page-link {
-        width: auto;
-        padding: $spacing-lg $spacing-xl;
-        margin: $spacing-sm 0;
-        font-size: $h4-font-size;
-        border-radius: $border-radius-md;
-      }
     }
     
-    // Mobile menu expanded state
+    // Show menu when nav-open class is applied
     &.nav-open {
       .nav-trigger {
-        span {
-          &:nth-child(1) {
-            transform: rotate(45deg) translate(2px, 2px);
+        // Transform hamburger into X
+        .hamburger-line {
+          &:first-child {
+            transform: rotate(45deg) translate(5px, 5px);
           }
           
           &:nth-child(2) {
             opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
           }
           
-          &:nth-child(3) {
-            transform: rotate(-45deg) translate(2px, -2px);
+          &:last-child {
+            transform: rotate(-45deg) translate(7px, -6px);
           }
         }
       }
       
       .trigger {
         display: flex !important;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($gray-800, 0.96);
+        backdrop-filter: blur(10px);
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        z-index: $z-index-dropdown;
+        animation: slideInDown 0.3s ease-out;
+        gap: $spacing-md;
+        
+        .page-link {
+          width: auto;
+          padding: $spacing-lg $spacing-xl;
+          margin: $spacing-xs 0;
+          font-size: $h4-font-size;
+          border-radius: $border-radius-lg;
+          color: $text-inverse;
+          background-color: rgba($primary-600, 0.1);
+          border: 2px solid transparent;
+          transition: all $transition-base;
+          text-align: center;
+          min-width: 200px;
+          
+          &:hover {
+            background-color: $primary-600;
+            border-color: $primary-400;
+            transform: scale(1.05);
+            color: $text-inverse;
+          }
+          
+          &.active,
+          &[aria-current="page"] {
+            background-color: $accent-600;
+            color: $gray-900;
+            border-color: $accent-400;
+          }
+        }
       }
     }
+  }
+  
+  // Prevent body scroll when menu is open
+  body.nav-open {
+    overflow: hidden;
   }
 }
 
