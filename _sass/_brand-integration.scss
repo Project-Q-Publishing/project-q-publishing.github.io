@@ -1,0 +1,712 @@
+// Project Q Publishing - Brand Integration
+// Apply brand colors and styling throughout all pages
+
+// =============================================================================
+// GLOBAL BRAND OVERRIDES
+// =============================================================================
+
+// Override any remaining minima defaults with brand colors
+.site-header {
+  border-bottom-color: $primary-200;
+}
+
+// Ensure all content uses brand typography and spacing
+.page-content {
+  .wrapper {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0 $container-padding-mobile;
+    
+    @include tablet-up {
+      padding: 0 $container-padding;
+    }
+  }
+}
+
+// =============================================================================
+// HOMEPAGE BRAND STYLING
+// =============================================================================
+
+// Homepage hero section
+.home-hero {
+  text-align: center;
+  padding: $spacing-xxl 0;
+  background: linear-gradient(135deg, $primary-50 0%, $background-primary 100%);
+  margin-bottom: $spacing-xxl;
+  
+  @include mobile-only {
+    padding: $spacing-xl 0;
+    margin-bottom: $spacing-xl;
+  }
+  
+  h1 {
+    color: $primary-700;
+    margin-bottom: $spacing-lg;
+    font-weight: $font-weight-light;
+  }
+  
+  .hero-tagline {
+    font-size: $large-font-size;
+    color: $text-secondary;
+    margin-bottom: $spacing-xl;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include mobile-only {
+      font-size: $base-font-size;
+      margin-bottom: $spacing-lg;
+    }
+  }
+}
+
+// Featured books section
+.featured-books {
+  margin: $spacing-xxl 0;
+  
+  h2 {
+    text-align: center;
+    color: $primary-600;
+    margin-bottom: $spacing-xl;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -$spacing-sm;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: $accent-500;
+      border-radius: 2px;
+    }
+  }
+  
+  .coming-soon {
+    text-align: center;
+    background-color: $primary-50;
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    border: 2px solid $primary-200;
+    color: $primary-700;
+    font-style: italic;
+    font-size: $large-font-size;
+  }
+}
+
+// Focus areas section
+.focus-areas {
+  background-color: $background-secondary;
+  padding: $spacing-xxl $spacing-lg;
+  margin: $spacing-xxl 0;
+  border-radius: $border-radius-lg;
+  
+  @include mobile-only {
+    padding: $spacing-xl $spacing-md;
+    margin: $spacing-xl 0;
+  }
+  
+  h2 {
+    text-align: center;
+    color: $primary-600;
+    margin-bottom: $spacing-xl;
+  }
+  
+  ul {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    li {
+      margin-bottom: $spacing-md;
+      padding-left: $spacing-md;
+      position: relative;
+      color: $text-primary;
+      font-size: $large-font-size;
+      
+      &::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: $primary-500;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+// Call-to-action section
+.home-cta {
+  text-align: center;
+  padding: $spacing-xl 0;
+  
+  h2 {
+    color: $secondary-600;
+    margin-bottom: $spacing-lg;
+  }
+  
+  .cta-links {
+    display: flex;
+    gap: $spacing-lg;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    a {
+      @extend .btn-primary;
+      text-decoration: none;
+      
+      &:nth-child(2) {
+        @extend .btn-secondary;
+      }
+    }
+  }
+  
+  .contact-cta {
+    margin-top: $spacing-xl;
+    padding-top: $spacing-xl;
+    border-top: 1px solid $border-light;
+    
+    a {
+      @extend .btn-accent;
+      text-decoration: none;
+    }
+  }
+}
+
+// =============================================================================
+// ABOUT PAGE BRAND STYLING
+// =============================================================================
+
+.about-page {
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-xxl;
+    
+    h1 {
+      color: $primary-600;
+    }
+    
+    .page-description {
+      font-size: $large-font-size;
+      color: $text-secondary;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  .mission-statement {
+    background: linear-gradient(135deg, $secondary-50 0%, $primary-50 100%);
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    margin: $spacing-xl 0;
+    border-left: 4px solid $primary-500;
+    
+    p {
+      font-size: $large-font-size;
+      line-height: 1.7;
+      color: $primary-800;
+      margin-bottom: 0;
+    }
+  }
+  
+  .focus-grid {
+    display: grid;
+    gap: $spacing-xl;
+    margin: $spacing-xxl 0;
+    
+    @include tablet-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .focus-item {
+    h3 {
+      color: $secondary-600;
+      margin-bottom: $spacing-md;
+      display: flex;
+      align-items: center;
+      
+      &::before {
+        content: '●';
+        color: $accent-500;
+        margin-right: $spacing-sm;
+      }
+    }
+    
+    ul {
+      li {
+        color: $text-secondary;
+        margin-bottom: $spacing-xs;
+      }
+    }
+  }
+  
+  .quality-standards {
+    background-color: $accent-50;
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    border: 2px solid $accent-200;
+    
+    h3 {
+      color: $accent-800;
+    }
+    
+    ul li {
+      color: $accent-700;
+    }
+  }
+  
+  .author-section {
+    text-align: center;
+    background-color: $background-secondary;
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    margin: $spacing-xl 0;
+    
+    h2 {
+      color: $primary-600;
+    }
+  }
+  
+  .philosophy-quote {
+    text-align: center;
+    font-size: $large-font-size;
+    font-style: italic;
+    color: $secondary-700;
+    margin: $spacing-xxl 0;
+    padding: $spacing-xl;
+    background-color: $secondary-50;
+    border-radius: $border-radius-lg;
+    border: 2px solid $secondary-200;
+    
+    &::before,
+    &::after {
+      content: '"';
+      color: $secondary-400;
+      font-size: 2em;
+    }
+  }
+  
+  .page-footer {
+    text-align: center;
+    margin-top: $spacing-xxl;
+    padding-top: $spacing-xl;
+    border-top: 1px solid $border-light;
+    
+    em {
+      color: $primary-600;
+      font-weight: $font-weight-medium;
+      font-size: $large-font-size;
+    }
+  }
+}
+
+// =============================================================================
+// BOOKS PAGE BRAND STYLING
+// =============================================================================
+
+.books-page {
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-xxl;
+    
+    h1 {
+      color: $primary-600;
+    }
+  }
+  
+  .coming-soon-notice {
+    background: linear-gradient(135deg, $accent-50 0%, $accent-100 100%);
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    text-align: center;
+    margin-bottom: $spacing-xxl;
+    border: 2px solid $accent-300;
+    
+    p {
+      font-size: $large-font-size;
+      color: $accent-800;
+      font-style: italic;
+      margin-bottom: 0;
+    }
+  }
+  
+  .book-categories {
+    .category-section {
+      margin-bottom: $spacing-xxl;
+      
+      h3 {
+        color: $secondary-600;
+        margin-bottom: $spacing-lg;
+        padding-bottom: $spacing-sm;
+        border-bottom: 2px solid $secondary-200;
+        display: flex;
+        align-items: center;
+        
+        &::before {
+          content: '📚';
+          margin-right: $spacing-sm;
+        }
+      }
+      
+      .category-description {
+        background-color: $background-secondary;
+        padding: $spacing-lg;
+        border-radius: $border-radius-md;
+        margin-bottom: $spacing-lg;
+        
+        ul {
+          margin-bottom: 0;
+          
+          li {
+            color: $text-secondary;
+            margin-bottom: $spacing-sm;
+            
+            &::marker {
+              color: $primary-500;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .update-cta {
+    background: linear-gradient(135deg, $primary-50 0%, $secondary-50 100%);
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    text-align: center;
+    margin-top: $spacing-xxl;
+    border: 2px solid $primary-200;
+    
+    h3 {
+      color: $primary-700;
+      margin-bottom: $spacing-md;
+    }
+    
+    a {
+      @extend .btn-primary;
+      text-decoration: none;
+    }
+  }
+  
+  .page-footer {
+    text-align: center;
+    margin-top: $spacing-xxl;
+    padding-top: $spacing-xl;
+    border-top: 1px solid $border-light;
+    
+    em {
+      color: $primary-600;
+      font-weight: $font-weight-medium;
+      font-size: $large-font-size;
+    }
+  }
+}
+
+// =============================================================================
+// CONTACT PAGE BRAND STYLING
+// =============================================================================
+
+.contact-page {
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-xxl;
+    
+    h1 {
+      color: $primary-600;
+    }
+  }
+  
+  .contact-grid {
+    display: grid;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-xxl;
+    
+    @include desktop-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .contact-section {
+    background-color: $background-secondary;
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    border-left: 4px solid $primary-500;
+    
+    h3 {
+      color: $primary-600;
+      margin-bottom: $spacing-lg;
+      display: flex;
+      align-items: center;
+      
+      &::before {
+        content: '✉️';
+        margin-right: $spacing-sm;
+      }
+    }
+    
+    &.publishing-inquiries h3::before { content: '📝'; }
+    &.general-contact h3::before { content: '📧'; }
+    &.readers h3::before { content: '📖'; }
+    &.business h3::before { content: '🤝'; }
+    
+    .contact-highlight {
+      background-color: $accent-100;
+      padding: $spacing-md;
+      border-radius: $border-radius-sm;
+      margin: $spacing-md 0;
+      border-left: 3px solid $accent-500;
+      
+      strong {
+        color: $accent-800;
+      }
+    }
+    
+    .submission-guidelines {
+      background-color: $secondary-50;
+      padding: $spacing-lg;
+      border-radius: $border-radius-md;
+      margin: $spacing-md 0;
+      
+      h4 {
+        color: $secondary-700;
+        margin-bottom: $spacing-sm;
+      }
+      
+      ul li {
+        color: $secondary-600;
+        margin-bottom: $spacing-xs;
+      }
+    }
+  }
+  
+  .contact-info-placeholder {
+    text-align: center;
+    background: linear-gradient(135deg, $primary-50 0%, $accent-50 100%);
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    margin: $spacing-xl 0;
+    border: 2px solid $primary-200;
+    
+    .placeholder-text {
+      color: $primary-700;
+      font-style: italic;
+      font-size: $large-font-size;
+    }
+  }
+  
+  .page-footer {
+    text-align: center;
+    margin-top: $spacing-xxl;
+    padding-top: $spacing-xl;
+    border-top: 1px solid $border-light;
+    
+    em {
+      color: $secondary-600;
+      font-weight: $font-weight-medium;
+      font-size: $large-font-size;
+    }
+  }
+}
+
+// =============================================================================
+// BOOK DETAIL PAGE STYLING (for future books)
+// =============================================================================
+
+.book-detail-page {
+  .book-header {
+    display: grid;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-xxl;
+    
+    @include tablet-up {
+      grid-template-columns: 300px 1fr;
+    }
+    
+    @include desktop-up {
+      grid-template-columns: 400px 1fr;
+    }
+  }
+  
+  .book-cover-section {
+    text-align: center;
+    
+    .book-cover-large {
+      max-width: 100%;
+      height: auto;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+      border: 1px solid $border-light;
+    }
+    
+    .book-actions {
+      margin-top: $spacing-lg;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+      
+      .btn-primary {
+        @extend .btn-primary;
+      }
+      
+      .btn-secondary {
+        @extend .btn-secondary;
+      }
+    }
+  }
+  
+  .book-info {
+    .book-title {
+      color: $primary-700;
+      margin-bottom: $spacing-sm;
+    }
+    
+    .book-author {
+      color: $secondary-600;
+      font-size: $large-font-size;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .book-price {
+      @extend .price-badge;
+      font-size: 1.25em;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .book-meta {
+      display: grid;
+      gap: $spacing-sm;
+      margin-bottom: $spacing-lg;
+      
+      .meta-row {
+        display: flex;
+        
+        .meta-label {
+          font-weight: $font-weight-semibold;
+          color: $text-secondary;
+          width: 120px;
+          flex-shrink: 0;
+        }
+        
+        .meta-value {
+          color: $text-primary;
+        }
+      }
+    }
+    
+    .book-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-sm;
+      margin: $spacing-lg 0;
+    }
+  }
+  
+  .book-description {
+    background-color: $background-secondary;
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    margin: $spacing-xl 0;
+    
+    h2 {
+      color: $primary-600;
+      margin-bottom: $spacing-lg;
+    }
+  }
+}
+
+// =============================================================================
+// CONTENT ENHANCEMENTS
+// =============================================================================
+
+// Enhanced list styling throughout the site
+.page-content {
+  ul:not(.horizontal-list):not(.footer-links):not(.breadcrumb) {
+    li {
+      position: relative;
+      padding-left: $spacing-md;
+      margin-bottom: $spacing-sm;
+      
+      &::before {
+        content: '▶';
+        position: absolute;
+        left: 0;
+        color: $primary-500;
+        font-size: 0.8em;
+        top: 0.1em;
+      }
+    }
+  }
+  
+  // Enhanced blockquotes
+  blockquote {
+    border-left-color: $primary-400;
+    background-color: $primary-50;
+    
+    &::before {
+      content: '"';
+      font-size: 3em;
+      color: $primary-300;
+      position: absolute;
+      top: -0.2em;
+      left: 0.2em;
+    }
+  }
+  
+  // Code blocks with brand colors
+  pre {
+    background-color: $code-block-background;
+    border: 1px solid $primary-200;
+  }
+  
+  code {
+    background-color: $inline-code-background;
+    color: $inline-code-text;
+    border-color: $inline-code-border;
+  }
+}
+
+// =============================================================================
+// RESPONSIVE BRAND ADJUSTMENTS
+// =============================================================================
+
+@include mobile-only {
+  .home-hero,
+  .focus-areas,
+  .contact-section {
+    margin-left: -$spacing-md;
+    margin-right: -$spacing-md;
+    border-radius: 0;
+  }
+  
+  .cta-links {
+    flex-direction: column;
+    align-items: center;
+    
+    .btn-primary,
+    .btn-secondary {
+      width: 200px;
+    }
+  }
+}
+
+// =============================================================================
+// PRINT STYLES WITH BRAND COLORS
+// =============================================================================
+
+@media print {
+  .home-hero,
+  .focus-areas {
+    background: none !important;
+    border: 1px solid $border-dark !important;
+  }
+  
+  .btn-primary,
+  .btn-secondary,
+  .btn-accent {
+    background: none !important;
+    color: $text-primary !important;
+    border: 1px solid $border-dark !important;
+  }
+}
