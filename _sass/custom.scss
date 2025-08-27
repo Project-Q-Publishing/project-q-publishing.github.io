@@ -1,23 +1,54 @@
 // Custom styles for Project Q Publishing
-// This file will be expanded in Phase 3: Styling & Branding
+// Mobile navigation fix and basic responsive improvements
 
-// Basic structure for future customization
-.site-header {
-  // Header styles will be added in Phase 3
+// Fix mobile navigation overlay issue
+@media screen and (max-width: 600px) {
+  .site-nav .trigger {
+    // Remove fixed positioning that causes overlay
+    position: static !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    
+    // Make navigation stack vertically on mobile
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .site-nav .page-link {
+    display: inline-block;
+    margin: 0 10px;
+    color: #424242;
+    
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  
+  // Ensure header doesn't have overflow issues
+  .site-header {
+    position: relative;
+    overflow: visible;
+  }
+  
+  // Add some spacing for better mobile readability
+  .page-content {
+    padding-top: 20px;
+  }
 }
 
-.site-navigation {
-  // Navigation styles will be added in Phase 3
-}
-
-.site-footer {
-  // Footer styles will be added in Phase 3
-}
-
-.book {
-  // Book layout styles will be added in Phase 3
-}
-
-.page {
-  // Page layout styles will be added in Phase 3
+// Desktop navigation improvements
+@media screen and (min-width: 601px) {
+  .site-nav .trigger {
+    display: block;
+  }
+  
+  .site-nav .page-link {
+    margin-left: 20px;
+    
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
