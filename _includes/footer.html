@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="site-footer-content">
+    <div class="footer-info">
+      <p>&copy; {{ "now" | date: "%Y" }} {{ site.title | default: "Project Q Publishing" }}. All rights reserved.</p>
+      {% if site.email %}
+        <p>Contact: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      {% endif %}
+    </div>
+    
+    {% if site.social_links %}
+    <div class="footer-social">
+      {% for social in site.social_links %}
+        <a href="{{ social[1] }}" target="_blank" rel="noopener noreferrer">{{ social[0] | capitalize }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</footer>

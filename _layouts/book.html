@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<article class="book">
+  <header class="book-header">
+    <div class="book-cover">
+      {% if page.cover_image %}
+        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }} cover" class="book-cover-image">
+      {% else %}
+        <div class="book-cover-placeholder">{{ page.title }}</div>
+      {% endif %}
+    </div>
+    
+    <div class="book-info">
+      <h1 class="book-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+        <h2 class="book-subtitle">{{ page.subtitle }}</h2>
+      {% endif %}
+      {% if page.author %}
+        <p class="book-author">by {{ page.author }}</p>
+      {% endif %}
+      {% if page.price %}
+        <p class="book-price">${{ page.price }}</p>
+      {% endif %}
+    </div>
+  </header>
+  
+  <div class="book-content">
+    {{ content }}
+  </div>
+  
+  {% if page.isbn or page.pages or page.publication_date %}
+  <aside class="book-details">
+    <h3>Book Details</h3>
+    <ul>
+      {% if page.isbn %}
+        <li><strong>ISBN:</strong> {{ page.isbn }}</li>
+      {% endif %}
+      {% if page.pages %}
+        <li><strong>Pages:</strong> {{ page.pages }}</li>
+      {% endif %}
+      {% if page.publication_date %}
+        <li><strong>Publication Date:</strong> {{ page.publication_date | date: "%B %d, %Y" }}</li>
+      {% endif %}
+    </ul>
+  </aside>
+  {% endif %}
+</article>
