@@ -1,16 +1,8 @@
-<nav class="site-navigation">
-  <ul class="nav-list">
-    <li class="nav-item">
-      <a href="{{ "/" | relative_url }}" {% if page.url == "/" %}class="current"{% endif %}>Home</a>
-    </li>
-    <li class="nav-item">
-      <a href="{{ "/about" | relative_url }}" {% if page.url == "/about/" %}class="current"{% endif %}>About</a>
-    </li>
-    <li class="nav-item">
-      <a href="{{ "/books" | relative_url }}" {% if page.url == "/books/" %}class="current"{% endif %}>Books</a>
-    </li>
-    <li class="nav-item">
-      <a href="{{ "/contact" | relative_url }}" {% if page.url == "/contact/" %}class="current"{% endif %}>Contact</a>
-    </li>
-  </ul>
+<nav class="site-nav">
+  <div class="trigger">
+    <a class="page-link" href="{{ "/" | relative_url }}">Home</a>
+    <a class="page-link" href="{{ "/about/" | relative_url }}">About</a>
+    <a class="page-link" href="{{ "/books/" | relative_url }}">Books</a>
+    <a class="page-link" href="{{ "/contact/" | relative_url }}">Contact</a>
+  </div>
 </nav>
