@@ -48,33 +48,53 @@ $accent-900: darken($brand-accent, 40%);     // #998024
 // Success (green)
 $success-50: #f0f9f4;
 $success-100: #d4f0dc;
+$success-200: #a7e3b8;
+$success-300: #7dd396;
+$success-400: #4ade80;
 $success-500: #16a34a;
 $success-600: #15803d;
 $success-700: #166534;
+$success-800: #14532d;
+$success-900: #0f3b21;
 $success: $success-500;
 
 // Warning (orange-yellow)
 $warning-50: #fffbeb;
 $warning-100: #fef3c7;
+$warning-200: #fde68a;
+$warning-300: #fcd34d;
+$warning-400: #fbbf24;
 $warning-500: #f59e0b;
 $warning-600: #d97706;
 $warning-700: #b45309;
+$warning-800: #92400e;
+$warning-900: #78350f;
 $warning: $warning-500;
 
 // Error (red)
 $error-50: #fef2f2;
 $error-100: #fecaca;
+$error-200: #fca5a5;
+$error-300: #f87171;
+$error-400: #f56565;
 $error-500: #ef4444;
 $error-600: #dc2626;
 $error-700: #b91c1c;
+$error-800: #991b1b;
+$error-900: #7f1d1d;
 $error: $error-500;
 
 // Info (cyan)
 $info-50: #ecfeff;
 $info-100: #cffafe;
+$info-200: #a5f3fc;
+$info-300: #67e8f9;
+$info-400: #22d3ee;
 $info-500: #06b6d4;
 $info-600: #0891b2;
 $info-700: #0e7490;
+$info-800: #155e75;
+$info-900: #164e63;
 $info: $info-500;
 
 // =============================================================================
