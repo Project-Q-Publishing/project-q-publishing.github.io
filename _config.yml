@@ -8,12 +8,9 @@ baseurl: ""
 
 title: Project Q Publishing
 tagline: "Quality Technical Programming Books"
-email: info@projectqpub.com
+email: contact@projectqpub.com
 description: >-
   Quality technical programming books for developers and engineers.
-  Specializing in comprehensive, practical resources covering modern 
-  programming languages, software development methodologies, and 
-  emerging technologies.
 
 # Extended metadata
 keywords: "programming books, technical books, software development, programming languages, coding, developers, engineers, technology"
@@ -26,7 +23,7 @@ company:
 # Author/Publisher info
 author:
   name: Project Q Publishing
-  email: info@projectqpub.com
+  email: contact@projectqpub.com
   bio: "Dedicated to creating exceptional technical programming books that serve the needs of today's developers and engineers."
 
 # Social media and professional links
@@ -34,7 +31,6 @@ social_links:
   linkedin: https://linkedin.com/company/project-q-publishing
   github: https://github.com/Project-Q-Publishing
   twitter: https://twitter.com/projectqpub
-  email: info@projectqpub.com
 
 # Social media usernames for SEO
 social:
@@ -47,7 +43,7 @@ social:
 # Contact information
 contact:
   email: info@projectqpub.com
-  business_hours: "Monday-Friday, 9 AM - 5 PM EST"
+  business_hours: "Monday-Friday, 9 AM - 5 PM GMT"
   response_time: "We typically respond within 24 hours"
   submissions: "We welcome manuscript submissions from experienced developers"
 
@@ -57,13 +53,13 @@ navigation:
     url: /
     description: "Homepage with featured books and company overview"
   - title: About
-    url: /about/
+    url: /about
     description: "Learn about our mission and publishing philosophy"
   - title: Books
-    url: /books/
+    url: /books
     description: "Browse our catalog of technical programming books"
   - title: Contact
-    url: /contact/
+    url: /contact
     description: "Get in touch for inquiries and manuscript submissions"
 
 # Header configuration
@@ -79,21 +75,21 @@ footer:
   show_copyright: true
   additional_links:
     - title: "Privacy Policy"
-      url: "/privacy/"
+      url: "/privacy"
     - title: "Submission Guidelines"
-      url: "/submissions/"
+      url: "/submissions"
 
 # Collections configuration
 collections:
   books:
     output: true
-    permalink: /books/:name/
+    permalink: /books/:name
     description: "Technical programming books published by Project Q Publishing"
     sort_by: publication_date
     sort_order: desc
   authors:
     output: true
-    permalink: /authors/:name/
+    permalink: /authors/:name
     description: "Authors who have published with Project Q Publishing"
   categories:
     output: false
@@ -149,7 +145,7 @@ plugins:
 
 # Plugin configuration
 paginate: 10
-paginate_path: "/posts/page:num/"
+paginate_path: "/posts/page:num"
 
 # Feed configuration
 feed:
@@ -158,7 +154,7 @@ feed:
 
 # SEO and metadata
 lang: en-US
-timezone: America/New_York
+timezone: Europe/London
 google_analytics: # Add GA tracking ID when ready
 google_site_verification: # Add Google Search Console verification
 
@@ -198,9 +194,9 @@ incremental: false
 profile: false
 
 # Archive and categorization
-archive_url: "/archive/"
-category_url: "/categories/"
-tag_url: "/tags/"
+archive_url: "/archive"
+category_url: "/categories"
+tag_url: "/tags"
 
 # Site features
 features:
