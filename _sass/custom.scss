@@ -1,54 +1,63 @@
 // Custom styles for Project Q Publishing
-// Mobile navigation fix and basic responsive improvements
+// Navigation always below site title
 
-// Fix mobile navigation overlay issue
-@media screen and (max-width: 600px) {
-  .site-nav .trigger {
-    // Remove fixed positioning that causes overlay
+// Force navigation to display below title at all screen sizes
+.site-header {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .site-title {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    font-weight: 300;
+  }
+}
+
+// Navigation styling for all screen sizes
+.site-nav {
+  position: static !important;
+  float: none !important;
+  
+  .trigger {
     position: static !important;
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    
-    // Make navigation stack vertically on mobile
-    display: block;
+    display: block !important;
     text-align: center;
     padding: 10px 0;
   }
   
-  .site-nav .page-link {
+  .page-link {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 15px;
     color: #424242;
+    font-size: 1.1em;
     
-    &:not(:last-child) {
-      margin-right: 10px;
+    &:hover {
+      text-decoration: underline;
     }
-  }
-  
-  // Ensure header doesn't have overflow issues
-  .site-header {
-    position: relative;
-    overflow: visible;
-  }
-  
-  // Add some spacing for better mobile readability
-  .page-content {
-    padding-top: 20px;
   }
 }
 
-// Desktop navigation improvements
-@media screen and (min-width: 601px) {
-  .site-nav .trigger {
-    display: block;
+// Mobile specific adjustments
+@media screen and (max-width: 600px) {
+  .site-header .site-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
   }
   
   .site-nav .page-link {
-    margin-left: 20px;
-    
-    &:first-child {
-      margin-left: 0;
-    }
+    margin: 0 10px;
+    font-size: 1em;
   }
+}
+
+// Ensure proper spacing for content
+.page-content {
+  padding-top: 20px;
 }
