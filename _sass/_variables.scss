@@ -1,0 +1,121 @@
+// Project Q Publishing - Core Variables
+// Override minima theme defaults with custom brand values
+
+// =============================================================================
+// BRAND COLORS
+// =============================================================================
+
+// Primary brand colors
+$brand-primary: #0000ff;      // Bright blue - primary brand color
+$brand-secondary: #0067b3;    // Professional blue - secondary brand color  
+$brand-accent: #ffd53d;       // Golden yellow - accent color
+
+// Override minima's default brand color
+$brand-color: $brand-primary;
+
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+// Font families - professional system font stack
+$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", 
+                   "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", 
+                   Roboto, Helvetica, Arial, sans-serif;
+
+$heading-font-family: $base-font-family;
+
+$code-font-family: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas", 
+                   "Roboto Mono", "Ubuntu Mono", "Liberation Mono", 
+                   "Courier New", monospace;
+
+// Font sizes - modular scale based on 1.125 ratio
+$base-font-size: 16px;
+$small-font-size: $base-font-size * 0.875;   // 14px
+$large-font-size: $base-font-size * 1.125;   // 18px
+
+// Font scale for headings
+$h1-font-size: $base-font-size * 2.25;       // 36px
+$h2-font-size: $base-font-size * 1.875;      // 30px
+$h3-font-size: $base-font-size * 1.5;        // 24px
+$h4-font-size: $base-font-size * 1.25;       // 20px
+$h5-font-size: $base-font-size * 1.125;      // 18px
+$h6-font-size: $base-font-size;              // 16px
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$base-font-weight: $font-weight-normal;
+
+// Line heights
+$base-line-height: 1.6;
+$heading-line-height: 1.25;
+$code-line-height: 1.4;
+
+// =============================================================================
+// SPACING & LAYOUT
+// =============================================================================
+
+// Base spacing unit - 8px grid system
+$spacing-unit: 30px;           // Keep minima default for compatibility
+$base-spacing: 8px;            // New 8px grid base
+$spacing-xs: $base-spacing * 0.5;    // 4px
+$spacing-sm: $base-spacing;           // 8px
+$spacing-md: $base-spacing * 2;       // 16px
+$spacing-lg: $base-spacing * 3;       // 24px
+$spacing-xl: $base-spacing * 4;       // 32px
+$spacing-xxl: $base-spacing * 6;      // 48px
+
+// Layout widths
+$content-width: 1000px;        // Override minima default (800px)
+$text-width: 700px;            // Optimal reading width
+$wide-width: 1200px;           // Full-width sections
+
+// Container padding
+$container-padding: $spacing-lg;
+$container-padding-mobile: $spacing-md;
+
+// =============================================================================
+// RESPONSIVE BREAKPOINTS
+// =============================================================================
+
+// Mobile-first breakpoints
+$breakpoint-mobile: 600px;     // Keep minima compatibility
+$breakpoint-tablet: 768px;     // Standard tablet breakpoint
+$breakpoint-desktop: 1024px;   // Desktop breakpoint
+$breakpoint-wide: 1200px;      // Wide desktop
+
+// Minima compatibility
+$on-palm: $breakpoint-mobile;
+$on-laptop: $breakpoint-desktop;
+$on-medium: $breakpoint-mobile;
+$on-large: $breakpoint-desktop;
+
+// =============================================================================
+// COMPONENT VARIABLES
+// =============================================================================
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-md: 6px;
+$border-radius-lg: 8px;
+
+// Shadows
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+// Transitions
+$transition-fast: 0.15s ease-in-out;
+$transition-base: 0.25s ease-in-out;
+$transition-slow: 0.35s ease-in-out;
+
+// Z-index scale
+$z-index-dropdown: 1000;
+$z-index-sticky: 1010;
+$z-index-fixed: 1020;
+$z-index-modal: 1030;
+$z-index-tooltip: 1040;
