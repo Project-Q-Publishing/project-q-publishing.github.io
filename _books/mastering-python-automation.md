@@ -4,7 +4,8 @@ subtitle: "From Scripts to Production Systems"
 author: "Sarah Johnson"
 isbn: "978-1-234567-89-0"
 publication_date: "2024-11-15"
-price: "$49.99"
+price: 49.99
+currency: "USD"
 pages: 485
 cover_image: "/assets/images/books/mastering-python-automation.jpg"
 description: >-

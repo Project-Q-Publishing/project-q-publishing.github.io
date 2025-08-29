@@ -51,7 +51,13 @@ body_class: "books-page"
               {% endif %}
               
               {% if book.price %}
-                <span class="price">{{ book.price }}</span>
+                <span class="price">
+                  {% if book.currency == "USD" %}${{ book.price }}
+                  {% elsif book.currency == "EUR" %}€{{ book.price }}
+                  {% elsif book.currency == "GBP" %}£{{ book.price }}
+                  {% else %}{{ book.currency }} {{ book.price }}
+                  {% endif %}
+                </span>
               {% endif %}
             </div>
             

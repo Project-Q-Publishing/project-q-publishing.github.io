@@ -21,7 +21,13 @@ layout: default
         <p class="book-author">by {{ page.author }}</p>
       {% endif %}
       {% if page.price %}
-        <p class="book-price">${{ page.price }}</p>
+        <p class="book-price">
+          {% if page.currency == "USD" %}${{ page.price }}
+          {% elsif page.currency == "EUR" %}€{{ page.price }}
+          {% elsif page.currency == "GBP" %}£{{ page.price }}
+          {% else %}{{ page.currency }} {{ page.price }}
+          {% endif %}
+        </p>
       {% endif %}
     </div>
   </header>

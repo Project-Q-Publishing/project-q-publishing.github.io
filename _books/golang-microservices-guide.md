@@ -4,7 +4,8 @@ subtitle: "Building Scalable Distributed Systems"
 author: "Michael Chen"
 isbn: "978-1-234567-90-6"
 publication_date: "2024-09-20"
-price: "$54.99"
+price: 54.99
+currency: "USD"
 pages: 612
 cover_image: "/assets/images/books/golang-microservices-guide.jpg"
 description: >-

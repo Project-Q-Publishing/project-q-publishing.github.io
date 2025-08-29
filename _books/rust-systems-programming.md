@@ -4,7 +4,8 @@ subtitle: "Memory-Safe High-Performance Applications"
 author: "Alex Rodriguez"
 isbn: "978-1-234567-91-3"
 publication_date: "2024-12-01"
-price: "$59.99"
+price: 59.99
+currency: "USD"
 pages: 728
 cover_image: "/assets/images/books/rust-systems-programming.jpg"
 description: >-
