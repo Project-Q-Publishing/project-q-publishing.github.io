@@ -269,16 +269,47 @@
 // Book card specific layout
 .book-card {
   @extend .card;
+  display: flex;
+  flex-direction: column;
   
   .book-cover {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 180px;
+    overflow: hidden;
     display: block;
+    flex-shrink: 0;
+    
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .placeholder-cover {
+      width: 100%;
+      height: 100%;
+      background-color: $background-secondary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $text-muted;
+      font-size: $small-font-size;
+      text-align: center;
+    }
   }
   
   .book-info {
     padding: $spacing-lg;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   
   .book-title {
@@ -294,6 +325,11 @@
     font-weight: $font-weight-semibold;
     color: $primary-600;
     font-size: 1.1em;
+  }
+  
+  .book-actions {
+    margin-top: auto;
+    padding-top: $spacing-md;
   }
 }
 
