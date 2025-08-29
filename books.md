@@ -18,13 +18,15 @@ body_class: "books-page"
       {% for book in sorted_books %}
         <article class="book-card">
           <div class="book-cover">
-            {% if book.cover_image %}
-              <img src="{{ book.cover_image }}" alt="{{ book.title }} cover" loading="lazy">
-            {% else %}
-              <div class="placeholder-cover">
-                <span>{{ book.title | truncatewords: 2 }}</span>
-              </div>
-            {% endif %}
+            <a href="{{ book.url }}">
+              {% if book.cover_image %}
+                <img src="{{ book.cover_image }}" alt="{{ book.title }} cover" loading="lazy">
+              {% else %}
+                <div class="placeholder-cover">
+                  <span>{{ book.title | truncatewords: 2 }}</span>
+                </div>
+              {% endif %}
+            </a>
           </div>
           
           <div class="book-info">
