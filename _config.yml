@@ -120,6 +120,7 @@ book_schema:
     - programming_languages
     - topics
     - target_audience
+    - featured
 
 # Default front matter
 defaults:

@@ -27,6 +27,7 @@ topics:
   - "Performance Optimization"
   - "Security"
 target_audience: "Python Developers, Backend Engineers, Full-stack Developers"
+featured: true
 purchase_links:
   amazon: "https://amazon.com/dp/example5"
   publisher: "/contact"

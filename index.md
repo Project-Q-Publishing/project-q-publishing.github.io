@@ -12,7 +12,7 @@ description: "Quality technical programming books for developers and engineers"
 <section class="featured-books">
   <h2>Featured Books</h2>
   <div class="books-grid featured">
-    {% assign featured_books = site.books | sort: 'publication_date' | reverse | limit: 3 %}
+    {% assign featured_books = site.books | where: 'featured', true | sort: 'publication_date' | reverse %}
     {% for book in featured_books %}
       <article class="book-card featured">
         <div class="book-cover">

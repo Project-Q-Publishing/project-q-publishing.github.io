@@ -27,6 +27,7 @@ topics:
   - "Monitoring"
   - "Security"
 target_audience: "DevOps Engineers, System Administrators, Software Architects"
+featured: true
 purchase_links:
   amazon: "https://amazon.com/dp/example4"
   publisher: "/contact"

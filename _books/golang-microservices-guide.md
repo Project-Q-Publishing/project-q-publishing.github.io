@@ -26,6 +26,7 @@ topics:
   - "Service Mesh"
   - "Observability"
 target_audience: "Backend Engineers, System Architects, DevOps Engineers"
+featured: true
 series: "Modern Architecture Series"
 edition: "1st Edition"
 purchase_links:
