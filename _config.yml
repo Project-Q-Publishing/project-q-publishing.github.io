@@ -58,9 +58,12 @@ navigation:
   - title: Books
     url: /books
     description: "Browse our catalog of technical programming books"
+  - title: Submissions
+    url: /submissions
+    description: "Submit your technical programming manuscript"
   - title: Contact
     url: /contact
-    description: "Get in touch for inquiries and manuscript submissions"
+    description: "Get in touch for inquiries and support"
 
 # Header configuration
 header:
@@ -74,10 +77,10 @@ footer:
   show_contact_info: true
   show_copyright: true
   additional_links:
+    - title: "Manuscript Submissions"
+      url: "/submissions"
     - title: "Privacy Policy"
       url: "/privacy"
-    - title: "Submission Guidelines"
-      url: "/submissions"
 
 # Collections configuration
 collections:
@@ -117,6 +120,7 @@ book_schema:
     - programming_languages
     - topics
     - target_audience
+    - featured
 
 # Default front matter
 defaults:

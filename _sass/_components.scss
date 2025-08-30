@@ -56,12 +56,13 @@
 .btn-primary {
   @extend %button-base;
   background-color: $button-primary-bg;
-  color: $button-primary-text;
+  color: $button-primary-text !important;
   border-color: $button-primary-bg;
   
   &:hover:not(:disabled) {
     background-color: $button-primary-hover;
     border-color: $button-primary-hover;
+    color: $button-primary-text !important;
     transform: translateY(-1px);
     box-shadow: $shadow-md;
   }
@@ -69,6 +70,13 @@
   &:active {
     transform: translateY(0);
     box-shadow: $shadow-sm;
+    color: $button-primary-text !important;
+  }
+  
+  // Ensure consistent text color in different contexts
+  &:visited,
+  &:link {
+    color: $button-primary-text !important;
   }
 }
 

@@ -52,4 +52,117 @@ layout: default
     </ul>
   </aside>
   {% endif %}
+  
+  {% comment %} Related Books Recommendations - Simplified approach {% endcomment %}
+  {% assign related_books = '' | split: '' %}
+  {% assign current_book = page %}
+  
+  {% comment %} First, find books with shared topics or programming languages {% endcomment %}
+  {% for book in site.books %}
+    {% unless book.url == current_book.url %}
+      {% assign is_related = false %}
+      
+      {% comment %} Check for shared topics {% endcomment %}
+      {% if current_book.topics and book.topics %}
+        {% for current_topic in current_book.topics %}
+          {% if book.topics contains current_topic %}
+            {% assign is_related = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      
+      {% comment %} Check for shared programming languages {% endcomment %}
+      {% unless is_related %}
+        {% if current_book.programming_languages and book.programming_languages %}
+          {% for current_lang in current_book.programming_languages %}
+            {% if book.programming_languages contains current_lang %}
+              {% assign is_related = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endunless %}
+      
+      {% comment %} Check for same difficulty level {% endcomment %}
+      {% unless is_related %}
+        {% if current_book.difficulty_level and book.difficulty_level == current_book.difficulty_level %}
+          {% assign is_related = true %}
+        {% endif %}
+      {% endunless %}
+      
+      {% comment %} Add related books {% endcomment %}
+      {% if is_related %}
+        {% assign related_books = related_books | push: book %}
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+  
+  {% comment %} If no related books found, show other recent books {% endcomment %}
+  {% if related_books.size == 0 %}
+    {% assign sorted_books = site.books | sort: 'publication_date' | reverse %}
+    {% for book in sorted_books limit: 3 %}
+      {% unless book.url == current_book.url %}
+        {% assign related_books = related_books | push: book %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+  
+  {% if related_books.size > 0 %}
+  <section class="related-books">
+    <h3>Related Books</h3>
+    <div class="books-grid related">
+      {% for book in related_books limit: 3 %}
+        <article class="book-card related">
+          <div class="book-cover">
+            <a href="{{ book.url }}">
+              {% if book.cover_image %}
+                <img src="{{ book.cover_image }}" alt="{{ book.title }} cover" loading="lazy">
+              {% else %}
+                <div class="placeholder-cover">
+                  <span>{{ book.title | truncatewords: 2 }}</span>
+                </div>
+              {% endif %}
+            </a>
+          </div>
+          
+          <div class="book-info">
+            <h4><a href="{{ book.url }}">{{ book.title }}</a></h4>
+            {% if book.subtitle %}
+              <p class="book-subtitle">{{ book.subtitle }}</p>
+            {% endif %}
+            
+            <p class="book-author">by {{ book.author }}</p>
+            
+            <div class="book-meta">
+              {% if book.programming_languages %}
+              <!--
+                <div class="languages">
+                  {% for lang in book.programming_languages limit: 2 %}
+                    <span class="language-tag">{{ lang }}</span>
+                  {% endfor %}
+                </div>
+              -->
+              {% endif %}
+              
+              {% if book.price %}
+                <span class="price">
+                  {% if book.currency == "USD" %}${{ book.price }}
+                  {% elsif book.currency == "EUR" %}€{{ book.price }}
+                  {% elsif book.currency == "GBP" %}£{{ book.price }}
+                  {% else %}{{ book.currency }} {{ book.price }}
+                  {% endif %}
+                </span>
+              {% endif %}
+            </div>
+            
+            <div class="book-actions">
+              <a href="{{ book.url }}" class="btn btn-primary btn-sm">Learn More</a>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 </article>

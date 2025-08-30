@@ -83,6 +83,28 @@
   @media screen and (min-width: $breakpoint-wide) {
     grid-template-columns: repeat(4, 1fr);
   }
+  
+  // Featured books on homepage - centered layout
+  &.featured {
+    justify-content: center;
+    
+    @media screen and (min-width: $breakpoint-mobile + 1px) {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 800px; // Constrain width for centering
+      margin: 0 auto;
+    }
+    
+    @media screen and (min-width: $breakpoint-desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1200px;
+    }
+    
+    // Don't expand to 4 columns for featured books
+    @media screen and (min-width: $breakpoint-wide) {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1200px;
+    }
+  }
 }
 
 // Feature grid for homepage sections

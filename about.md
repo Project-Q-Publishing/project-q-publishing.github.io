@@ -43,9 +43,58 @@ body_class: "about-page"
   </div>
 </section>
 
-<section class="author-section">
-  <h2>Featured Author</h2>
-  <p>Our inaugural publications will feature expert insights and practical knowledge from experienced professionals in the software development industry.</p>
+<section class="publishing-approach">
+  <h2>Our Publishing Approach</h2>
+  
+  <div class="approach-grid">
+    <div class="approach-item">
+      <h3>Author Partnership</h3>
+      <p>We work closely with experienced developers, engineers, and technology leaders who bring real-world expertise to their writing. Our authors are practitioners who understand the challenges facing today's development teams.</p>
+    </div>
+    
+    <div class="approach-item">
+      <h3>Rigorous Review Process</h3>
+      <p>Every manuscript undergoes thorough technical review by industry experts, ensuring accuracy, relevance, and practical value. We maintain high editorial standards while preserving each author's unique voice and insights.</p>
+    </div>
+    
+    <div class="approach-item">
+      <h3>Practical Focus</h3>
+      <p>Our books emphasize hands-on learning with extensive code examples, real-world case studies, and actionable advice that developers can immediately apply in their daily work.</p>
+    </div>
+  </div>
+</section>
+
+<section class="company-values">
+  <h2>Our Values</h2>
+  
+  <ul class="values-list">
+    <li><strong>Quality First:</strong> We never compromise on technical accuracy or editorial excellence</li>
+    <li><strong>Developer-Centric:</strong> Every decision is made with the reader's learning experience in mind</li>
+    <li><strong>Accessible Knowledge:</strong> Complex technical concepts explained clearly and practically</li>
+    <li><strong>Community Driven:</strong> We listen to the developer community and respond to their evolving needs</li>
+    <li><strong>Continuous Learning:</strong> Technology evolves, and our content reflects current best practices</li>
+  </ul>
+</section>
+
+<section class="target-audience">
+  <h2>Who We Serve</h2>
+  
+  <div class="audience-segments">
+    <div class="segment">
+      <h3>Professional Developers</h3>
+      <p>Software engineers and developers looking to deepen their expertise, learn new technologies, and advance their careers with comprehensive, practical resources.</p>
+    </div>
+    
+    <div class="segment">
+      <h3>Engineering Teams</h3>
+      <p>Development teams seeking authoritative references for architectural decisions, technology adoption, and best practices implementation.</p>
+    </div>
+    
+    <div class="segment">
+      <h3>Technology Leaders</h3>
+      <p>Technical leads, architects, and engineering managers who need in-depth understanding of technologies and methodologies to guide their teams effectively.</p>
+    </div>
+  </div>
 </section>
 
 <div class="philosophy-quote">
