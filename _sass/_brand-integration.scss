@@ -154,10 +154,6 @@
     a {
       @extend .btn-primary;
       text-decoration: none;
-      
-      &:nth-child(2) {
-        @extend .btn-secondary;
-      }
     }
   }
   
