@@ -136,11 +136,13 @@ layout: default
             
             <div class="book-meta">
               {% if book.programming_languages %}
+              <!--
                 <div class="languages">
                   {% for lang in book.programming_languages limit: 2 %}
                     <span class="language-tag">{{ lang }}</span>
                   {% endfor %}
                 </div>
+              -->
               {% endif %}
               
               {% if book.price %}
