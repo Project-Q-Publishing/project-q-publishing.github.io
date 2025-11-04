@@ -58,18 +58,15 @@ body_class: "about-page"
   
   <div class="audience-segments">
     <div class="segment">
-      <h3>Professional Developers</h3>
-      <p>Software engineers and developers looking to deepen their expertise, learn new technologies, and advance their careers with comprehensive, practical resources.</p>
+      <p><b>Professional Developers</b>: software engineers and developers looking to deepen their expertise, learn new technologies, and advance their careers with comprehensive, practical resources.</p>
     </div>
     
     <div class="segment">
-      <h3>Engineering Teams</h3>
-      <p>Development teams seeking authoritative references for architectural decisions, technology adoption, and best practices implementation.</p>
+      <p><b>Engineering Teams</b>: development teams seeking authoritative references for architectural decisions, technology adoption, and best practices implementation.</p>
     </div>
     
     <div class="segment">
-      <h3>Technology Leaders</h3>
-      <p>Technical leads, architects, and engineering managers who need in-depth understanding of technologies and methodologies to guide their teams effectively.</p>
+      <p><b>Technology Leaders</b>: technical leads, architects, and engineering managers who need in-depth understanding of technologies and methodologies to guide their teams effectively.</p>
     </div>
   </div>
 </section>
