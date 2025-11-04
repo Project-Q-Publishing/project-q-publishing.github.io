@@ -73,7 +73,7 @@ body_class: "about-page"
 
 <section class="company-values">
   <h2>Our Values</h2>
-  
+  <p>We have five core values:</p>  
   <ul class="values-list">
     <li><strong>Quality First:</strong> We never compromise on technical accuracy or editorial excellence</li>
     <li><strong>Developer-Centric:</strong> Every decision is made with the reader's learning experience in mind</li>
