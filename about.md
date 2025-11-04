@@ -40,15 +40,15 @@ body_class: "about-page"
   
   <div class="approach-grid">
     <div class="approach-item">
-      <p><b>Author Partnership</b>: we work closely with experienced developers, engineers, and technology leaders who bring real-world expertise to their writing. Our authors are practitioners who understand the challenges facing today's development teams.</p>
+      <p><strong>Author Partnership</strong>: we work closely with experienced developers, engineers, and technology leaders who bring real-world expertise to their writing. Our authors are practitioners who understand the challenges facing today's development teams.</p>
     </div>
     
     <div class="approach-item">
-      <p><b>Rigorous Review Process</b>: every manuscript undergoes thorough technical review by industry experts, ensuring accuracy, relevance, and practical value. We maintain high editorial standards while preserving each author's unique voice and insights.</p>
+      <p><strong>Rigorous Review Process</strong>: every manuscript undergoes thorough technical review by industry experts, ensuring accuracy, relevance, and practical value. We maintain high editorial standards while preserving each author's unique voice and insights.</p>
     </div>
     
     <div class="approach-item">
-      <p><b>Practical Focus</b>: our books emphasize hands-on learning with extensive code examples, real-world case studies, and actionable advice that developers can immediately apply in their daily work.</p>
+      <p><strong>Practical Focus</strong>: our books emphasize hands-on learning with extensive code examples, real-world case studies, and actionable advice that developers can immediately apply in their daily work.</p>
     </div>
   </div>
 </section>
@@ -58,15 +58,15 @@ body_class: "about-page"
   
   <div class="audience-segments">
     <div class="segment">
-      <p><b>Professional Developers</b>: software engineers and developers looking to deepen their expertise, learn new technologies, and advance their careers with comprehensive, practical resources.</p>
+      <p><strong>Professional Developers</strong>: software engineers and developers looking to deepen their expertise, learn new technologies, and advance their careers with comprehensive, practical resources.</p>
     </div>
     
     <div class="segment">
-      <p><b>Engineering Teams</b>: development teams seeking authoritative references for architectural decisions, technology adoption, and best practices implementation.</p>
+      <p><strong>Engineering Teams</strong>: development teams seeking authoritative references for architectural decisions, technology adoption, and best practices implementation.</p>
     </div>
     
     <div class="segment">
-      <p><b>Technology Leaders</b>: technical leads, architects, and engineering managers who need in-depth understanding of technologies and methodologies to guide their teams effectively.</p>
+      <p><strong>Technology Leaders</strong>: technical leads, architects, and engineering managers who need in-depth understanding of technologies and methodologies to guide their teams effectively.</p>
     </div>
   </div>
 </section>
