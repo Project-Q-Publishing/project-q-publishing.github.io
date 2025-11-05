@@ -40,6 +40,11 @@ social:
     - https://github.com/Project-Q-Publishing
     - https://twitter.com/projectqpub
 
+# Twitter card configuration for jekyll-seo-tag
+twitter:
+  username: projectqpub
+  card: summary_large_image
+
 # Contact information
 contact:
   email: info@projectqpub.com
@@ -153,9 +158,14 @@ feed:
 
 # SEO and metadata
 lang: en-US
+locale: en_US
 timezone: Europe/London
 google_analytics: # Add GA tracking ID when ready
 google_site_verification: # Add Google Search Console verification
+
+# Default image for social sharing (used by jekyll-seo-tag)
+logo: /assets/images/logo.png
+image: /assets/images/social-card.png
 
 # SEO defaults
 seo:
