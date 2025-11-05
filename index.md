@@ -72,15 +72,16 @@ description: "Quality technical programming books for developers and engineers"
         </article>
       {% endfor %}
     </div>
+    <div class="view-all-books">
+      <a href="/books" class="btn btn-outline">View All Books</a>
+    </div>
+
   {% else %}
     <div class="coming-soon-notice">
-      <p>Our featured technical programming books are currently in development. Check back soon for our inaugural releases.</p>
+      <p>Our books are currently in development. Check back soon for our first releases.</p>
     </div>
   {% endif %}
 
-  <div class="view-all-books">
-    <a href="/books" class="btn btn-outline">View All Books</a>
-  </div>
 </section>
 
 <section class="focus-areas">
