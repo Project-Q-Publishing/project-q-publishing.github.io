@@ -7,7 +7,7 @@ publication_date: "2024-09-20"
 price: 54.99
 currency: "USD"
 pages: 612
-cover_image: "/assets/images/books/golang-microservices-guide.jpg"
+cover_image: "/assets/images/books/golang-microservices-guide.webp"
 description: >-
   Learn to design, build, and deploy production-ready microservices using Go.
   This comprehensive guide covers everything from basic service design to 

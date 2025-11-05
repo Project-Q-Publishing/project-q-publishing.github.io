@@ -7,7 +7,7 @@ publication_date: "2024-10-15"
 price: 52.99
 currency: "USD"
 pages: 564
-cover_image: "/assets/images/books/docker-kubernetes-production.jpg"
+cover_image: "/assets/images/books/docker-kubernetes-production.webp"
 description: >-
   Master containerization and orchestration for production environments. This comprehensive 
   guide covers Docker best practices, Kubernetes deployment strategies, monitoring, 
