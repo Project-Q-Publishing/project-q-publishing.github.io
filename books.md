@@ -112,16 +112,18 @@ body_class: "books-page"
 {% endfor %}
 {% assign unique_languages = all_languages | uniq | sort %}
 
-{% if unique_languages.size > 0 %}
 <section class="programming-languages">
   <h2>Programming Languages</h2>
-  <div class="language-filter">
-    {% for language in unique_languages %}
-      <a href="#" class="language-tag" data-language="{{ language | slugify }}">{{ language }}</a>
-    {% endfor %}
-  </div>
+  {% if unique_languages.size > 0 %}
+    <div class="language-filter">
+      {% for language in unique_languages %}
+        <a href="#" class="language-tag" data-language="{{ language | slugify }}">{{ language }}</a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>Our upcoming books will cover multiple programming languages including Python, Go, Rust, and more.</p>
+  {% endif %}
 </section>
-{% endif %}
 
 <section class="update-cta">
   <h3>Stay Updated</h3>
