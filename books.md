@@ -64,7 +64,7 @@ body_class: "books-page"
             </div>
             
             <div class="book-actions">
-              <a href="{{ book.url }}" class="btn btn-primary">Learn More</a>
+              <a href="{{ book.url }}" class="btn btn-primary">View Book</a>
               {% if book.purchase_links.amazon %}
                 <a href="{{ book.purchase_links.amazon }}" class="btn btn-secondary" target="_blank" rel="noopener">Buy Now</a>
               {% endif %}
