@@ -74,7 +74,7 @@ description: "Quality technical programming books for developers and engineers"
     </div>
   {% else %}
     <div class="coming-soon-notice">
-      <p><em>Our featured technical programming books are currently in development. Check back soon for our inaugural releases.</em></p>
+      <p>Our featured technical programming books are currently in development. Check back soon for our inaugural releases.</p>
     </div>
   {% endif %}
 

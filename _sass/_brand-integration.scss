@@ -65,7 +65,7 @@
   margin: $spacing-xxl 0;
   
   h2 {
-    text-align: center;
+    text-align: left;
     color: $primary-600;
     margin-bottom: $spacing-xl;
     position: relative;
@@ -74,8 +74,7 @@
       content: '';
       position: absolute;
       bottom: -$spacing-sm;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
       width: 60px;
       height: 3px;
       background-color: $accent-500;
@@ -108,7 +107,7 @@
   }
   
   h2 {
-    text-align: center;
+    text-align: left;
     color: $primary-600;
     margin-bottom: $spacing-xl;
   }
@@ -137,7 +136,7 @@
 
 // Call-to-action section
 .home-cta {
-  text-align: center;
+  text-align: left;
   padding: $spacing-xl 0;
   
   h2 {
@@ -148,7 +147,7 @@
   .cta-links {
     display: flex;
     gap: $spacing-lg;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     
     a {
@@ -313,17 +312,24 @@
   
   .coming-soon-notice {
     background: linear-gradient(135deg, $accent-50 0%, $accent-100 100%);
-    padding: $spacing-xl;
+    padding: $spacing-lg $spacing-xl;
     border-radius: $border-radius-lg;
     text-align: center;
     margin-bottom: $spacing-xxl;
     border: 2px solid $accent-300;
-    
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
     p {
       font-size: $large-font-size;
       color: $accent-800;
       font-style: italic;
       margin-bottom: 0;
+      word-wrap: normal;
+      overflow-wrap: normal;
+      hyphens: none;
+      max-width: none;
     }
   }
   
