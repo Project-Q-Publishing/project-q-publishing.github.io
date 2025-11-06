@@ -1,18 +1,38 @@
 <div id="search-container">
-  <input type="text" id="search-input" placeholder="Search books by title, author, topic, or language...">
+  <div class="search-wrapper">
+    <input type="text" id="search-input" placeholder="Search books by title, author, topic, or language...">
+    <button type="button" id="search-clear" class="search-clear" aria-label="Clear search">&times;</button>
+  </div>
   <ul id="results-container"></ul>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
 
 <script>
+var searchInput = document.getElementById('search-input');
+var clearButton = document.getElementById('search-clear');
+var resultsContainer = document.getElementById('results-container');
+
 SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
+  searchInput: searchInput,
+  resultsContainer: resultsContainer,
   json: '/search.json',
   searchResultTemplate: '<li><a href="{url}"><strong>{title}</strong></a><br><span class="author">by {author}</span><br><span class="description">{description}</span></li>',
   noResultsText: 'No books found',
   limit: 10,
   fuzzy: false
 })
+
+// Show/hide clear button
+searchInput.addEventListener('input', function() {
+  clearButton.style.display = this.value.length > 0 ? 'inline-block' : 'none';
+});
+
+// Clear search
+clearButton.addEventListener('click', function() {
+  searchInput.value = '';
+  resultsContainer.innerHTML = '';
+  clearButton.style.display = 'none';
+  searchInput.focus();
+});
 </script>

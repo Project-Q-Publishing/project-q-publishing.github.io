@@ -4,10 +4,16 @@
   margin: 2rem 0;
   max-width: 100%;
 
-  #search-input {
+  .search-wrapper {
+    position: relative;
+    display: inline-block;
     width: 100%;
     max-width: 600px;
-    padding: 0.75rem 1rem;
+  }
+
+  #search-input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
     font-size: 1rem;
     border: 2px solid #e1e4e8;
     border-radius: 4px;
@@ -20,6 +26,32 @@
 
     &::placeholder {
       color: #6a737d;
+    }
+  }
+
+  .search-clear {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #6a737d;
+    cursor: pointer;
+    padding: 0 0.75rem;
+    line-height: 1;
+    display: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #0000ff;
+    }
+
+    &:focus {
+      outline: 2px solid #0000ff;
+      outline-offset: -2px;
+      border-radius: 0 4px 4px 0;
     }
   }
 
