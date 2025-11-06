@@ -1,7 +1,19 @@
 // Search Box Styles
 
+.nav-search-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  .site-nav {
+    width: auto !important;
+    flex-grow: 1;
+  }
+}
+
 #search-container {
-  margin: 1rem 0 0 0;
+  margin: 0;
   max-width: 100%;
   position: relative;
 
@@ -172,8 +184,16 @@
 
 // Responsive adjustments
 @media (max-width: 768px) {
+  .site-header .wrapper {
+    position: relative;
+  }
+
   #search-container {
-    margin: 1.5rem 0;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    margin: 0;
+    z-index: 100;
 
     #search-input {
       font-size: 0.95rem;
