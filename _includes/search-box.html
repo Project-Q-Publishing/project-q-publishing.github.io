@@ -1,4 +1,10 @@
 <div id="search-container">
+  <button type="button" id="search-toggle" class="search-toggle" aria-label="Toggle search">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.35-4.35"></path>
+    </svg>
+  </button>
   <div class="search-wrapper">
     <input type="text" id="search-input" placeholder="Search books...">
     <button type="button" id="search-clear" class="search-clear" aria-label="Clear search">&times;</button>
@@ -9,6 +15,8 @@
 <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
 
 <script>
+var searchContainer = document.getElementById('search-container');
+var searchToggle = document.getElementById('search-toggle');
 var searchInput = document.getElementById('search-input');
 var clearButton = document.getElementById('search-clear');
 var resultsContainer = document.getElementById('results-container');
@@ -23,6 +31,12 @@ SimpleJekyllSearch({
   fuzzy: false
 })
 
+// Toggle search box
+searchToggle.addEventListener('click', function() {
+  searchContainer.classList.add('expanded');
+  searchInput.focus();
+});
+
 // Show/hide clear button
 searchInput.addEventListener('input', function() {
   clearButton.style.display = this.value.length > 0 ? 'inline-block' : 'none';
@@ -34,5 +48,23 @@ clearButton.addEventListener('click', function() {
   resultsContainer.innerHTML = '';
   clearButton.style.display = 'none';
   searchInput.focus();
+});
+
+// Collapse search when clicking outside
+document.addEventListener('click', function(e) {
+  if (!searchContainer.contains(e.target)) {
+    if (searchInput.value === '' && resultsContainer.children.length === 0) {
+      searchContainer.classList.remove('expanded');
+    }
+  }
+});
+
+// Close on escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && searchContainer.classList.contains('expanded')) {
+    if (searchInput.value === '' && resultsContainer.children.length === 0) {
+      searchContainer.classList.remove('expanded');
+    }
+  }
 });
 </script>

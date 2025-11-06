@@ -3,12 +3,58 @@
 #search-container {
   margin: 1rem 0 0 0;
   max-width: 100%;
+  position: relative;
+
+  .search-toggle {
+    background: none;
+    border: 2px solid #e1e4e8;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: #6a737d;
+
+    &:hover {
+      border-color: #0000ff;
+      color: #0000ff;
+    }
+
+    &:focus {
+      outline: 2px solid #0000ff;
+      outline-offset: 2px;
+    }
+
+    svg {
+      display: block;
+    }
+  }
 
   .search-wrapper {
-    position: relative;
+    position: absolute;
     display: inline-block;
-    width: 100%;
+    width: 0;
     max-width: 400px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+  }
+
+  &.expanded {
+    .search-toggle {
+      display: none;
+    }
+
+    .search-wrapper {
+      width: 400px;
+      opacity: 1;
+      position: relative;
+    }
   }
 
   #search-input {
