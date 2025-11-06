@@ -1,0 +1,18 @@
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="Search books by title, author, topic, or language...">
+  <ul id="results-container"></ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json',
+  searchResultTemplate: '<li><a href="{url}"><strong>{title}</strong></a><br><span class="author">by {author}</span><br><span class="description">{description}</span></li>',
+  noResultsText: 'No books found',
+  limit: 10,
+  fuzzy: false
+})
+</script>
