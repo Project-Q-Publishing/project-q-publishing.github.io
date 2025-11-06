@@ -1,0 +1,24 @@
+{% if page.layout == "book" or page.url contains "/books/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "{{ site.url }}"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Books",
+    "item": "{{ site.url }}/books"
+  }{% if page.layout == "book" %},{
+    "@type": "ListItem",
+    "position": 3,
+    "name": "{{ page.title }}",
+    "item": "{{ site.url }}{{ page.url }}"
+  }{% endif %}]
+}
+</script>
+{% endif %}

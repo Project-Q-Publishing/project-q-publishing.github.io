@@ -1,0 +1,61 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "{{ page.title }}",
+  {% if page.subtitle %}"alternativeHeadline": "{{ page.subtitle }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.company.name }}",
+    "url": "{{ site.url }}"
+  },
+  "isbn": "{{ page.isbn }}",
+  "bookFormat": "https://schema.org/Paperback",
+  "inLanguage": "en-US",
+  {% if page.publication_date %}"datePublished": "{{ page.publication_date }}",{% endif %}
+  {% if page.pages %}"numberOfPages": {{ page.pages }},{% endif %}
+  "description": "{{ page.description | strip_html | strip_newlines | escape }}",
+  {% if page.cover_image %}"image": "{{ site.url }}{{ page.cover_image }}",{% endif %}
+  {% if page.topics %}"about": [
+    {% for topic in page.topics %}"{{ topic }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+  ],{% endif %}
+  {% if page.programming_languages %}"keywords": "{{ page.programming_languages | join: ', ' }}, {{ page.topics | join: ', ' }}",{% endif %}
+  {% if page.reviews and page.reviews.size > 0 %}"aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{% assign total = 0 %}{% for review in page.reviews %}{% assign total = total | plus: review.rating %}{% endfor %}{{ total | divided_by: page.reviews.size | round: 1 }}",
+    "reviewCount": "{{ page.reviews.size }}",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {% for review in page.reviews %}{
+      "@type": "Review",
+      "author": {
+        "@type": "Organization",
+        "name": "{{ review.reviewer }}"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{{ review.rating }}",
+        "bestRating": "5"
+      },
+      "reviewBody": "{{ review.quote }}"
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ],{% endif %}
+  "offers": {
+    "@type": "Offer",
+    "price": "{{ page.price }}",
+    "priceCurrency": "{{ page.currency }}",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "{{ site.company.name }}"
+    }{% if page.purchase_links %},
+    "url": "{{ page.purchase_links.amazon }}"{% endif %}
+  }
+}
+</script>
