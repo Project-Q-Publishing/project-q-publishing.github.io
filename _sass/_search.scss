@@ -1,14 +1,14 @@
 // Search Box Styles
 
 #search-container {
-  margin: 2rem 0;
+  margin: 1rem 0 0 0;
   max-width: 100%;
 
   .search-wrapper {
     position: relative;
     display: inline-block;
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
   }
 
   #search-input {
@@ -60,18 +60,35 @@
   }
 
   ul#results-container {
-    padding: 0;
+    padding: 0.5rem;
     list-style-type: none;
-    margin-top: 1rem;
-    max-width: 800px;
+    margin-top: 0.5rem;
+    max-width: 600px;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+
+    &:empty {
+      display: none;
+      border: none;
+      padding: 0;
+      box-shadow: none;
+    }
 
     li {
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.75rem;
       padding: 1rem;
       border: 1px solid #e1e4e8;
       border-radius: 4px;
       background-color: #fff;
       transition: box-shadow 0.2s ease;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       &:hover {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

@@ -10,8 +10,6 @@ body_class: "books-page"
   <p>Quality technical programming books for developers and engineers</p>
 </div>
 
-{% include search-box.html %}
-
 <section class="books-collection">
   {% assign sorted_books = site.books | sort: 'publication_date' | reverse %}
   
