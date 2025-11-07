@@ -54,6 +54,7 @@
         const topic = this.getAttribute('data-topic');
         toggleFilter(state.activeTopics, topic, this);
         filterAndSort();
+        collapseFilters();
       });
     });
 
@@ -64,6 +65,7 @@
         const language = this.getAttribute('data-language');
         toggleFilter(state.activeLanguages, language, this);
         filterAndSort();
+        collapseFilters();
       });
     });
 
@@ -96,6 +98,22 @@
     const toggleText = elements.toggleButton.querySelector('.toggle-text');
     if (toggleText) {
       toggleText.textContent = isCollapsed ? 'Show Filters' : 'Hide Filters';
+    }
+  }
+
+  // Collapse filters (called after user makes a selection)
+  function collapseFilters() {
+    if (!elements.filterControls || !elements.toggleButton) return;
+
+    // Only collapse if currently expanded
+    if (!elements.filterControls.classList.contains('collapsed')) {
+      elements.filterControls.classList.add('collapsed');
+      elements.toggleButton.setAttribute('aria-expanded', 'false');
+
+      const toggleText = elements.toggleButton.querySelector('.toggle-text');
+      if (toggleText) {
+        toggleText.textContent = 'Show Filters';
+      }
     }
   }
 
