@@ -10,13 +10,83 @@ body_class: "books-page"
   <p>Quality technical programming books for developers and engineers</p>
 </div>
 
+{% comment %} Collect all unique topics and languages for filters {% endcomment %}
+{% assign all_topics = '' | split: '' %}
+{% assign all_languages = '' | split: '' %}
+{% for book in site.books %}
+  {% if book.topics %}
+    {% assign all_topics = all_topics | concat: book.topics %}
+  {% endif %}
+  {% if book.programming_languages %}
+    {% assign all_languages = all_languages | concat: book.programming_languages %}
+  {% endif %}
+{% endfor %}
+{% assign unique_topics = all_topics | uniq | sort %}
+{% assign unique_languages = all_languages | uniq | sort %}
+
+{% if site.books.size > 0 %}
+<div class="filter-sort-controls">
+  <div class="controls-header">
+    <h3>Filter & Sort Books</h3>
+    <button id="clear-filters" class="clear-filters" disabled>Clear All Filters</button>
+  </div>
+
+  <div class="sort-controls">
+    <label for="sort-select">Sort by:</label>
+    <select id="sort-select">
+      <option value="date-desc">Newest First</option>
+      <option value="date-asc">Oldest First</option>
+      <option value="title-asc">Title (A-Z)</option>
+      <option value="title-desc">Title (Z-A)</option>
+      <option value="price-asc">Price (Low to High)</option>
+      <option value="price-desc">Price (High to Low)</option>
+    </select>
+  </div>
+
+  {% if unique_topics.size > 0 %}
+  <div class="filter-section">
+    <h4>Filter by Topic</h4>
+    <div class="filter-tags">
+      {% for topic in unique_topics %}
+        <button class="topic-tag" data-topic="{{ topic | slugify }}">{{ topic }}</button>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if unique_languages.size > 0 %}
+  <div class="filter-section">
+    <h4>Filter by Programming Language</h4>
+    <div class="filter-tags">
+      {% for language in unique_languages %}
+        <button class="language-tag" data-language="{{ language | slugify }}">{{ language }}</button>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <div id="results-count" class="results-count">Showing all {{ site.books.size }} books</div>
+</div>
+
+<div id="no-results" class="no-results">
+  <p>No books match your current filters. Try adjusting your selections.</p>
+</div>
+{% endif %}
+
 <section class="books-collection">
   {% assign sorted_books = site.books | sort: 'publication_date' | reverse %}
-  
+
   {% if site.books.size > 0 %}
     <div class="books-grid">
       {% for book in sorted_books %}
-        <article class="book-card">
+        <article class="book-card"
+          data-topics="{{ book.topics | join: ',' | downcase | replace: ' ', '-' }}"
+          data-languages="{{ book.programming_languages | join: ',' | downcase | replace: ' ', '-' }}"
+          data-difficulty="{{ book.difficulty_level | downcase | replace: ' ', '-' }}"
+          data-price="{{ book.price }}"
+          data-date="{{ book.publication_date }}"
+          data-title="{{ book.title | downcase }}"
+          data-featured="{{ book.featured }}">
           <div class="book-cover">
             <a href="{{ book.url }}">
               {% if book.cover_image %}
@@ -77,51 +147,6 @@ body_class: "books-page"
     <div class="coming-soon-notice">
       <p><em>Our first technical programming books are currently in development. Check back soon for our inaugural releases.</em></p>
     </div>
-  {% endif %}
-</section>
-
-<section class="book-categories">
-  <h2>Browse by Topic</h2>
-  
-  {% comment %} Collect all unique topics from books {% endcomment %}
-  {% assign all_topics = '' | split: '' %}
-  {% for book in site.books %}
-    {% if book.topics %}
-      {% assign all_topics = all_topics | concat: book.topics %}
-    {% endif %}
-  {% endfor %}
-  {% assign unique_topics = all_topics | uniq | sort %}
-  
-  {% if unique_topics.size > 0 %}
-    <div class="topic-tags">
-      {% for topic in unique_topics %}
-        <a href="#" class="topic-tag" data-topic="{{ topic | slugify }}">{{ topic }}</a>
-      {% endfor %}
-    </div>
-  {% else %}
-    <p>Our upcoming releases will span several key areas including programming languages, system design, software development, and professional development.</p>
-  {% endif %}
-</section>
-
-{% comment %} Programming Languages Filter {% endcomment %}
-{% assign all_languages = '' | split: '' %}
-{% for book in site.books %}
-  {% if book.programming_languages %}
-    {% assign all_languages = all_languages | concat: book.programming_languages %}
-  {% endif %}
-{% endfor %}
-{% assign unique_languages = all_languages | uniq | sort %}
-
-<section class="programming-languages">
-  <h2>Programming Languages</h2>
-  {% if unique_languages.size > 0 %}
-    <div class="language-filter">
-      {% for language in unique_languages %}
-        <a href="#" class="language-tag" data-language="{{ language | slugify }}">{{ language }}</a>
-      {% endfor %}
-    </div>
-  {% else %}
-    <p>Our upcoming books will cover multiple programming languages including Python, Go, Rust, and more.</p>
   {% endif %}
 </section>
 

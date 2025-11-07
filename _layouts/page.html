@@ -9,8 +9,12 @@ layout: default
       <p class="page-description">{{ page.description }}</p>
     {% endif %}
   </header>
-  
+
   <div class="page-content">
     {{ content }}
   </div>
 </article>
+
+{% if page.body_class == "books-page" %}
+<script src="{{ '/assets/js/books-filter.js' | relative_url }}"></script>
+{% endif %}
