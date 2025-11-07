@@ -1,13 +1,13 @@
 ---
 layout: page
 title: "Manuscript Submissions"
-description: "Submit your technical programming book proposal to Project Q Publishing"
+description: "Submit your technical book proposal to Project Q Publishing"
 body_class: "submissions-page"
 ---
 
 <div class="page-header">
   <h1>Manuscript Submissions</h1>
-  <p class="page-description">We're actively seeking high-quality technical programming manuscripts from experienced developers and industry experts.</p>
+  <p class="page-description">We're actively seeking high-quality technical manuscripts from experienced developers and industry experts.</p>
 </div>
 
 <div class="submission-overview">

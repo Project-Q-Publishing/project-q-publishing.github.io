@@ -17,7 +17,7 @@ Professional technical book publishing website built with Jekyll and hosted on G
 
 ## Overview
 
-Project Q Publishing specializes in high-quality technical programming books for developers, engineers, and technology professionals. This Jekyll-based static site provides:
+Project Q Publishing specializes in high-quality technical books for developers, engineers, and technology professionals. This Jekyll-based static site provides:
 
 - **Book Catalog**: Showcase technical books with detailed metadata
 - **Manuscript Submissions**: Accept proposals from experienced authors

@@ -3,8 +3,8 @@
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Technical Programming Books",
-  "description": "Complete catalog of technical programming books published by {{ site.company.name }}",
+  "name": "Technical Books",
+  "description": "Complete catalog of technical books published by {{ site.company.name }}",
   "numberOfItems": {{ site.books.size }},
   "itemListElement": [
     {% for book in site.books limit: 50 %}{

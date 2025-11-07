@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Project Q Publishing"
-description: "Quality technical programming books for developers and engineers"
+description: "Quality technical books for developers and engineers"
 ---
 
 <div class="home-hero">

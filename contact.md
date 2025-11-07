@@ -16,7 +16,7 @@ body_class: "contact-page"
     
     <div class="contact-highlight">
       <p><strong>Manuscript Submissions</strong><br>
-      We are actively seeking high-quality technical programming manuscripts from experienced developers and industry experts.</p>
+      We are actively seeking high-quality technical manuscripts from experienced developers and industry experts.</p>
     </div>
     
     <p>If you have expertise in:</p>

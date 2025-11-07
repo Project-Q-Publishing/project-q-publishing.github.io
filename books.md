@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Books"
-description: "Browse our catalog of programming books"
+description: "Browse our catalog of technical books"
 body_class: "books-page"
 ---
 
@@ -147,7 +147,7 @@ body_class: "books-page"
     </div>
   {% else %}
     <div class="coming-soon-notice">
-      <p><em>Our first technical programming books are currently in development. Check back soon for our inaugural releases.</em></p>
+      <p><em>Our first books are currently in development. Check back soon for our inaugural releases.</em></p>
     </div>
   {% endif %}
 </section>
