@@ -1,0 +1,76 @@
+{% comment %}
+  Enhanced Open Graph and Twitter Card meta tags for book pages
+  These provide rich previews when book pages are shared on social media
+{% endcomment %}
+
+{% if page.layout == "book" %}
+<!-- Open Graph Meta Tags -->
+<meta property="og:type" content="book">
+<meta property="og:title" content="{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }}{% endif %}">
+<meta property="og:description" content="{{ page.description | strip_html | strip_newlines | truncate: 200 }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.company.name }}">
+
+{% if page.cover_image %}
+<meta property="og:image" content="{{ page.cover_image | absolute_url }}">
+<meta property="og:image:alt" content="{{ page.title }} book cover">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="900">
+{% else %}
+<meta property="og:image" content="{{ '/assets/images/og-default.jpg' | absolute_url }}">
+{% endif %}
+
+<!-- Book-specific Open Graph tags -->
+{% if page.author %}
+<meta property="book:author" content="{{ page.author }}">
+{% endif %}
+
+{% if page.isbn %}
+<meta property="book:isbn" content="{{ page.isbn }}">
+{% endif %}
+
+{% if page.publication_date %}
+<meta property="book:release_date" content="{{ page.publication_date }}">
+{% endif %}
+
+{% if page.topics %}
+  {% for topic in page.topics %}
+<meta property="book:tag" content="{{ topic }}">
+  {% endfor %}
+{% endif %}
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }}{% endif %}">
+<meta name="twitter:description" content="{{ page.description | strip_html | strip_newlines | truncate: 200 }}">
+
+{% if page.cover_image %}
+<meta name="twitter:image" content="{{ page.cover_image | absolute_url }}">
+<meta name="twitter:image:alt" content="{{ page.title }} book cover">
+{% else %}
+<meta name="twitter:image" content="{{ '/assets/images/og-default.jpg' | absolute_url }}">
+{% endif %}
+
+{% if site.social.twitter %}
+<meta name="twitter:site" content="@{{ site.social.twitter }}">
+<meta name="twitter:creator" content="@{{ site.social.twitter }}">
+{% endif %}
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="{{ page.author }}">
+
+{% if page.programming_languages %}
+<meta name="keywords" content="{{ page.programming_languages | join: ', ' }}, {{ page.topics | join: ', ' }}, {{ page.author }}, programming books, technical books">
+{% endif %}
+
+<!-- Pricing and Availability -->
+{% if page.price %}
+<meta property="product:price:amount" content="{{ page.price }}">
+<meta property="product:price:currency" content="{{ page.currency | default: 'USD' }}">
+{% endif %}
+
+{% if page.purchase_links.amazon %}
+<meta property="product:availability" content="in stock">
+{% endif %}
+
+{% endif %}

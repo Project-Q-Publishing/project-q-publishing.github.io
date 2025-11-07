@@ -31,7 +31,7 @@ layout: default
       {% endif %}
     </div>
   </header>
-  
+
   <div class="book-content">
     {{ content }}
   </div>
@@ -53,6 +53,8 @@ layout: default
   </aside>
   {% endif %}
   
+  {% include social-share.html %}
+
   {% comment %} Related Books Recommendations - Simplified approach {% endcomment %}
   {% assign related_books = '' | split: '' %}
   {% assign current_book = page %}

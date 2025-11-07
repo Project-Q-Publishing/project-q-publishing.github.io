@@ -1,0 +1,152 @@
+// Social Share Buttons
+
+.social-share {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f6f8fa;
+  border-radius: 8px;
+  border: 1px solid #e1e4e8;
+
+  .social-share-title {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #24292e;
+  }
+
+  .social-share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .social-share-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    border: 2px solid #e1e4e8;
+    border-radius: 6px;
+    background-color: white;
+    color: #24292e;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+    }
+
+    span {
+      line-height: 1;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    // Twitter/X specific styling
+    &.twitter {
+      &:hover {
+        background-color: #000000;
+        border-color: #000000;
+        color: white;
+      }
+    }
+
+    // LinkedIn specific styling
+    &.linkedin {
+      &:hover {
+        background-color: #0077b5;
+        border-color: #0077b5;
+        color: white;
+      }
+    }
+
+    // Facebook specific styling
+    &.facebook {
+      &:hover {
+        background-color: #1877f2;
+        border-color: #1877f2;
+        color: white;
+      }
+    }
+
+    // Reddit specific styling
+    &.reddit {
+      &:hover {
+        background-color: #ff4500;
+        border-color: #ff4500;
+        color: white;
+      }
+    }
+
+    // Copy link specific styling
+    &.copy-link {
+      &:hover {
+        background-color: #0000ff;
+        border-color: #0000ff;
+        color: white;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .social-share {
+    padding: 1rem;
+
+    .social-share-title {
+      font-size: 0.95rem;
+    }
+
+    .social-share-buttons {
+      gap: 0.5rem;
+    }
+
+    .social-share-button {
+      padding: 0.5rem 0.875rem;
+      font-size: 0.85rem;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      span {
+        display: none;
+      }
+
+      // Show only icons on mobile
+      &:hover span {
+        display: none;
+      }
+    }
+  }
+}
+
+// Extra small screens - stack buttons
+@media (max-width: 480px) {
+  .social-share {
+    .social-share-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .social-share-button {
+      justify-content: center;
+      padding: 0.625rem;
+    }
+  }
+}
