@@ -91,9 +91,9 @@ body_class: "books-page"
     <div class="books-grid">
       {% for book in sorted_books %}
         <article class="book-card"
-          data-topics="{{ book.topics | join: ',' | downcase | replace: ' ', '-' }}"
-          data-languages="{{ book.programming_languages | join: ',' | downcase | replace: ' ', '-' }}"
-          data-difficulty="{{ book.difficulty_level | downcase | replace: ' ', '-' }}"
+          data-topics="{% for topic in book.topics %}{{ topic | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}"
+          data-languages="{% for lang in book.programming_languages %}{{ lang | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}"
+          data-difficulty="{{ book.difficulty_level | slugify }}"
           data-price="{{ book.price }}"
           data-date="{{ book.publication_date }}"
           data-title="{{ book.title | downcase }}"
