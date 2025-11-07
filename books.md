@@ -1,13 +1,12 @@
 ---
 layout: page
 title: "Books"
-description: "Browse our catalog of technical programming books"
+description: "Browse our catalog of programming books"
 body_class: "books-page"
 ---
 
 <div class="page-header">
   <h1>Our Book Catalog</h1>
-  <p>Quality technical programming books for developers and engineers</p>
 </div>
 
 {% comment %} Collect all unique topics and languages for filters {% endcomment %}
