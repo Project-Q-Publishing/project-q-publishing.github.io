@@ -268,6 +268,44 @@ Author biography and credentials.
    cover_image: "/assets/images/books/your-book-cover.jpg"
    ```
 
+### Book Filtering Integration
+
+The books page includes interactive filtering and sorting. When you add a new book, it automatically integrates with these filters:
+
+**How it works:**
+- Filter buttons are generated from `programming_languages` and `topics` arrays in book front matter
+- Jekyll's `slugify` filter normalizes values for matching (e.g., "C#" becomes "c")
+- JavaScript filters book cards based on selected topics and languages
+- Books can be sorted by date, title, or price
+
+**Steps to ensure filter integration:**
+
+1. **Add proper metadata** in your book's front matter:
+   ```yaml
+   programming_languages:
+     - "C#"
+     - "SQL"
+   topics:
+     - "Web Development"
+     - "API Design"
+   ```
+
+2. **Rebuild the site** to regenerate filter buttons and book cards:
+   ```bash
+   bundle exec jekyll build
+   ```
+
+3. **Test the filters** by running the site locally:
+   ```bash
+   bundle exec jekyll serve
+   ```
+   Navigate to `/books` and verify your book appears when selecting its languages/topics.
+
+**Note on special characters:**
+- Languages with special characters (e.g., "C#", "C++") are automatically handled
+- Jekyll's `slugify` filter removes special characters consistently across filter buttons and book cards
+- Both "C#" in the button and "C#" in the book metadata become "c" for matching
+
 ## Featured Books System
 
 ### How It Works
