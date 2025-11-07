@@ -1,0 +1,188 @@
+// Author Social Links
+
+.author-social {
+  margin: 1rem 0;
+
+  .author-social-header {
+    h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #6a737d;
+      margin: 0 0 0.75rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .author-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .author-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.875rem;
+    background-color: white;
+    border: 2px solid #e1e4e8;
+    border-radius: 6px;
+    color: #24292e;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+
+    svg {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+    }
+
+    .author-social-platform {
+      font-weight: 600;
+    }
+
+    .author-social-handle {
+      color: #6a737d;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    // Platform-specific colors
+    &.twitter:hover {
+      background-color: #000000;
+      border-color: #000000;
+      color: white;
+
+      .author-social-handle {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    &.linkedin:hover {
+      background-color: #0077b5;
+      border-color: #0077b5;
+      color: white;
+
+      .author-social-handle {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    &.github:hover {
+      background-color: #24292e;
+      border-color: #24292e;
+      color: white;
+
+      .author-social-handle {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    &.website:hover {
+      background-color: #0000ff;
+      border-color: #0000ff;
+      color: white;
+
+      .author-social-handle {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}
+
+// Inline version in book header
+.book-author-social-inline {
+  margin: 0.5rem 0 0 0;
+
+  .author-social {
+    margin: 0;
+
+    .author-social-header {
+      h3 {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .author-social-links {
+      gap: 0.5rem;
+    }
+
+    .author-social-link {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.8rem;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .author-social {
+    .author-social-header h3 {
+      font-size: 0.85rem;
+    }
+
+    .author-social-link {
+      padding: 0.375rem 0.625rem;
+      font-size: 0.8rem;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      // Hide handle on mobile, show only platform
+      .author-social-handle {
+        display: none;
+      }
+    }
+  }
+
+  .book-author-social-inline {
+    .author-social {
+      .author-social-link {
+        padding: 0.3rem 0.5rem;
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        // Hide platform name on mobile in inline version
+        .author-social-platform {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Extra small screens
+@media (max-width: 480px) {
+  .author-social {
+    .author-social-links {
+      gap: 0.5rem;
+    }
+
+    .author-social-link {
+      // Show only icons on very small screens
+      .author-social-platform {
+        display: none;
+      }
+    }
+  }
+}

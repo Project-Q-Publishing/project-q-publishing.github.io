@@ -148,6 +148,14 @@ Books are stored as Markdown files in the `_books/` directory. Each book file co
 # Required Fields
 title: "Your Book Title"
 author: "Author Name"
+
+# Author Social Media (optional but recommended)
+author_social:
+  twitter: "author_handle"
+  linkedin: "authorname"
+  github: "authorname"
+  website: "https://authorname.dev"
+
 isbn: "978-1-234567-89-0"
 publication_date: "2025-06-15"
 price: 49.99
@@ -229,6 +237,7 @@ Author biography and credentials.
 |-------|------|-------------|
 | `title` | String | Full book title |
 | `author` | String | Author's full name |
+| `author_social` | Object | Author's social media profiles (optional but recommended) |
 | `isbn` | String | ISBN-13 number |
 | `publication_date` | String | Format: YYYY-MM-DD |
 | `price` | Number | Price (numeric only) |

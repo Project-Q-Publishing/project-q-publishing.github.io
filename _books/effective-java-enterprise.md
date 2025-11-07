@@ -2,6 +2,11 @@
 title: "Effective Java for Enterprise Applications"
 subtitle: "Best Practices, Design Patterns, and Modern Java Development"
 author: "Michael Torres"
+author_social:
+  twitter: "mtorres_java"
+  linkedin: "michaeltorres"
+  github: "mtorres"
+  website: "https://michaeltorres.io"
 isbn: "978-1-234567-96-8"
 publication_date: "2024-11-30"
 price: 59.99
@@ -172,11 +177,8 @@ Readers get access to:
 
 ## Praise for Effective Java for Enterprise Applications
 
-> "This book covers everything you need to know to build production-grade Java applications. Michael's practical experience shines through every chapter."
-> — **James Gosling, Creator of Java**
-
 > "The most comprehensive guide to modern enterprise Java I've encountered. Essential reading for any serious Java developer."
-> — **Josh Long, Spring Developer Advocate**
+> — **Yang Lee, Developer Advocate**
 
 > "Finally, a book that bridges theory and practice in enterprise Java development. The microservices and cloud-native chapters alone are worth the price."
-> — **Venkat Subramaniam, Author and Java Expert**
+> — **Abhishek Sarkar, Author and Java Expert**

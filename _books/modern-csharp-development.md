@@ -2,6 +2,11 @@
 title: "Modern C# Development"
 subtitle: "Building Enterprise Applications with .NET 8 and Beyond"
 author: "Sarah Chen"
+author_social:
+  twitter: "sarahchen_dev"
+  linkedin: "sarahchen"
+  github: "sarahchen"
+  website: "https://sarahchen.dev"
 isbn: "978-1-234567-95-1"
 publication_date: "2024-10-20"
 price: 54.99

@@ -20,6 +20,13 @@ layout: default
       {% if page.author %}
         <p class="book-author">by {{ page.author }}</p>
       {% endif %}
+
+      {% if page.author_social %}
+        <div class="book-author-social-inline">
+          {% include author-social.html %}
+        </div>
+      {% endif %}
+
       {% if page.price %}
         <p class="book-price">
           {% if page.currency == "USD" %}${{ page.price }}
