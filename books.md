@@ -113,15 +113,7 @@ body_class: "books-page"
               {% if book.difficulty_level %}
                 <span class="difficulty">{{ book.difficulty_level }}</span>
               {% endif %}
-              
-              {% if book.programming_languages %}
-                <div class="languages">
-                  {% for lang in book.programming_languages limit: 3 %}
-                    <span class="language-tag">{{ lang }}</span>
-                  {% endfor %}
-                </div>
-              {% endif %}
-              
+
               {% if book.price %}
                 <span class="price">
                   {% if book.currency == "USD" %}${{ book.price }}
