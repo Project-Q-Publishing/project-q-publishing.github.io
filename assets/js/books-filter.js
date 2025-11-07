@@ -74,6 +74,7 @@
       elements.sortSelect.addEventListener('change', function() {
         state.sortBy = this.value;
         filterAndSort();
+        collapseFilters();
       });
     }
 
