@@ -18,7 +18,9 @@
     sortSelect: null,
     clearButton: null,
     resultsCount: null,
-    noResults: null
+    noResults: null,
+    toggleButton: null,
+    filterControls: null
   };
 
   // Initialize
@@ -31,6 +33,8 @@
     elements.clearButton = document.getElementById('clear-filters');
     elements.resultsCount = document.getElementById('results-count');
     elements.noResults = document.getElementById('no-results');
+    elements.toggleButton = document.getElementById('toggle-filters');
+    elements.filterControls = document.querySelector('.filter-sort-controls');
 
     if (!elements.bookCards.length) return;
 
@@ -74,6 +78,24 @@
     // Clear filters button
     if (elements.clearButton) {
       elements.clearButton.addEventListener('click', clearAllFilters);
+    }
+
+    // Toggle filters button
+    if (elements.toggleButton) {
+      elements.toggleButton.addEventListener('click', toggleFilters);
+    }
+  }
+
+  // Toggle filters visibility
+  function toggleFilters() {
+    if (!elements.filterControls || !elements.toggleButton) return;
+
+    const isCollapsed = elements.filterControls.classList.toggle('collapsed');
+    elements.toggleButton.setAttribute('aria-expanded', !isCollapsed);
+
+    const toggleText = elements.toggleButton.querySelector('.toggle-text');
+    if (toggleText) {
+      toggleText.textContent = isCollapsed ? 'Show Filters' : 'Hide Filters';
     }
   }
 

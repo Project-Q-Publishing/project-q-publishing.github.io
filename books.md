@@ -25,11 +25,21 @@ body_class: "books-page"
 {% assign unique_languages = all_languages | uniq | sort %}
 
 {% if site.books.size > 0 %}
-<div class="filter-sort-controls">
+<div class="filter-sort-controls collapsed">
   <div class="controls-header">
     <h3>Filter & Sort Books</h3>
-    <button id="clear-filters" class="clear-filters" disabled>Clear All Filters</button>
+    <div class="header-actions">
+      <button id="clear-filters" class="clear-filters" disabled>Clear All Filters</button>
+      <button id="toggle-filters" class="toggle-filters" aria-expanded="false">
+        <span class="toggle-text">Show Filters</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="2 5 8 11 14 5"></polyline>
+        </svg>
+      </button>
+    </div>
   </div>
+
+  <div class="filter-content">
 
   <div class="sort-controls">
     <label for="sort-select">Sort by:</label>
@@ -66,6 +76,7 @@ body_class: "books-page"
   {% endif %}
 
   <div id="results-count" class="results-count">Showing all {{ site.books.size }} books</div>
+  </div>
 </div>
 
 <div id="no-results" class="no-results">
