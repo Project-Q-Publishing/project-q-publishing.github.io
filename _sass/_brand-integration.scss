@@ -627,18 +627,7 @@
 .page-content {
   ul:not(.horizontal-list):not(.footer-links):not(.breadcrumb) {
     li {
-      position: relative;
-      padding-left: $spacing-md;
       margin-bottom: $spacing-sm;
-      
-      &::before {
-        content: '▶';
-        position: absolute;
-        left: 0;
-        color: $primary-500;
-        font-size: 0.8em;
-        top: 0.1em;
-      }
     }
   }
   
