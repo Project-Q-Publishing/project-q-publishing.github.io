@@ -23,7 +23,7 @@ body_class: "thank-you-page"
   <div class="additional-resources">
     <h3>While You Wait</h3>
     <div class="resource-links">
-      <ul>
+      <ul class="resource-list">
         <li><a href="/books" class="btn btn-outline">Browse Our Books</a></li>
         <li><a href="/about" class="btn btn-outline">Learn More About Us</a></li>
       {% if site.social_links.linkedin %}
