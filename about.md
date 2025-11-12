@@ -5,7 +5,7 @@ body_class: "about-page"
 ---
 
 <div class="page-header">
-  <p>We believe that quality technical and educational resources are essential for the advancement of software development. Our mission is to publish comprehensive, practical, and accessible programming books that help developers at all levels enhance their skills and understanding.</p>
+  <p>We believe that quality technical and educational resources are essential for the advancement of software development. Our mission is to publish comprehensive, practical, and accessible technical books that help developers at all levels enhance their skills and understanding.</p>
 </div>
 
 <section>

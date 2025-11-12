@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Project Q Publishing"
-description: "Quality technical programming books for developers and engineers"
+description: "Quality technical books for developers and engineers"
 ---
 
 <div class="home-hero">
@@ -63,7 +63,7 @@ description: "Quality technical programming books for developers and engineers"
             </div>
 
             <div class="book-actions">
-              <a href="{{ book.url }}" class="btn btn-primary">Learn More</a>
+              <a href="{{ book.url }}" class="btn btn-primary">View Book</a>
               {% if book.purchase_links.amazon %}
                 <a href="{{ book.purchase_links.amazon }}" class="btn btn-secondary" target="_blank" rel="noopener">Buy Now</a>
               {% endif %}

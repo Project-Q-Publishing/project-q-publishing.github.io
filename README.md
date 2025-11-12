@@ -17,7 +17,7 @@ Professional technical book publishing website built with Jekyll and hosted on G
 
 ## Overview
 
-Project Q Publishing specializes in high-quality technical programming books for developers, engineers, and technology professionals. This Jekyll-based static site provides:
+Project Q Publishing specializes in high-quality technical books for developers, engineers, and technology professionals. This Jekyll-based static site provides:
 
 - **Book Catalog**: Showcase technical books with detailed metadata
 - **Manuscript Submissions**: Accept proposals from experienced authors
@@ -148,6 +148,14 @@ Books are stored as Markdown files in the `_books/` directory. Each book file co
 # Required Fields
 title: "Your Book Title"
 author: "Author Name"
+
+# Author Social Media (optional but recommended)
+author_social:
+  twitter: "author_handle"
+  linkedin: "authorname"
+  github: "authorname"
+  website: "https://authorname.dev"
+
 isbn: "978-1-234567-89-0"
 publication_date: "2025-06-15"
 price: 49.99
@@ -229,6 +237,7 @@ Author biography and credentials.
 |-------|------|-------------|
 | `title` | String | Full book title |
 | `author` | String | Author's full name |
+| `author_social` | Object | Author's social media profiles (optional but recommended) |
 | `isbn` | String | ISBN-13 number |
 | `publication_date` | String | Format: YYYY-MM-DD |
 | `price` | Number | Price (numeric only) |
@@ -267,6 +276,44 @@ Author biography and credentials.
    ```yaml
    cover_image: "/assets/images/books/your-book-cover.jpg"
    ```
+
+### Book Filtering Integration
+
+The books page includes interactive filtering and sorting. When you add a new book, it automatically integrates with these filters:
+
+**How it works:**
+- Filter buttons are generated from `programming_languages` and `topics` arrays in book front matter
+- Jekyll's `slugify` filter normalizes values for matching (e.g., "C#" becomes "c")
+- JavaScript filters book cards based on selected topics and languages
+- Books can be sorted by date, title, or price
+
+**Steps to ensure filter integration:**
+
+1. **Add proper metadata** in your book's front matter:
+   ```yaml
+   programming_languages:
+     - "C#"
+     - "SQL"
+   topics:
+     - "Web Development"
+     - "API Design"
+   ```
+
+2. **Rebuild the site** to regenerate filter buttons and book cards:
+   ```bash
+   bundle exec jekyll build
+   ```
+
+3. **Test the filters** by running the site locally:
+   ```bash
+   bundle exec jekyll serve
+   ```
+   Navigate to `/books` and verify your book appears when selecting its languages/topics.
+
+**Note on special characters:**
+- Languages with special characters (e.g., "C#", "C++") are automatically handled
+- Jekyll's `slugify` filter removes special characters consistently across filter buttons and book cards
+- Both "C#" in the button and "C#" in the book metadata become "c" for matching
 
 ## Featured Books System
 

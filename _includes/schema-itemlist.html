@@ -1,0 +1,38 @@
+{% if page.url == "/books" or page.url == "/books/" or page.url == "/books/index.html" or page.url == "/books.html" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Technical Books",
+  "description": "Complete catalog of technical books published by {{ site.company.name }}",
+  "numberOfItems": {{ site.books.size }},
+  "itemListElement": [
+    {% for book in site.books limit: 50 %}{
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "Book",
+        "name": "{{ book.title }}",
+        "author": {
+          "@type": "Person",
+          "name": "{{ book.author }}"
+        },
+        "url": "{{ site.url }}{{ book.url }}",
+        {% if book.cover_image %}"image": "{{ site.url }}{{ book.cover_image }}",{% endif %}
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ site.company.name }}"
+        },
+        "isbn": "{{ book.isbn }}",
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ book.price }}",
+          "priceCurrency": "{{ book.currency }}",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+{% endif %}

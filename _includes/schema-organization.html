@@ -1,0 +1,30 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.company.name }}",
+  "url": "{{ site.url }}",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "{{ site.url }}{{ site.logo }}",
+    "width": "600",
+    "height": "60"
+  },
+  "description": "{{ site.description | strip_html | strip_newlines | escape }}",
+  "foundingDate": "{{ site.company.founded }}",
+  "email": "{{ site.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    {% for link in site.social.links %}"{{ link }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "{{ site.contact.email }}",
+    "availableLanguage": "English"
+  }
+}
+</script>

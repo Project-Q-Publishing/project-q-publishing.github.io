@@ -2,16 +2,43 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0000ff">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <link rel="shortcut icon" href="{{ '/favicon.png' | relative_url }}">
-  
+
+  <!-- SEO Plugin -->
   {%- seo -%}
+
+  <!-- Enhanced Open Graph for Books -->
+  {%- include book-meta.html -%}
+
+  <!-- Structured Data (JSON-LD) -->
+  {%- include schema-organization.html -%}
+  {%- if page.layout == "book" -%}
+    {%- include schema-book.html -%}
+  {%- endif -%}
+  {%- include schema-breadcrumbs.html -%}
+  {%- include schema-itemlist.html -%}
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+
+  <!-- RSS Feed -->
   {%- feed_meta -%}
+
+  <!-- Canonical URL (if not already set by jekyll-seo-tag) -->
+  {% unless page.canonical_url %}
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  {% endunless %}
+
+  <!-- Analytics -->
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}

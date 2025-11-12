@@ -3,7 +3,10 @@
     <a class="site-logo" rel="author" href="{{ "/" | relative_url }}">
       <img src="{{ '/assets/images/logo with text.png' | relative_url }}" alt="Project Q Publishing Logo" class="logo-image">
     </a>
-    
-    {% include navigation.html %}
+
+    <div class="nav-search-container">
+      {% include navigation.html %}
+      {% include search-box.html %}
+    </div>
   </div>
 </header>

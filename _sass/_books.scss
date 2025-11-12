@@ -1,0 +1,234 @@
+// Books Page Filter and Sort Styles
+
+.filter-sort-controls {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f6f8fa;
+  border-radius: 8px;
+
+  .controls-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    h3 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .clear-filters {
+      background: none;
+      border: 1px solid #e1e4e8;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: #0000ff;
+        color: #0000ff;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+
+    .toggle-filters {
+      background: none;
+      border: 1px solid #e1e4e8;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      svg {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        border-color: #0000ff;
+        color: #0000ff;
+      }
+
+      &[aria-expanded="false"] svg {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .filter-content {
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  &.collapsed .filter-content {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+  }
+
+  .sort-controls {
+    margin-bottom: 1.5rem;
+
+    label {
+      font-weight: 600;
+      margin-right: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    select {
+      padding: 0.5rem 2rem 0.5rem 0.75rem;
+      border: 2px solid #e1e4e8;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      background-color: white;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #0000ff;
+      }
+    }
+  }
+
+  .filter-section {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h4 {
+      margin: 0 0 0.75rem 0;
+      font-size: 1rem;
+      color: #24292e;
+    }
+
+    .filter-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  }
+
+  .results-count {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6a737d;
+    padding-top: 1rem;
+    border-top: 1px solid #e1e4e8;
+  }
+}
+
+// Topic and Language Filter Tags
+.topic-tag,
+.language-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 2px solid #e1e4e8;
+  border-radius: 20px;
+  color: #24292e;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #0000ff;
+    color: #0000ff;
+    transform: translateY(-1px);
+  }
+
+  &.active {
+    background-color: #0000ff;
+    border-color: #0000ff;
+    color: white;
+
+    &:hover {
+      background-color: #0000cc;
+      border-color: #0000cc;
+    }
+  }
+}
+
+// No results message
+.no-results {
+  display: none;
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f6f8fa;
+  border-radius: 8px;
+  margin: 2rem 0;
+
+  &.show {
+    display: block;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #6a737d;
+    margin: 0;
+  }
+}
+
+// Book card hidden state
+.book-card.hidden {
+  display: none !important;
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .filter-sort-controls {
+    padding: 1rem;
+
+    .controls-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+
+      h3 {
+        width: 100%;
+      }
+
+      .header-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .clear-filters,
+      .toggle-filters {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .sort-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      select {
+        width: 100%;
+      }
+    }
+  }
+}

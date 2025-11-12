@@ -1,5 +1,5 @@
 # Project Q Publishing - Jekyll Configuration
-# Technical programming books for developers and engineers
+# Technical books for developers and engineers
 
 # Site settings
 domain: projectqpub.com
@@ -7,10 +7,10 @@ url: https://projectqpub.com
 baseurl: ""
 
 title: Project Q Publishing
-tagline: "Quality Technical Programming Books"
+tagline: "Quality Technical Books"
 email: contact@projectqpub.com
 description: >-
-  Quality technical programming books for developers and engineers.
+  Quality technical books for developers and engineers.
 
 # Extended metadata
 keywords: "programming books, technical books, software development, programming languages, coding, developers, engineers, technology"
@@ -24,7 +24,7 @@ company:
 author:
   name: Project Q Publishing
   email: contact@projectqpub.com
-  bio: "Dedicated to creating exceptional technical programming books that serve the needs of today's developers and engineers."
+  bio: "Dedicated to creating exceptional technical books that serve the needs of today's developers and engineers."
 
 # Social media and professional links
 social_links:
@@ -40,11 +40,16 @@ social:
     - https://github.com/Project-Q-Publishing
     - https://twitter.com/projectqpub
 
+# Twitter card configuration for jekyll-seo-tag
+twitter:
+  username: projectqpub
+  card: summary_large_image
+
 # Contact information
 contact:
   email: info@projectqpub.com
   business_hours: "Monday-Friday, 9 AM - 5 PM GMT"
-  response_time: "We typically respond within 24 hours"
+  response_time: "48 hours"
   submissions: "We welcome manuscript submissions from experienced developers"
 
 # Navigation structure
@@ -57,10 +62,10 @@ navigation:
     description: "Learn about our mission and publishing philosophy"
   - title: Books
     url: /books
-    description: "Browse our catalog of technical programming books"
+    description: "Browse our catalog of technical books"
   - title: Submissions
     url: /submissions
-    description: "Submit your technical programming manuscript"
+    description: "Submit your technical manuscript"
   - title: Contact
     url: /contact
     description: "Get in touch for inquiries and support"
@@ -87,7 +92,7 @@ collections:
   books:
     output: true
     permalink: /books/:name
-    description: "Technical programming books published by Project Q Publishing"
+    description: "Technical books published by Project Q Publishing"
     sort_by: publication_date
     sort_order: desc
   authors:
@@ -150,19 +155,27 @@ plugins:
 feed:
   posts_limit: 20
   excerpt_only: false
+  path: feed.xml
+  collections:
+    - books
 
 # SEO and metadata
 lang: en-US
+locale: en_US
 timezone: Europe/London
 google_analytics: # Add GA tracking ID when ready
 google_site_verification: # Add Google Search Console verification
+
+# Default image for social sharing (used by jekyll-seo-tag)
+logo: /assets/images/logo.png
+image: /assets/images/social-card.png
 
 # SEO defaults
 seo:
   type: Organization
   name: "Project Q Publishing"
-  headline: "Quality Technical Programming Books"
-  description: "Specializing in comprehensive, practical programming resources for developers and engineers"
+  headline: "Quality Technical Books"
+  description: "Specializing in comprehensive, practical technical resources for developers and engineers"
   url: "https://projectqpub.com"
   logo: "/assets/images/logo.png"
   social_image: "/assets/images/social-card.png"

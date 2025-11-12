@@ -16,7 +16,6 @@ difficulty_level: "Advanced"
 programming_languages:
   - "Go"
   - "SQL"
-  - "Docker"
 topics:
   - "Concurrency"
   - "Performance Optimization"
