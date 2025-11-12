@@ -630,7 +630,29 @@
       margin-bottom: $spacing-sm;
     }
   }
-  
+
+  // Continuous numbering for ordered lists (e.g., Table of Contents)
+  // This allows numbering to continue across multiple <ol> elements
+  counter-reset: chapter-counter;
+
+  ol {
+    list-style: none;
+    padding-left: 2em;
+
+    li {
+      counter-increment: chapter-counter;
+      margin-bottom: $spacing-sm;
+      position: relative;
+
+      &::before {
+        content: counter(chapter-counter) ". ";
+        position: absolute;
+        left: -2em;
+        font-weight: 600;
+      }
+    }
+  }
+
   // Enhanced blockquotes
   blockquote {
     border-left-color: $primary-400;
