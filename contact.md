@@ -45,20 +45,20 @@ body_class: "contact-page"
     <h3>Contact Form</h3>
     
     <div class="contact-form-container">
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+      <form action="https://formspree.io/f/xjkjvqpp" method="POST" class="contact-form">
         <div class="form-group">
           <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" required aria-required="true">
         </div>
-        
+
         <div class="form-group">
           <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="_replyto" required aria-required="true">
         </div>
-        
+
         <div class="form-group">
           <label for="inquiry-type">Inquiry Type</label>
-          <select id="inquiry-type" name="inquiry-type">
+          <select id="inquiry-type" name="inquiry_type">
             <option value="general">General Inquiry</option>
             <option value="manuscript">Manuscript Submission</option>
             <option value="partnership">Partnership/Business</option>
@@ -66,23 +66,24 @@ body_class: "contact-page"
             <option value="media">Media Inquiry</option>
           </select>
         </div>
-        
+
         <div class="form-group">
           <label for="subject">Subject *</label>
-          <input type="text" id="subject" name="subject" required>
+          <input type="text" id="subject" name="_subject" required aria-required="true">
         </div>
-        
+
         <div class="form-group">
           <label for="message">Message *</label>
-          <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry..."></textarea>
+          <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="Please provide details about your inquiry..."></textarea>
         </div>
-        
+
         <div class="form-group">
           <input type="hidden" name="_next" value="{{ site.url }}/contact-thank-you">
-          <input type="hidden" name="_subject" value="New Contact Form Submission">
-          <input type="text" name="_gotcha" style="display:none">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" class="btn btn-primary">Send Message</button>
         </div>
+
+        <p class="form-status" id="form-status"></p>
       </form>
     </div>
     
