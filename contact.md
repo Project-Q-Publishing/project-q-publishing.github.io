@@ -1,24 +1,24 @@
 ---
 layout: page
-title: "Contact"
-description: "Get in touch with Project Q Publishing"
+title: "Contact Project Q Publishing"
+# description: "Get in touch with Project Q Publishing"
 body_class: "contact-page"
 ---
 
 <div class="page-header">
-  <h1>Contact Project Q Publishing</h1>
-  <p class="page-description">We welcome inquiries from authors, readers, and industry professionals.</p>
+  <p class="page-description">We welcome inquiries from readers, authors, and industry professionals. You can use the contact form below or <a href="{{ site.social_links.linkedin }}" target="_blank" rel="noopener">connect with us on LinkedIn</a></p>
 </div>
+
+<div class="contact-highlight">
+  <p><strong>Manuscript Submissions</strong><br>
+  We are actively seeking high-quality technical manuscripts from experienced developers and industry experts.</p>
+</div>
+
 
 <div class="contact-grid">
   <div class="contact-section publishing-inquiries">
-    <h3>Publishing Inquiries</h3>
-    
-    <div class="contact-highlight">
-      <p><strong>Manuscript Submissions</strong><br>
-      We are actively seeking high-quality technical manuscripts from experienced developers and industry experts.</p>
-    </div>
-    
+    <h3>Publishing Inquiries</h3>    
+   
     <p>If you have expertise in:</p>
     <ul>
       <li>Modern programming languages and frameworks</li>
@@ -33,10 +33,10 @@ body_class: "contact-page"
       <h4>Submission Guidelines</h4>
       <p>Please include:</p>
       <ul>
-        <li>A detailed book proposal outlining your concept</li>
-        <li>Sample chapters or outline</li>
+        <li>A detailed description outlining your concept</li>
+        <li>A book outline with a table of contents</li>
         <li>Your technical background and relevant experience</li>
-        <li>Target audience and market analysis</li>
+        <li>Target audience and initial market analysis</li>
       </ul>
     </div>
   </div>
@@ -87,16 +87,6 @@ body_class: "contact-page"
       </form>
     </div>
     
-    <div class="contact-info">
-      <h4>Direct Contact</h4>
-      <p><strong>Email</strong>: {{ site.email }}</p>
-      <p><strong>Business Hours</strong>: {{ site.contact.business_hours }}</p>
-      <p><strong>Response Time</strong>: {{ site.contact.response_time }}</p>
-      
-      {% if site.social_links.linkedin %}
-        <p><strong>LinkedIn</strong>: <a href="{{ site.social_links.linkedin }}" target="_blank" rel="noopener">Connect with us</a></p>
-      {% endif %}
-    </div>
   </div>
 </div>
 
