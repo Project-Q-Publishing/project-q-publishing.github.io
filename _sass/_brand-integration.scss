@@ -118,14 +118,10 @@
     margin: 0 auto;
     
     li {
-      margin-bottom: $spacing-md;
-      padding-left: $spacing-md;
-      position: relative;
-      color: $text-primary;
+      margin-bottom: $spacing-xs;
       font-size: $large-font-size;
       
       &::before {
-        content: '→';
         position: absolute;
         left: 0;
         color: $primary-500;
