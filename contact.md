@@ -17,7 +17,7 @@ body_class: "contact-page"
 
 <div class="contact-grid">
   <div class="contact-section publishing-inquiries">
-    <h3>Publishing Inquiries</h3>    
+    <h1>Publishing Inquiries</h1>    
    
     <p>If you have expertise in:</p>
     <ul>
@@ -30,7 +30,7 @@ body_class: "contact-page"
     <p>We'd love to hear from you.</p>
     
     <div class="submission-guidelines">
-      <h4>Submission Guidelines</h4>
+      <h2>Submission Guidelines</h2>
       <p>Please include:</p>
       <ul>
         <li>A detailed description outlining your concept</li>
@@ -42,7 +42,7 @@ body_class: "contact-page"
   </div>
 
   <div class="contact-section general-contact">
-    <h3>Contact Form</h3>
+    <h1>Contact Form</h1>
     
     <div class="contact-form-container">
       <form action="https://formspree.io/f/xjkjvqpp" method="POST" class="contact-form">
@@ -92,7 +92,7 @@ body_class: "contact-page"
 
 <div class="contact-grid">
   <div class="contact-section readers">
-    <h3>For Readers</h3>
+    <h1>For Readers</h1>
     
     <p>Questions about our books, availability, or technical support? We're here to help.</p>
     
@@ -104,7 +104,7 @@ body_class: "contact-page"
   </div>
 
   <div class="contact-section business">
-    <h3>Business Inquiries</h3>
+    <h1>Business Inquiries</h1>
     
     <p>Interested in partnership opportunities, bulk sales, or corporate training materials? Let's discuss how we can work together.</p>
     
