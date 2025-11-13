@@ -118,15 +118,8 @@
     margin: 0;
 
     li {
-      margin-bottom: $spacing-xs;
+      margin-bottom: $spacing-sm;
       font-size: $large-font-size;
-
-      &::before {
-        position: absolute;
-        left: 0;
-        color: $primary-500;
-        font-weight: $font-weight-bold;
-      }
     }
   }
 }
