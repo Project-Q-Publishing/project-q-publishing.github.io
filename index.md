@@ -29,7 +29,7 @@ description: "Quality technical books for developers and engineers"
           </div>
 
           <div class="book-info">
-            <h3><a href="{{ book.url }}">{{ book.title }}</a></h3>
+            <h2><a href="{{ book.url }}">{{ book.title }}</a></h2>
             {% if book.subtitle %}
               <p class="book-subtitle">{{ book.subtitle }}</p>
             {% endif %}
