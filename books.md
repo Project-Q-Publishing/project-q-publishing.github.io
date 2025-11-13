@@ -152,7 +152,7 @@ body_class: "books-page"
 </section>
 
 <section class="update-cta">
-  <h3>Stay Updated</h3>
+  <h2>Stay Updated</h2>
   <p>Be the first to know about new releases, or inquire about manuscript submissions and publishing opportunities.</p>
   <a href="/contact" class="btn btn-primary">Contact Us</a>
 </section>
