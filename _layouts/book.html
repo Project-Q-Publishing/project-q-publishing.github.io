@@ -28,7 +28,7 @@ layout: default
       {% endif %}
 
       {% if page.price %}
-        <p class="book-price">
+        <p class="price">
           {% if page.currency == "USD" %}${{ page.price }}
           {% elsif page.currency == "EUR" %}€{{ page.price }}
           {% elsif page.currency == "GBP" %}£{{ page.price }}
