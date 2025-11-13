@@ -115,12 +115,12 @@
   
   ul {
     max-width: 600px;
-    margin: 0 auto;
-    
+    margin: 0;
+
     li {
       margin-bottom: $spacing-xs;
       font-size: $large-font-size;
-      
+
       &::before {
         position: absolute;
         left: 0;
