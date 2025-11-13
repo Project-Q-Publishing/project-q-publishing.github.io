@@ -53,7 +53,7 @@ body_class: "books-page"
 
   {% if unique_topics.size > 0 %}
   <div class="filter-section">
-    <h4>Filter by Topic</h4>
+    <h2>Filter by Topic</h2>
     <div class="filter-tags">
       {% for topic in unique_topics %}
         <button class="topic-tag" data-topic="{{ topic | slugify }}">{{ topic }}</button>
@@ -64,7 +64,7 @@ body_class: "books-page"
 
   {% if unique_languages.size > 0 %}
   <div class="filter-section">
-    <h4>Filter by Programming Language</h4>
+    <h2>Filter by Programming Language</h2>
     <div class="filter-tags">
       {% for language in unique_languages %}
         <button class="language-tag" data-language="{{ language | slugify }}">{{ language }}</button>
