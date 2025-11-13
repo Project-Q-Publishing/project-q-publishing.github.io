@@ -1,12 +1,11 @@
 ---
 layout: page
-title: "Books"
-description: "Browse our catalog of technical books"
+title: "Book Catalog"
 body_class: "books-page"
 ---
 
 <div class="page-header">
-  <h1>Our Book Catalog</h1>
+  <p>Browse our catalog of technical books.</p>
 </div>
 
 {% comment %} Collect all unique topics and languages for filters {% endcomment %}
