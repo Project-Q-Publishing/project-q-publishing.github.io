@@ -43,14 +43,6 @@ description: "Quality technical books for developers and engineers"
                 <span class="difficulty">{{ book.difficulty_level }}</span>
               {% endif %}
 
-              {% if book.programming_languages %}
-                <div class="languages">
-                  {% for lang in book.programming_languages limit: 2 %}
-                    <span class="language-tag">{{ lang }}</span>
-                  {% endfor %}
-                </div>
-              {% endif %}
-
               {% if book.price %}
                 <span class="price">
                   {% if book.currency == "USD" %}${{ book.price }}
