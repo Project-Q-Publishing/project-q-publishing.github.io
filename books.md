@@ -25,7 +25,7 @@ body_class: "books-page"
 {% if site.books.size > 0 %}
 <div class="filter-sort-controls collapsed">
   <div class="controls-header">
-    <h3>Filter & Sort Books</h3>
+    <h1>Filter & Sort Books</h1>
     <div class="header-actions">
       <button id="clear-filters" class="clear-filters" disabled>Clear All Filters</button>
       <button id="toggle-filters" class="toggle-filters" aria-expanded="false">
