@@ -811,7 +811,7 @@
   
   .book-meta {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: $spacing-xs;
     margin: $spacing-sm 0;
   }
