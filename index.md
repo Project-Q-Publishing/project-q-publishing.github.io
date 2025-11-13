@@ -98,8 +98,8 @@ description: "Quality technical books for developers and engineers"
 <section class="home-cta">
   <h2>Stay Connected</h2>
   <div class="cta-links">
-    <a href="/about">Learn more about our mission</a>
-    <a href="/books">Browse our upcoming catalog</a>
+    <a href="/about">Learn more about us</a>
+    <a href="/books">Browse our catalog</a>
   </div>
   <div class="contact-cta">
     <p>For publishing inquiries and manuscript submissions:</p>
