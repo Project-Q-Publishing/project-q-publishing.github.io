@@ -6,7 +6,7 @@ body_class: "contact-page"
 ---
 
 <div class="page-header">
-  <p class="page-description">We welcome inquiries from readers, authors, and industry professionals. You can use the contact form below or <a href="{{ site.social_links.linkedin }}" target="_blank" rel="noopener">connect with us on LinkedIn</a></p>
+  <p class="page-description">We welcome inquiries from readers, authors, and industry professionals. You can use the contact form below or <a href="{{ site.social_links.linkedin }}" style="text-decoration: underline;" target="_blank" rel="noopener">connect with us on LinkedIn</a>.</p>
 </div>
 
 <div class="contact-highlight">
