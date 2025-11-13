@@ -27,17 +27,18 @@ body_class: "contact-page"
       <li>Emerging technologies and trends</li>
     </ul>
     
-    <p>We'd love to hear from you.</p>
+    <p>we'd love to hear from you. Just fill in the contact form and select "Publishing Inquiry". We'll get back to you about your writing proposal or manuscript.</p>
     
     <div class="submission-guidelines">
       <h2>Submission Guidelines</h2>
-      <p>Please include:</p>
+      <p>We're happy to discuss ideas at all stages of development. Our discussions aim to develop the following items:</p>
       <ul>
         <li>A detailed description outlining your concept</li>
         <li>A book outline with a table of contents</li>
         <li>Your technical background and relevant experience</li>
         <li>Target audience and initial market analysis</li>
       </ul>
+      <p>We'd recommend you think about these aspects of your book as soon as you can. They help get the book off to the best possible start.</p>
     </div>
   </div>
 
@@ -60,7 +61,7 @@ body_class: "contact-page"
           <label for="inquiry-type">Inquiry Type</label>
           <select id="inquiry-type" name="inquiry_type">
             <option value="general">General Inquiry</option>
-            <option value="manuscript">Manuscript Submission</option>
+            <option value="manuscript">Publishing Inquiry</option>
             <option value="partnership">Partnership/Business</option>
             <option value="reader-support">Reader Support</option>
             <option value="media">Media Inquiry</option>
