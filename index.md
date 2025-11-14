@@ -29,7 +29,7 @@ description: "Quality technical books for developers and engineers"
           </div>
 
           <div class="book-info">
-            <h3><a href="{{ book.url }}">{{ book.title }}</a></h3>
+            <h2><a href="{{ book.url }}">{{ book.title }}</a></h2>
             {% if book.subtitle %}
               <p class="book-subtitle">{{ book.subtitle }}</p>
             {% endif %}
@@ -41,14 +41,6 @@ description: "Quality technical books for developers and engineers"
             <div class="book-meta">
               {% if book.difficulty_level %}
                 <span class="difficulty">{{ book.difficulty_level }}</span>
-              {% endif %}
-
-              {% if book.programming_languages %}
-                <div class="languages">
-                  {% for lang in book.programming_languages limit: 2 %}
-                    <span class="language-tag">{{ lang }}</span>
-                  {% endfor %}
-                </div>
               {% endif %}
 
               {% if book.price %}
@@ -98,8 +90,8 @@ description: "Quality technical books for developers and engineers"
 <section class="home-cta">
   <h2>Stay Connected</h2>
   <div class="cta-links">
-    <a href="/about">Learn more about our mission</a>
-    <a href="/books">Browse our upcoming catalog</a>
+    <a href="/about">Learn more about us</a>
+    <a href="/books">Browse our catalog</a>
   </div>
   <div class="contact-cta">
     <p>For publishing inquiries and manuscript submissions:</p>

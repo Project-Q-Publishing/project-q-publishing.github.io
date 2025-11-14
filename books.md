@@ -1,12 +1,11 @@
 ---
 layout: page
-title: "Books"
-description: "Browse our catalog of technical books"
+title: "Book Catalog"
 body_class: "books-page"
 ---
 
 <div class="page-header">
-  <h1>Our Book Catalog</h1>
+  <p>Browse our catalog of technical books.</p>
 </div>
 
 {% comment %} Collect all unique topics and languages for filters {% endcomment %}
@@ -26,7 +25,7 @@ body_class: "books-page"
 {% if site.books.size > 0 %}
 <div class="filter-sort-controls collapsed">
   <div class="controls-header">
-    <h3>Filter & Sort Books</h3>
+    <h1>Filter & Sort Books</h1>
     <div class="header-actions">
       <button id="clear-filters" class="clear-filters" disabled>Clear All Filters</button>
       <button id="toggle-filters" class="toggle-filters" aria-expanded="false">
@@ -54,7 +53,7 @@ body_class: "books-page"
 
   {% if unique_topics.size > 0 %}
   <div class="filter-section">
-    <h4>Filter by Topic</h4>
+    <h2>Filter by Topic</h2>
     <div class="filter-tags">
       {% for topic in unique_topics %}
         <button class="topic-tag" data-topic="{{ topic | slugify }}">{{ topic }}</button>
@@ -65,7 +64,7 @@ body_class: "books-page"
 
   {% if unique_languages.size > 0 %}
   <div class="filter-section">
-    <h4>Filter by Programming Language</h4>
+    <h2>Filter by Programming Language</h2>
     <div class="filter-tags">
       {% for language in unique_languages %}
         <button class="language-tag" data-language="{{ language | slugify }}">{{ language }}</button>
@@ -153,7 +152,7 @@ body_class: "books-page"
 </section>
 
 <section class="update-cta">
-  <h3>Stay Updated</h3>
+  <h2>Stay Updated</h2>
   <p>Be the first to know about new releases, or inquire about manuscript submissions and publishing opportunities.</p>
   <a href="/contact" class="btn btn-primary">Contact Us</a>
 </section>

@@ -28,7 +28,7 @@ layout: default
       {% endif %}
 
       {% if page.price %}
-        <p class="book-price">
+        <p class="price">
           {% if page.currency == "USD" %}${{ page.price }}
           {% elsif page.currency == "EUR" %}€{{ page.price }}
           {% elsif page.currency == "GBP" %}£{{ page.price }}
@@ -166,7 +166,7 @@ layout: default
             </div>
             
             <div class="book-actions">
-              <a href="{{ book.url }}" class="btn btn-primary btn-sm">Learn More</a>
+              <a href="{{ book.url }}" class="btn btn-primary btn-sm">View Book</a>
             </div>
           </div>
         </article>

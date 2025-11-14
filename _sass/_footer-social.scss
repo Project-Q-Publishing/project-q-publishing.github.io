@@ -1,13 +1,20 @@
 // Footer Social Links
 
 .site-footer {
+  // Footer column 3 description text
+  .footer-col-3 {
+    p {
+      color: white;
+    }
+  }
+
   .contact-button-wrapper {
     margin-bottom: 1.5rem;
 
     .contact-title {
       font-size: 0.875rem;
       font-weight: 600;
-      color: #6a737d;
+      color: white;
       margin: 0 0 0.75rem 0;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -55,7 +62,7 @@
     .social-links-title {
       font-size: 0.875rem;
       font-weight: 600;
-      color: #6a737d;
+      color: white;
       margin: 0 0 0.75rem 0;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -192,7 +199,6 @@
             display: block;
             margin: auto;
             flex-shrink: 0;
-            vertical-align: middle;
           }
 
           // Hide text on mobile, show only icons

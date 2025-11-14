@@ -6,7 +6,7 @@ body_class: "contact-page"
 ---
 
 <div class="page-header">
-  <p class="page-description">We welcome inquiries from readers, authors, and industry professionals. You can use the contact form below or <a href="{{ site.social_links.linkedin }}" target="_blank" rel="noopener">connect with us on LinkedIn</a></p>
+  <p class="page-description">We welcome inquiries from readers, authors, and industry professionals. You can use the contact form below or <a href="{{ site.social_links.linkedin }}" style="text-decoration: underline;" target="_blank" rel="noopener">connect with us on LinkedIn</a>.</p>
 </div>
 
 <div class="contact-highlight">
@@ -17,7 +17,7 @@ body_class: "contact-page"
 
 <div class="contact-grid">
   <div class="contact-section publishing-inquiries">
-    <h3>Publishing Inquiries</h3>    
+    <h1>Publishing Inquiries</h1>    
    
     <p>If you have expertise in:</p>
     <ul>
@@ -27,22 +27,23 @@ body_class: "contact-page"
       <li>Emerging technologies and trends</li>
     </ul>
     
-    <p>We'd love to hear from you.</p>
+    <p>we'd love to hear from you. Just fill in the contact form and select "Publishing Inquiry". We'll get back to you about your writing proposal or manuscript.</p>
     
     <div class="submission-guidelines">
-      <h4>Submission Guidelines</h4>
-      <p>Please include:</p>
+      <h2>Submission Guidelines</h2>
+      <p>We're happy to discuss ideas at all stages of development. Our discussions aim to develop the following items:</p>
       <ul>
         <li>A detailed description outlining your concept</li>
         <li>A book outline with a table of contents</li>
         <li>Your technical background and relevant experience</li>
         <li>Target audience and initial market analysis</li>
       </ul>
+      <p>We'd recommend you think about these aspects of your book as soon as you can. They help get the book off to the best possible start.</p>
     </div>
   </div>
 
   <div class="contact-section general-contact">
-    <h3>Contact Form</h3>
+    <h1>Contact Form</h1>
     
     <div class="contact-form-container">
       <form action="https://formspree.io/f/xjkjvqpp" method="POST" class="contact-form">
@@ -60,7 +61,7 @@ body_class: "contact-page"
           <label for="inquiry-type">Inquiry Type</label>
           <select id="inquiry-type" name="inquiry_type">
             <option value="general">General Inquiry</option>
-            <option value="manuscript">Manuscript Submission</option>
+            <option value="manuscript">Publishing Inquiry</option>
             <option value="partnership">Partnership/Business</option>
             <option value="reader-support">Reader Support</option>
             <option value="media">Media Inquiry</option>
@@ -92,7 +93,7 @@ body_class: "contact-page"
 
 <div class="contact-grid">
   <div class="contact-section readers">
-    <h3>For Readers</h3>
+    <h1>For Readers</h1>
     
     <p>Questions about our books, availability, or technical support? We're here to help.</p>
     
@@ -104,7 +105,7 @@ body_class: "contact-page"
   </div>
 
   <div class="contact-section business">
-    <h3>Business Inquiries</h3>
+    <h1>Business Inquiries</h1>
     
     <p>Interested in partnership opportunities, bulk sales, or corporate training materials? Let's discuss how we can work together.</p>
     

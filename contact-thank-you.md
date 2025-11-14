@@ -21,11 +21,12 @@ body_class: "thank-you-page"
   </div>
   
   <div class="additional-resources">
-    <h3>While You Wait</h3>
+    <h2>While You Wait</h2>
+    <p>Here are some links to explore more while you wait:</p>
     <div class="resource-links">
       <ul class="resource-list">
-        <li><a href="/books" class="btn btn-outline">Browse Our Books</a></li>
-        <li><a href="/about" class="btn btn-outline">Learn More About Us</a></li>
+        <li><a href="/books" class="btn btn-outline">Browse our books</a></li>
+        <li><a href="/about" class="btn btn-outline">Learn more about us</a></li>
       {% if site.social_links.linkedin %}
         <li><a href="{{ site.social_links.linkedin }}" class="btn btn-outline" target="_blank" rel="noopener">Connect on LinkedIn</a></li>
       {% endif %}
