@@ -63,6 +63,9 @@ navigation:
   - title: Books
     url: /books
     description: "Browse our catalog of technical books"
+  - title: Write
+    url: /write
+    description: "Join our team of technical authors"
   - title: Submissions
     url: /submissions
     description: "Submit your technical manuscript"
