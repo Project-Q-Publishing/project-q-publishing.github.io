@@ -57,21 +57,19 @@ navigation:
   - title: Home
     url: /
     description: "Homepage with featured books and company overview"
-  - title: About
-    url: /about
-    description: "Learn about our mission and publishing philosophy"
   - title: Books
     url: /books
     description: "Browse our catalog of technical books"
   - title: Write
     url: /write
     description: "Join our team of technical authors"
-  - title: Submissions
-    url: /submissions
-    description: "Submit your technical manuscript"
   - title: Contact
     url: /contact
     description: "Get in touch for inquiries and support"
+  - title: About
+    url: /about
+    description: "Learn about our mission and publishing philosophy"
+
 
 # Header configuration
 header:
