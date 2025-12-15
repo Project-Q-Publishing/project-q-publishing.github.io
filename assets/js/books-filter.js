@@ -196,29 +196,55 @@
     return topicMatch && languageMatch;
   }
 
-  // Sort cards
+  // Sort comparator functions
+  const sortComparators = {
+    // String comparisons (title)
+    'title-asc': (a, b) => {
+      const titleA = a.getAttribute('data-title');
+      const titleB = b.getAttribute('data-title');
+      return titleA.localeCompare(titleB);
+    },
+    'title-desc': (a, b) => {
+      const titleA = a.getAttribute('data-title');
+      const titleB = b.getAttribute('data-title');
+      return titleB.localeCompare(titleA);
+    },
+
+    // Numeric comparisons (price)
+    'price-asc': (a, b) => {
+      const priceA = parseFloat(a.getAttribute('data-price') || 0);
+      const priceB = parseFloat(b.getAttribute('data-price') || 0);
+      return priceA - priceB;
+    },
+    'price-desc': (a, b) => {
+      const priceA = parseFloat(a.getAttribute('data-price') || 0);
+      const priceB = parseFloat(b.getAttribute('data-price') || 0);
+      return priceB - priceA;
+    },
+
+    // Date comparisons
+    'date-asc': (a, b) => {
+      const dateA = new Date(a.getAttribute('data-date'));
+      const dateB = new Date(b.getAttribute('data-date'));
+      return dateA - dateB;
+    },
+    'date-desc': (a, b) => {
+      const dateA = new Date(a.getAttribute('data-date'));
+      const dateB = new Date(b.getAttribute('data-date'));
+      return dateB - dateA;
+    }
+  };
+
+  // Sort cards using the appropriate comparator
   function sortCards(cards) {
     const grid = document.querySelector('.books-grid');
     if (!grid) return;
 
-    // Sort array of cards
-    cards.sort((a, b) => {
-      switch (state.sortBy) {
-        case 'title-asc':
-          return a.getAttribute('data-title').localeCompare(b.getAttribute('data-title'));
-        case 'title-desc':
-          return b.getAttribute('data-title').localeCompare(a.getAttribute('data-title'));
-        case 'price-asc':
-          return parseFloat(a.getAttribute('data-price') || 0) - parseFloat(b.getAttribute('data-price') || 0);
-        case 'price-desc':
-          return parseFloat(b.getAttribute('data-price') || 0) - parseFloat(a.getAttribute('data-price') || 0);
-        case 'date-asc':
-          return new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date'));
-        case 'date-desc':
-        default:
-          return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
-      }
-    });
+    // Get the comparator function for the current sort option
+    const comparator = sortComparators[state.sortBy] || sortComparators['date-desc'];
+
+    // Sort array of cards using the comparator
+    cards.sort(comparator);
 
     // Reorder DOM elements
     cards.forEach(card => {
