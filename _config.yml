@@ -30,8 +30,8 @@ author:
 social_links:
   linkedin: https://linkedin.com/company/project-q-publishing
   github: https://github.com/Project-Q-Publishing
-  instagram: https://instagram.com/projectqpub
   bluesky: https://bsky.app/profile/projectqpub.com
+  instagram: https://instagram.com/projectqpub
 
 # Social media usernames for SEO
 social:
@@ -39,8 +39,8 @@ social:
   links:
     - https://linkedin.com/company/project-q-publishing
     - https://github.com/Project-Q-Publishing
-    - https://instagram.com/projectqpub
     - https://bsky.app/profile/projectqpub.com
+    - https://instagram.com/projectqpub
 
 # Contact information
 contact:
@@ -186,8 +186,8 @@ organization:
   same_as:
     - "https://linkedin.com/company/project-q-publishing"
     - "https://github.com/Project-Q-Publishing"
-    - "https://instagram.com/projectqpub"
     - "https://bsky.app/profile/projectqpub.com"
+    - "https://instagram.com/projectqpub"
 
 # Content and formatting
 markdown: kramdown
