@@ -30,7 +30,8 @@ author:
 social_links:
   linkedin: https://linkedin.com/company/project-q-publishing
   github: https://github.com/Project-Q-Publishing
-  twitter: https://twitter.com/projectqpub
+  instagram: https://instagram.com/projectqpub
+  bluesky: https://bsky.app/profile/projectqpub.bsky.social
 
 # Social media usernames for SEO
 social:
@@ -38,12 +39,8 @@ social:
   links:
     - https://linkedin.com/company/project-q-publishing
     - https://github.com/Project-Q-Publishing
-    - https://twitter.com/projectqpub
-
-# Twitter card configuration for jekyll-seo-tag
-twitter:
-  username: projectqpub
-  card: summary_large_image
+    - https://instagram.com/projectqpub
+    - https://bsky.app/profile/projectqpub.bsky.social
 
 # Contact information
 contact:
@@ -189,7 +186,8 @@ organization:
   same_as:
     - "https://linkedin.com/company/project-q-publishing"
     - "https://github.com/Project-Q-Publishing"
-    - "https://twitter.com/projectqpub"
+    - "https://instagram.com/projectqpub"
+    - "https://bsky.app/profile/projectqpub.com"
 
 # Content and formatting
 markdown: kramdown
