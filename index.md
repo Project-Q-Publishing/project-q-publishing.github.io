@@ -6,7 +6,7 @@ description: "Quality technical books for developers and engineers"
 
 <div class="home-hero">
   <h1>Welcome to Project Q Publishing</h1>
-  <p class="hero-tagline">Quality technical books for developers, engineers, and technology professionals</p>
+  <p class="hero-tagline">Quality technical books for developers and engineers</p>
 </div>
 
 <section class="featured-books">
