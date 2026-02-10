@@ -14,15 +14,15 @@ body_class: "write-page"
   <div class="feature-grid">
     <article class="benefit-card">
       <h3>25 Years of Experience</h3>
-      <p>You'll work with an editor with at least 25 years experience, guaranteed.</p>
+      <p>Run by an editor with over 25 years' experience, you'll get all the support you need.</p>
     </article>
     <article class="benefit-card">
       <h3>Developer-Friendly Workflow</h3>
-      <p>We use GitHub and Markdown by default.</p>
+      <p>We use GitHub and Markdown by default, following a books-as-code approach.</p>
     </article>
     <article class="benefit-card">
       <h3>Your Words, Your Platform</h3>
-      <p>However, write in whatever platform you like, we'll work it out.</p>
+      <p>However, write on whatever platform you like, we'll work it out.</p>
     </article>
   </div>
 </section>
