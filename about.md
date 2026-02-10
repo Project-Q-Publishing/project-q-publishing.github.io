@@ -15,8 +15,9 @@ body_class: "about-page"
       <img src="/assets/images/Matt profile 178x178.png" alt="Matthew Moodie">
     </div>
     <div class="team-bio-text">
-      <h3>Matthew Moodie</h3>
-      <p>Your bio text goes here.</p>
+      <h3>Matthew Moodie, Founder and Publisher</h3>
+      <p>Matt has more than 25 years' experience in technical publishing. He began as a trainee editor in the year 2000 and was most recently an Editorial Director. He has edited hundreds of technical books and overseen hundreds more.</p>
+      <p><a href="https://www.linkedin.com/in/matthew-moodie-2734679a/">LinkedIn profile</a></p>
     </div>
   </div>
 </section>
