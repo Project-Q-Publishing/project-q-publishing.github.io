@@ -6,14 +6,8 @@ body_class: "contact-page"
 ---
 
 <div class="page-header">
-  <p class="page-description">We welcome inquiries from readers, authors, and industry professionals. You can use the contact form below or <a href="{{ site.social_links.linkedin }}" style="text-decoration: underline;" target="_blank" rel="noopener">connect with us on LinkedIn</a>.</p>
+  <p class="page-description">We welcome inquiries from readers and authors, anyone who wants to get in touch. You can use the contact form below or <a href="{{ site.social_links.linkedin }}" style="text-decoration: underline;" target="_blank" rel="noopener">connect with us on LinkedIn</a>. You can find code bundles and errata on our <a href="https://github.com/Project-Q-Publishing/" style="text-decoration: underline;" target="_blank" rel="noopener">GitHub pages</a>.</p>
 </div>
-
-<div class="contact-highlight">
-  <p><strong>Manuscript Submissions</strong><br>
-  We are actively seeking high-quality technical manuscripts from experienced developers and industry experts.</p>
-</div>
-
 
 <div class="contact-grid">
   <div class="contact-section publishing-inquiries">
@@ -94,14 +88,12 @@ body_class: "contact-page"
 <div class="contact-grid">
   <div class="contact-section readers">
     <h1>For Readers</h1>
-    
-    <p>Questions about our books, availability, or technical support? We're here to help.</p>
-    
-    <div class="contact-highlight">
-      <p><strong>Book Availability</strong>: Check back regularly for updates on our upcoming releases.</p>
-    </div>
-    
-    <p><strong>Technical Support</strong>: We provide ongoing support for technical questions related to our published books.</p>
+      
+      <p>Questions about our books, availability, or technical support? We're here to help.</p>
+      
+      <div class="contact-highlight">
+        <p><strong>Reader Support</strong>: We provide ongoing support for technical questions related to our published books. You can find code bundles and errata on our <a href="https://github.com/Project-Q-Publishing/" style="text-decoration: underline;" target="_blank" rel="noopener">GitHub pages</a>.</p>
+      </div>
   </div>
 
   <div class="contact-section business">
@@ -117,5 +109,5 @@ body_class: "contact-page"
 </div>
 
 <div class="page-footer">
-  <em>We look forward to hearing from you and building the future of technical publishing together.</em>
+  <em>We look forward to hearing from you.</em>
 </div>
