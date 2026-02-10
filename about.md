@@ -37,15 +37,6 @@ body_class: "about-page"
       </ul>
     </div>
     
-    <div class="focus-item quality-standards">
-      <p>Every book we publish meets our high standards for:</p>
-      <ul>
-        <li>Technical accuracy and depth</li>
-        <li>Clear, practical explanations</li>
-        <li>Real-world examples and applications</li>
-        <li>Professional editing and production</li>
-      </ul>
-    </div>
   </div>
 </section>
 
