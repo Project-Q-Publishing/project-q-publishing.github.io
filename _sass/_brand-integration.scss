@@ -671,6 +671,43 @@
 }
 
 // =============================================================================
+// TEAM SECTION
+// =============================================================================
+
+.team-section {
+  margin-bottom: $spacing-xxl;
+}
+
+.team-bio {
+  display: grid;
+  gap: $spacing-xl;
+  align-items: start;
+  margin-bottom: $spacing-xl;
+
+  @include tablet-up {
+    grid-template-columns: 178px 1fr;
+  }
+}
+
+.team-bio-image img {
+  border-radius: $border-radius-lg;
+  max-width: 100%;
+  height: auto;
+}
+
+.team-bio-text {
+  h3 {
+    color: $primary-600;
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: 1.7;
+  }
+}
+
+// =============================================================================
 // WRITE PAGE BRAND STYLING
 // =============================================================================
 

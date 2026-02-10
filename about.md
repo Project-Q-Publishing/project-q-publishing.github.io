@@ -5,8 +5,22 @@ body_class: "about-page"
 ---
 
 <div class="page-header">
-  <p>We believe that quality technical and educational resources are essential for the advancement of software development. Our mission is to publish comprehensive, practical, and accessible technical books that help developers at all levels enhance their skills and understanding.</p>
+  <p>We are a start-up publisher with the goal of publishing useful technical books for developers. Founded by an editor and writer with more than 25 years' experience in technical publishing, we listen to readers and provide the content they need.</p>
 </div>
+
+<section class="team-section">
+  <h2>Meet the Team</h2>
+  <div class="team-bio">
+    <div class="team-bio-image">
+      <img src="/assets/images/Matt profile 178x178.png" alt="Matthew Moodie">
+    </div>
+    <div class="team-bio-text">
+      <h3>Matthew Moodie, Founder and Publisher</h3>
+      <p>Matt has more than 25 years' experience in technical publishing. He began as a trainee editor in the year 2000 and was most recently an Editorial Director. He has edited hundreds of technical books and overseen hundreds more.</p>
+      <p><a href="https://www.linkedin.com/in/matthew-moodie-2734679a/">LinkedIn profile</a></p>
+    </div>
+  </div>
+</section>
 
 <section>
   <h2>Our Focus</h2>
@@ -23,15 +37,6 @@ body_class: "about-page"
       </ul>
     </div>
     
-    <div class="focus-item quality-standards">
-      <p>Every book we publish meets our high standards for:</p>
-      <ul>
-        <li>Technical accuracy and depth</li>
-        <li>Clear, practical explanations</li>
-        <li>Real-world examples and applications</li>
-        <li>Professional editing and production</li>
-      </ul>
-    </div>
   </div>
 </section>
 
@@ -40,15 +45,15 @@ body_class: "about-page"
   
   <div class="approach-grid">
     <div class="approach-item">
-      <p><strong>Author Partnership</strong>: we work closely with experienced developers, engineers, and technology leaders who bring real-world expertise to their writing. Our authors are practitioners who understand the challenges facing today's development teams.</p>
+      <p><strong>Author Partnership</strong>: we work closely with experienced developers, engineers, and technology leaders who bring real-world expertise to their writing. Our authors are practitioners who understand the challenges you face.</p>
     </div>
     
     <div class="approach-item">
-      <p><strong>Rigorous Review Process</strong>: every manuscript undergoes thorough technical review by industry experts, ensuring accuracy, relevance, and practical value. We maintain high editorial standards while preserving each author's unique voice and insights.</p>
+      <p><strong>Rigorous Review Process</strong>: we read, review, and edit every manuscript we publish. We conduct a thorough technical review for accuracy, relevance, and practical value. We maintain high editorial standards while preserving each author's unique voice and insights.</p>
     </div>
     
     <div class="approach-item">
-      <p><strong>Practical Focus</strong>: our books emphasize hands-on learning with extensive code examples, real-world case studies, and actionable advice that developers can immediately apply in their daily work.</p>
+      <p><strong>Run by Technical People for Technical People</strong>: our team uses Markdown and GitHub to develop our books, using a books-as-code workflow. We regularly write code and contribute to open-source projects.</p>
     </div>
   </div>
 </section>
@@ -70,19 +75,3 @@ body_class: "about-page"
     </div>
   </div>
 </section>
-
-<section class="company-values">
-  <h2>Our Values</h2>
-  <p>We have five core values:</p>  
-  <ul class="values-list">
-    <li><strong>Quality First:</strong> We never compromise on technical accuracy or editorial excellence</li>
-    <li><strong>Developer-Centric:</strong> Every decision is made with the reader's learning experience in mind</li>
-    <li><strong>Accessible Knowledge:</strong> Complex technical concepts explained clearly and practically</li>
-    <li><strong>Community Driven:</strong> We listen to the developer community and respond to their evolving needs</li>
-    <li><strong>Continuous Learning:</strong> Technology evolves, and our content reflects current best practices</li>
-  </ul>
-</section>
-
-<div class="philosophy-quote">
-  We believe in creating books that serve as both learning resources and practical references that developers will return to throughout their careers.
-</div>
