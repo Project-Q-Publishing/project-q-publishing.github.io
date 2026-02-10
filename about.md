@@ -8,6 +8,19 @@ body_class: "about-page"
   <p>We are a start-up publisher with the goal of publishing useful technical books for developers. Founded by an editor and writer with more than 25 years' experience in technical publishing, we listen to readers and provide the content they need.</p>
 </div>
 
+<section class="team-section">
+  <h2>Meet the Team</h2>
+  <div class="team-bio">
+    <div class="team-bio-image">
+      <img src="/assets/images/Matt profile 178x178.png" alt="Matthew Moodie">
+    </div>
+    <div class="team-bio-text">
+      <h3>Matthew Moodie</h3>
+      <p>Your bio text goes here.</p>
+    </div>
+  </div>
+</section>
+
 <section>
   <h2>Our Focus</h2>
   
