@@ -75,7 +75,3 @@ body_class: "about-page"
     </div>
   </div>
 </section>
-
-<div class="philosophy-quote">
-  We believe in creating books that serve as both learning resources and practical references that developers will return to throughout their careers.
-</div>
