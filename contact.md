@@ -6,7 +6,7 @@ body_class: "contact-page"
 ---
 
 <div class="page-header">
-  <p class="page-description">We welcome inquiries from readers and authors, anyone who wants to get in touch. You can use the contact form below or <a href="{{ site.social_links.linkedin }}" style="text-decoration: underline;" target="_blank" rel="noopener">connect with us on LinkedIn</a>. You can find code bundles and errata on our <a href="https://github.com/Project-Q-Publishing/" style="text-decoration: underline;" target="_blank" rel="noopener">GitHub pages</a>.</p>
+  <p class="page-description">We welcome inquiries from readers and authors (and anyone else who wants to get in touch). You can use the contact form below or <a href="{{ site.social_links.linkedin }}" style="text-decoration: underline;" target="_blank" rel="noopener">connect with us on LinkedIn</a>. You can find code bundles and errata on our <a href="https://github.com/Project-Q-Publishing/" style="text-decoration: underline;" target="_blank" rel="noopener">GitHub pages</a>.</p>
 </div>
 
 <div class="contact-grid">
