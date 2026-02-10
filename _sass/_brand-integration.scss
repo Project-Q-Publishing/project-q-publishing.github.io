@@ -671,6 +671,96 @@
 }
 
 // =============================================================================
+// WRITE PAGE BRAND STYLING
+// =============================================================================
+
+.write-page {
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-xxl;
+
+    h1 {
+      color: $primary-600;
+    }
+
+    .page-description {
+      font-size: $large-font-size;
+      color: $text-secondary;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .author-benefits {
+    margin-bottom: $spacing-xxl;
+
+    h2 {
+      text-align: center;
+      color: $primary-600;
+      margin-bottom: $spacing-xl;
+    }
+  }
+
+  .benefit-card {
+    background-color: $background-secondary;
+    padding: $spacing-xl;
+    border-radius: $border-radius-lg;
+    border-left: 4px solid $primary-500;
+
+    h3 {
+      color: $primary-600;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      color: $text-secondary;
+      line-height: 1.7;
+    }
+  }
+
+  .submission-process {
+    margin-bottom: $spacing-xxl;
+
+    h2 {
+      text-align: center;
+      color: $primary-600;
+      margin-bottom: $spacing-xl;
+    }
+
+    ol {
+      max-width: 600px;
+      margin: 0 auto;
+
+      li {
+        margin-bottom: $spacing-md;
+        line-height: 1.7;
+        color: $text-secondary;
+      }
+    }
+  }
+
+  .cta-section {
+    text-align: center;
+    background-color: $primary-50;
+    padding: $spacing-xxl;
+    border-radius: $border-radius-lg;
+
+    h2 {
+      color: $primary-700;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      color: $text-secondary;
+      margin-bottom: $spacing-lg;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// =============================================================================
 // RESPONSIVE BRAND ADJUSTMENTS
 // =============================================================================
 
