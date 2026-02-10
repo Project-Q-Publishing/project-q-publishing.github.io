@@ -53,7 +53,7 @@ body_class: "about-page"
     </div>
     
     <div class="approach-item">
-      <p><strong>Practical Focus</strong>: our books emphasize hands-on learning with extensive code examples, real-world case studies, and actionable advice that you can immediately apply.</p>
+      <p><strong>Run by Technical People for Technical People</strong>: our team uses Markdown and GitHub to develop our books, using a books-as-code workflow. We regularly write code and contribute to open-source projects.</p>
     </div>
   </div>
 </section>
