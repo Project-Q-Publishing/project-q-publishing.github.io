@@ -78,7 +78,7 @@ description: "Quality technical books for developers and engineers"
 
 <section class="focus-areas">
   <h2>About Our Focus</h2>
-  <p>We focus on creating comprehensive, practical programming resources that help developers:</p>
+  <p>We focus on creating comprehensive, practical programming resources that help you:</p>
   <ul>
     <li>Master new programming languages and frameworks</li>
     <li>Understand complex technical concepts</li>
