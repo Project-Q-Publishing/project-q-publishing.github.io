@@ -619,19 +619,22 @@ Author biography and credentials.
 ### Adding Book Cover Images
 
 1. **Prepare image**:
-   - Recommended size: 600x900px (2:3 aspect ratio)
-   - Format: JPG or PNG
-   - File size: < 500KB for fast loading
+   - Recommended size: 600×900px (2:3 aspect ratio)
+   - Format: **WebP** (preferred) — ~30% smaller than JPEG at equivalent quality, supported by all modern browsers
+   - Quality: 85–90 (in GIMP: `File > Export As > cover.webp`, quality 85–90, lossless: No)
+   - File size: < 150KB for fast loading
 
 2. **Save to assets**:
    ```bash
-   cp cover.jpg assets/images/books/your-book-cover.jpg
+   cp cover.webp assets/images/books/your-book-cover.webp
    ```
 
 3. **Reference in front matter**:
    ```yaml
-   cover_image: "/assets/images/books/your-book-cover.jpg"
+   cover_image: "/assets/images/books/your-book-cover.webp"
    ```
+
+> **Note on resolution**: DPI/PPI settings have no effect on web display — only pixel dimensions matter. Export at 600×900px regardless of what DPI GIMP shows.
 
 ### Book Filtering Integration
 
