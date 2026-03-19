@@ -32,11 +32,13 @@ featured: true
 
 Master container technology from the ground up and solve one of software development's most persistent headaches: the "it works on my machine" problem. Whether you are a developer or a DevOps engineer, this practical guide gives you the skills to build, share, and run modern applications reliably across any environment.
 
-Docker: Once Upon a Time takes you on a structured journey from zero to production-ready. You will start with core container concepts and Docker installation on Mac, Windows, and Linux, then progress through image management, container networking, data persistence with volumes, and Dockerfile authoring. Each chapter includes hands-on exercises with answer keys, so you can immediately validate what you have learned.
+*Docker: Once Upon a Time* is written by a Senior DevOps and Cloud Native Engineer with over a decade of experience guiding large enterprises through the complex adoption of containers and Kubernetes clusters. This book takes you on a structured journey from zero to production-ready. 
+
+You will start with core container concepts and Docker installation on Mac, Windows, and Linux, then progress through image management, container networking, data persistence with volumes, and Dockerfile authoring. Each chapter includes hands-on exercises with answer keys, so you can immediately validate what you have learned.
 
 Build and publish your own images to Docker Hub, then deploy containerized workloads to the cloud using DigitalOcean App Platform. You will also gain practical experience with Docker Compose V2 to coordinate multi-service applications—including real-world use cases such as a WordPress and MariaDB stack.
 
-Written in accessible, direct language and structured from simple to advanced, Docker: Once Upon a Time requires only basic Linux system administration knowledge. No prior Docker experience is needed—just a terminal and a willingness to learn.
+Written in accessible, direct language and structured from simple to advanced, *Docker: Once Upon a Time* requires only basic Linux system administration knowledge. No prior Docker experience is needed—just a terminal and a willingness to learn.
 
 ## What You Will Learn
 
@@ -68,6 +70,6 @@ Written by Manuel Morejón, an experienced Docker practitioner and educator, und
 
 Manuel is a Senior DevOps and Cloud Native Engineer with over a decade of experience guiding large enterprises through the complex adoption of containers and Kubernetes clusters. Recognized by the community as a former Docker Captain, he has spent years designing, automating, and scaling production-grade environments.
 
-A passionate advocate for the "Docs-as-Code" philosophy, Manuel is the creator and author of the Once Upon a Time series (Docker: Once Upon a Time and Kubernetes: Once Upon a Time). Through this project, he bridges the gap between advanced cloud-native concepts and practical, production-oriented learning.
+A passionate advocate for the "Docs-as-Code" philosophy, Manuel is the creator and author of the Once Upon a Time series (*Docker: Once Upon a Time* and *Kubernetes: Once Upon a Time*). Through this project, he bridges the gap between advanced cloud-native concepts and practical, production-oriented learning.
 
 Above all, Manuel believes that technical knowledge should not be a luxury. He is dedicated to building a strong, collaborative community where knowledge is openly shared. To sustain this vision, he pioneers innovative community-support models through corporate GitHub Sponsorships, allowing those with the means to support the ecosystem so that high-quality technical resources remain accessible to developers worldwide.
