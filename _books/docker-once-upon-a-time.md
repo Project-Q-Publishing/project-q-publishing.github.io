@@ -68,4 +68,8 @@ Written by Manuel Morejón, an experienced Docker practitioner and educator, und
 
 ## About the Author
 
-Manuel is a Senior DevOps Engineer and Cloud Native Architect. He specializes in making complex infrastructure concepts accessible. Author of "Once Upon a Time Kubernetes," the go-to reference for learning container orchestration hands-on, without unnecessary cloud costs.
+Manuel is a Senior DevOps and Cloud Native Engineer with over a decade of experience guiding large enterprises through the complex adoption of containers and Kubernetes clusters. Recognized by the community as a former Docker Captain, he has spent years designing, automating, and scaling production-grade environments.
+
+A passionate advocate for the "Docs-as-Code" philosophy, Manuel is the creator and author of the Once Upon a Time series (Docker: Once Upon a Time and Kubernetes: Once Upon a Time). Through this project, he bridges the gap between advanced cloud-native concepts and practical, production-oriented learning.
+
+Above all, Manuel believes that technical knowledge should not be a luxury. He is dedicated to building a strong, collaborative community where knowledge is openly shared. To sustain this vision, he pioneers innovative community-support models through corporate GitHub Sponsorships, allowing those with the means to support the ecosystem so that high-quality technical resources remain accessible to developers worldwide.
