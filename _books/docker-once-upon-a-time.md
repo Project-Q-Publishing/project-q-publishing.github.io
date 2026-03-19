@@ -11,21 +11,19 @@ cover_image: "/assets/images/books/docker-once-upon-a-time.webp"
 description: >-
   Master container technology and solve one of software development's most persistent headaches: the "it works on my machine" problem. 
 difficulty_level: "Beginner"  # Beginner, Intermediate, or Advanced
-programming_languages:
-  - "Language"
 topics:
-  - "Topic 1"
-  - "Topic 2"
-target_audience: "Target readers"
-purchase_links:
-  amazon: "https://amazon.com/dp/example"
-  publisher: "/contact"
-sample_chapters:
-  - "Chapter 1: Chapter Title"
-reviews:
-  - quote: "Review text"
-    author: "Reviewer Name"
-    rating: 5
+  - "Docker"
+  - "Containers"
+target_audience: "Developers and DevOps engineers who want to get started with Docker and container technology."
+# purchase_links:
+  # amazon: "https://amazon.com/dp/example"
+  # publisher: "/contact"
+# sample_chapters:
+  # - "Chapter 1: Chapter Title"
+# reviews:
+#  - quote: "Review text"
+    # author: "Reviewer Name"
+    # rating: 5
 
 featured: true
 ---
