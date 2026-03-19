@@ -7,7 +7,7 @@ publication_date: "2026-06-16"
 price: 29.99
 currency: "USD"
 pages: 186
-cover_image: "/assets/images/books/cover-filename.jpg"
+cover_image: "/assets/images/books/docker-once-upon-a-time.webp"
 description: >-
   Master container technology and solve one of software development's most persistent headaches: the "it works on my machine" problem. 
 difficulty_level: "Beginner"  # Beginner, Intermediate, or Advanced
