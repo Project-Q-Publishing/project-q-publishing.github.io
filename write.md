@@ -44,7 +44,7 @@ body_class: "write-page"
     </details>
     <details class="faq-item">
       <summary>How are royalties handled?</summary>
-      <p>We offer authors royalties on the net sales that we receive. Net here is the actual amount of money received by us (after conversion of any foreign currency received), net of VAT or of any other taxes; any bank charges; handling charges; printing costs; and postage and packaging charges.</p>
+      <p>We offer authors royalties as a percentage of the net sales that we receive. Net here is the actual amount of money received by us (after conversion of any foreign currency received), net of VAT or of any other taxes; any bank charges; handling charges; printing costs; and postage and packaging charges.</p>
     </details>
   </div>
 </section>
