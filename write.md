@@ -46,10 +46,6 @@ body_class: "write-page"
       <summary>How are royalties handled?</summary>
       <p>We offer authors royalties on the net sales that we receive. Net here is the actual amount of money received by us (after conversion of any foreign currency received), net of VAT or of any other taxes; any bank charges; handling charges; printing costs; and postage and packaging charges.</p>
     </details>
-    <details class="faq-item">
-      <summary>How long does it take to publish a book?</summary>
-      <p>It varies depending on the scope and your availability. We'll work out a realistic schedule together that fits around your commitments.</p>
-    </details>
   </div>
 </section>
 
