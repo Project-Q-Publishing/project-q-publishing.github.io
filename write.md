@@ -35,10 +35,6 @@ body_class: "write-page"
       <p>We are a full-service publisher, meaning we provide all levels of editing (development, copy editing, proofreading) as standard. We do the layout and design the cover as well. There is no cost to authors and they earn money through royalties based on sales revenue.</p>
     </details>
     <details class="faq-item">
-      <summary>What topics are you looking for?</summary>
-      <p>We publish technical books on programming languages, software architecture, development practices, and emerging technologies. If you're unsure whether your idea fits, get in touch — we're happy to discuss it.</p>
-    </details>
-    <details class="faq-item">
       <summary>Do I need to have a finished manuscript?</summary>
       <p>Not at all. We're happy to hear from you at any stage — whether you have a rough idea, a detailed outline, or a completed draft.</p>
     </details>
