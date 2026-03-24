@@ -24,6 +24,10 @@ body_class: "write-page"
       <h3>Your Words, Your Platform</h3>
       <p>However, write on whatever platform you like, we'll work it out.</p>
     </article>
+    <article class="benefit-card">
+      <h3>Run By Technical People</h3>
+      <p> We're run by people who understand code and what it means to tinker, play, and work with computers.</p>
+    </article>
   </div>
 </section>
 
