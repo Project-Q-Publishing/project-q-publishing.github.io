@@ -18,7 +18,7 @@ body_class: "write-page"
     </article>
     <article class="benefit-card">
       <h3>Developer-Friendly Workflow</h3>
-      <p>We use GitHub and Markdown by default, following a books-as-code approach.</p>
+      <p>We use GitHub and Markdown by default, giving you a distraction-free writing experience. By removing the chrome and giving you a familiar interface, you can focus fully on the content.</p>
     </article>
     <article class="benefit-card">
       <h3>Your Words, Your Platform</h3>
