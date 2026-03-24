@@ -28,7 +28,7 @@ body_class: "write-page"
 </section>
 
 <section class="author-faq">
-  <h2>Author FAQ</h2>
+  <h2>Author FAQs</h2>
   <div class="faq-list">
       <details class="faq-item">
       <summary>Are you a self-publisher and is there any cost to me?</summary>
