@@ -18,12 +18,46 @@ body_class: "write-page"
     </article>
     <article class="benefit-card">
       <h3>Developer-Friendly Workflow</h3>
-      <p>We use GitHub and Markdown by default, following a books-as-code approach.</p>
+      <p>We use GitHub and Markdown by default, giving you a distraction-free writing experience. By removing the chrome and giving you a familiar interface, you can focus fully on the content.</p>
     </article>
     <article class="benefit-card">
       <h3>Your Words, Your Platform</h3>
       <p>However, write on whatever platform you like, we'll work it out.</p>
     </article>
+    <article class="benefit-card">
+      <h3>Run By Technical People</h3>
+      <p>We're run by people who understand code and what it means to tinker, play, and work with computers.</p>
+    </article>
+    <article class="benefit-card">
+      <h3>Books as Code</h3>
+      <p>We treat our books as code, giving us access to powerful code-related tools. We have a fully open-source tool chain capable of CI/CD for your content, as well as automated code testing and verification.</p>
+    </article>
+    <article class="benefit-card">
+      <h3>Working in the Open</h3>
+      <p>Through GitHub, we're uniquely transparent as a publisher; you can see what is happening to your content at all times.</p>
+    </article>
+  </div>
+</section>
+
+<section class="author-faq">
+  <h2>Author FAQs</h2>
+  <div class="faq-list">
+      <details class="faq-item">
+      <summary>Are you a self-publisher and is there any cost to me?</summary>
+      <p>We are a full-service publisher, meaning we provide all levels of editing (development, copy editing, proofreading) as standard. We do the layout and design the cover as well. There is no cost to authors and they earn money through royalties based on sales revenue.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do I need to have a finished manuscript?</summary>
+      <p>Not at all. We're happy to hear from you at any stage — whether you have a rough idea, a detailed outline, or a completed draft.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What does the publishing process look like?</summary>
+      <p>After an initial conversation, we'll agree on an outline and schedule. You write, we provide editorial support throughout, then we handle production and distribution.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How are royalties handled?</summary>
+      <p>We offer authors royalties as a percentage of the net sales that we receive. Net here is the actual amount of money received by us (after conversion of any foreign currency received), net of VAT or of any other taxes; any bank charges; handling charges; printing costs; and postage and packaging charges.</p>
+    </details>
   </div>
 </section>
 

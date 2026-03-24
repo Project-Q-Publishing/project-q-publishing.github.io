@@ -776,6 +776,62 @@
     }
   }
 
+  .author-faq {
+    margin-bottom: $spacing-xxl;
+
+    h2 {
+      text-align: center;
+      color: $primary-600;
+      margin-bottom: $spacing-xl;
+    }
+
+    .faq-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid $border-light;
+
+      summary {
+        padding: $spacing-lg 0;
+        font-weight: $font-weight-semibold;
+        color: $text-primary;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after {
+          content: "+";
+          font-size: 1.25rem;
+          color: $primary-500;
+          flex-shrink: 0;
+          margin-left: $spacing-md;
+        }
+
+        &:hover {
+          color: $primary-600;
+        }
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+      }
+
+      &[open] summary::after {
+        content: "−";
+      }
+
+      p {
+        padding: 0 0 $spacing-lg 0;
+        color: $text-secondary;
+        line-height: 1.7;
+      }
+    }
+  }
+
   .cta-section {
     text-align: center;
     background-color: $primary-50;
