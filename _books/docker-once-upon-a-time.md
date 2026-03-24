@@ -28,8 +28,6 @@ target_audience: "Developers and DevOps engineers who want to get started with D
 featured: true
 ---
 
-## Overview
-
 Master container technology from the ground up and solve one of software development's most persistent headaches: the "it works on my machine" problem. Whether you are a developer or a DevOps engineer, this practical guide gives you the skills to build, share, and run modern applications reliably across any environment.
 
 *Docker: Once Upon a Time* is written by a Senior DevOps and Cloud Native Engineer with over a decade of experience guiding large enterprises through the complex adoption of containers and Kubernetes clusters. This book takes you on a structured journey from zero to production-ready. 
