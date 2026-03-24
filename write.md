@@ -26,7 +26,11 @@ body_class: "write-page"
     </article>
     <article class="benefit-card">
       <h3>Run By Technical People</h3>
-      <p> We're run by people who understand code and what it means to tinker, play, and work with computers.</p>
+      <p>We're run by people who understand code and what it means to tinker, play, and work with computers.</p>
+    </article>
+        <article class="benefit-card">
+      <h3>Books as Code</h3>
+      <p>We treat our books as code, giving us access to powerful code-related tools. We have a fully open-source tool chain capable of CI/CD for your content, as well as automated code testing and verification.</p>
     </article>
   </div>
 </section>
