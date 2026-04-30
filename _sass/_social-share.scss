@@ -90,6 +90,15 @@
       }
     }
 
+    // Bluesky specific styling
+    &.bluesky {
+      &:hover {
+        background-color: #0085ff;
+        border-color: #0085ff;
+        color: white;
+      }
+    }
+
     // Copy link specific styling
     &.copy-link {
       &:hover {
