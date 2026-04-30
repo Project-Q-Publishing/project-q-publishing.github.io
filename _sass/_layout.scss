@@ -359,6 +359,11 @@
 // Book detail page header purchase buttons
 .book > .book-header .book-actions {
   margin-bottom: $spacing-md;
+
+  .btn:hover:not(:disabled),
+  .btn:active {
+    transform: none;
+  }
 }
 
 // =============================================================================
