@@ -366,6 +366,32 @@
   }
 }
 
+// Book detail page bottom CTA
+.book-cta {
+  margin: $spacing-xl 0;
+  padding: $spacing-xl;
+  background-color: $background-secondary;
+  border-radius: $border-radius-lg;
+  text-align: center;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: $spacing-md;
+  }
+
+  .book-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+  }
+
+  .btn:hover:not(:disabled),
+  .btn:active {
+    transform: none;
+  }
+}
+
 // =============================================================================
 // CONTENT LAYOUTS
 // =============================================================================
