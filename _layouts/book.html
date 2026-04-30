@@ -44,9 +44,9 @@ layout: default
           {% endif %}
           {% if page.purchase_links.publisher %}
             {% if page.purchase_links.publisher contains "://" %}
-              <a href="{{ page.purchase_links.publisher }}" class="btn btn-secondary" target="_blank" rel="noopener">Buy from Publisher</a>
+              <a href="{{ page.purchase_links.publisher }}" class="btn btn-primary" target="_blank" rel="noopener">Buy from Publisher</a>
             {% else %}
-              <a href="{{ page.purchase_links.publisher }}" class="btn btn-secondary">Buy from Publisher</a>
+              <a href="{{ page.purchase_links.publisher }}" class="btn btn-primary">Buy from Publisher</a>
             {% endif %}
           {% endif %}
         </div>
