@@ -36,6 +36,21 @@ layout: default
           {% endif %}
         </p>
       {% endif %}
+
+      {% if page.purchase_links.amazon or page.purchase_links.publisher %}
+        <div class="book-actions">
+          {% if page.purchase_links.amazon %}
+            <a href="{{ page.purchase_links.amazon }}" class="btn btn-primary" target="_blank" rel="noopener">Buy on Amazon</a>
+          {% endif %}
+          {% if page.purchase_links.publisher %}
+            {% if page.purchase_links.publisher contains "://" %}
+              <a href="{{ page.purchase_links.publisher }}" class="btn btn-primary" target="_blank" rel="noopener">Buy from Publisher</a>
+            {% else %}
+              <a href="{{ page.purchase_links.publisher }}" class="btn btn-primary">Buy from Publisher</a>
+            {% endif %}
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
   </header>
 
@@ -59,7 +74,25 @@ layout: default
     </ul>
   </aside>
   {% endif %}
-  
+
+  {% if page.purchase_links.amazon or page.purchase_links.publisher %}
+    <section class="book-cta">
+      <h3>Get this book</h3>
+      <div class="book-actions">
+        {% if page.purchase_links.amazon %}
+          <a href="{{ page.purchase_links.amazon }}" class="btn btn-primary" target="_blank" rel="noopener">Buy on Amazon</a>
+        {% endif %}
+        {% if page.purchase_links.publisher %}
+          {% if page.purchase_links.publisher contains "://" %}
+            <a href="{{ page.purchase_links.publisher }}" class="btn btn-primary" target="_blank" rel="noopener">Buy from Publisher</a>
+          {% else %}
+            <a href="{{ page.purchase_links.publisher }}" class="btn btn-primary">Buy from Publisher</a>
+          {% endif %}
+        {% endif %}
+      </div>
+    </section>
+  {% endif %}
+
   {% include social-share.html %}
 
   {% comment %} Related Books Recommendations - Simplified approach {% endcomment %}

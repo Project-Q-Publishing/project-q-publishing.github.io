@@ -15,7 +15,7 @@ topics:
   - "Python"
 target_audience: "Python programmers who have learned the basics and want to apply their skills to complete, practical projects."
 purchase_links:
-  amazon: "https://www.amazon.com/Python-Project-Book-Build-Games-ebook/dp/B0GHNMDQKD/"
+  amazon: "https://www.amazon.com/Python-Project-Book-Build-Games/dp/1918722021/"
   #publisher: "/contact"
 # sample_chapters:
   # - "Chapter 1: Chapter Title"
