@@ -1,12 +1,12 @@
 ---
 title: "Docker: Once Upon a Time"
-subtitle: "Create, share, and run modern applications"
+subtitle: "Create, Share, and Run Modern Applications"
 author: "Manuel Morejón"
 isbn: "978-1-918722-00-0"
-publication_date: "2026-06-16"
+publication_date: "2026-06-12"
 price: 29.99
 currency: "USD"
-pages: 186
+pages: 206
 cover_image: "/assets/images/books/docker-once-upon-a-time.webp"
 description: >-
   Master container technology and solve one of software development's most persistent headaches: the "it works on my machine" problem. 
