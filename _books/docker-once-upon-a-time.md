@@ -64,6 +64,34 @@ Includes a dedicated Docker Compose V2 chapter with real-world multi-service use
 
 Written by Manuel Morejón, an experienced Docker practitioner and educator, under an open model
 
+## Table of Contents
+
+Chapter 1: About This Book
+
+Chapter 2: Introduction to Containers
+
+Chapter 3: Installing Docker
+
+Chapter 4: First Steps with Docker 
+
+Chapter 5: Container Routines
+
+Chapter 6: Publishing and Consuming Services
+
+Chapter 7: Configuration and Data Persistence
+
+Chapter 8: Building Images
+
+Chapter 9: Publishing Images
+
+Chapter 10: Deploying Containers to the Cloud
+
+Chapter 11: Docker Compose V2
+
+Chapter 12: Recommendations and Next Steps
+
+Chapter 13: Exercise Answers
+
 ## About the Author
 
 Manuel is a Senior DevOps and Cloud Native Engineer with over a decade of experience guiding large enterprises through the complex adoption of containers and Kubernetes clusters. Recognized by the community as a former Docker Captain, he has spent years designing, automating, and scaling production-grade environments.
