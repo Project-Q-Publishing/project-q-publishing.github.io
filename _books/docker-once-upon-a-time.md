@@ -15,9 +15,9 @@ topics:
   - "Docker"
   - "Containers"
 target_audience: "Developers and DevOps engineers who want to get started with Docker and container technology."
-# purchase_links:
-  # amazon: "https://amazon.com/dp/example"
-  # publisher: "/contact"
+purchase_links:
+   amazon: "https://www.amazon.com/dp/B0H12YRR8J/"
+   publisher: "https://shop.ingramspark.com/b/084?params=KNLuMKSiE6ZhAzIeIyIzezP91DzY0wyFKP8Q9r8pVWS"
 # sample_chapters:
   # - "Chapter 1: Chapter Title"
 # reviews:
