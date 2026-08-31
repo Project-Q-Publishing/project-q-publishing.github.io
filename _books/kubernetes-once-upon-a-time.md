@@ -1,15 +1,15 @@
 ---
 title: "Kubernetes: Once Upon a Time"
-subtitle: "Container orchestration"
+subtitle: "Container Orchestration"
 author: "Manuel Morejón"
 isbn: "978-1-918722-01-7"
-publication_date: "2026-07-16"
+publication_date: "2026-09-30"
 price: 29.99
 currency: "USD"
-pages: 186
+pages: 264
 cover_image: "/assets/images/books/kubernetes-once-upon-a-time.webp"
 description: >-
-  Master Kubernetes v1.35+ on your laptop without cloud bills. Build production-grade multi-node clusters using Kind (Kubernetes in Docker). From architecture basics to Ingress, Gateway API, and RBAC. 
+  Master Kubernetes v1.36+ on your laptop without cloud bills. Build production-grade multi-node clusters using Kind (Kubernetes in Docker). From architecture basics to Ingress, Gateway API, and RBAC. 
 difficulty_level: "Intermediate"  # Beginner, Intermediate, or Advanced
 topics:
   - "Kubernetes"
@@ -41,18 +41,18 @@ Forget about obsolete Minikube or heavy virtual machines. In this book, you will
 
 Your learning environment will include:
 
-- Multi-node cluster: Simulate a real production environment with control-plane and workers.
-- Real networking: You will implement MetalLB to simulate real Load Balancers on your PC.
-- Ingress and Gateway API: Master modern traffic entry points.
-- Persistence: Manage volumes (PV/PVC) that survive restarts.
+- Multi-node cluster: spin up an environment with control-plane and workers
+- Real networking: simulate real load balancers on your PC
+- Ingress and Gateway API: master modern traffic entry points
+- Persistence: manage volumes that survive restarts with persistent volumes
 
-The content is structured to take you from fundamentals to advanced concepts using the latest Kubernetes v1.35+:
+The content is structured to take you from fundamentals to advanced concepts using the latest Kubernetes v1.36+:
 
-- Cloud-native architecture: Finally understand Pods, ReplicaSets, and Deployments.
-- Configuration management: ConfigMaps, Secrets, and security best practices.
-- Security: RBAC (Role-Based Access Control) and ServiceAccounts.
-- Resources: CPU/RAM limits and Autoscaling (HPA).
-- Real world: How to translate what you learned locally to the cloud (AWS, Google Cloud, DigitalOcean).
+- Cloud-native architecture: finally understand pods, ReplicaSets, and deployments
+- Configuration management: ConfigMaps, secrets, and security best practices
+- Security: Role-Based Access Control (RBAC) and ServiceAccounts
+- Resources: CPU/RAM limits and Autoscaling (HPA)
+- Real world: translate what you learned locally to the cloud (AWS, Google Cloud, DigitalOcean)
 
 Start deploying your first cluster in 40 seconds. Grab your copy now and level up your DevOps career.
 
