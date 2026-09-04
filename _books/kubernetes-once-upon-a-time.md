@@ -16,8 +16,8 @@ topics:
   - "Docker"
   - "Containers"
 target_audience: "Engineers, developers, and sysadmins who want to move from playing with Kubernetes to truly understanding it."
-# purchase_links:
-  # amazon: "https://amazon.com/dp/example"
+purchase_links:
+  amazon: "https://www.amazon.com/Kubernetes-Once-Upon-Time-Orchestration/dp/1918722013/"
   # publisher: "/contact"
 # sample_chapters:
   # - "Chapter 1: Chapter Title"
