@@ -29,7 +29,7 @@ purchase_links:
 featured: true
 ---
 
-> "I think DOS is the best first platform for learning assembly as it sets the stage for using it on other modern operating systems and achieving maximum speed."  - Chastity Rose White
+> "I think DOS is the best first platform for learning assembly as it sets the stage for using it on other modern operating systems and achieving maximum speed." - Chastity White Rose
 
 Learn to build small, lightning-fast programs that squeeze every last byte out of your machine. You will gain the confidence to write complete text-based console applications from scratch, controlling the computer directly instead of leaning on layers of abstraction that hide how things really work.
 
@@ -70,7 +70,7 @@ Chapter 2: The putstring Function
 
 Chapter 3: The intstr and putint functions
 
-Chapter 4: Chastity’s Intel Assembly Reference
+Chapter 4: Chastity's Intel Assembly Reference
 
 Chapter 5: Integer Sequences and Their Application in Learning
 
