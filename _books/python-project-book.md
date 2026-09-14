@@ -13,6 +13,8 @@ description: >-
 difficulty_level: "Beginner"  # Beginner, Intermediate, or Advanced
 topics:
   - "Python"
+programming_languages:
+  - "Python"
 target_audience: "Python programmers who have learned the basics and want to apply their skills to complete, practical projects."
 purchase_links:
   amazon: "https://www.amazon.com/Python-Project-Book-Build-Games/dp/1918722021/"
@@ -21,7 +23,7 @@ purchase_links:
   # - "Chapter 1: Chapter Title"
 # reviews:
 #  - quote: "Review text"
-    # author: "Reviewer Name"
+    # reviewer: "Reviewer Name"
     # rating: 5
 
 featured: true
