@@ -17,7 +17,7 @@ programming_languages:
   - "x86 assembly"
 target_audience: "Programmers with experience in at least one language who want to understand computers at the lowest level and write their own efficient programs for DOS and Linux."
 purchase_links:
-  #amazon: ""
+  amazon: "https://www.amazon.com/Assembly-Arithmetic-Algorithms-16-Bit-DOS/dp/1918722080/"
   #publisher: ""
 # sample_chapters:
   # - "Chapter 1: Chapter Title"
