@@ -18,7 +18,7 @@ topics:
 target_audience: "Engineers, developers, and sysadmins who want to move from playing with Kubernetes to truly understanding it."
 purchase_links:
   amazon: "https://www.amazon.com/Kubernetes-Once-Upon-Time-Orchestration/dp/1918722013/"
-  # publisher: "/contact"
+  publisher: "https://shop.ingramspark.com/b/084?params=jIubp9oCk6VWvnZLcRaNpJAJTY3gAI0wNlZsiAf3pgK"
 # sample_chapters:
   # - "Chapter 1: Chapter Title"
 # reviews:
